@@ -1,0 +1,397 @@
+Twettr
+v7
+r0
+t304855181.245753
+cCheck dependencies
+cProcessInfoPlistFile /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/Info.plist wettr-Info.plist
+cProcessPCH /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch.pth wettr_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/main.o /Users/pet/Dropbox/wettr/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrAppDelegate.o /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrViewController.o /Users/pet/Dropbox/wettr/Classes/wettrViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/XPathQuery.o /Users/pet/Dropbox/wettr/Classes/XPathQuery.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHpple.o /Users/pet/Dropbox/wettr/Classes/TFHpple.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHppleElement.o /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/wettr normal i386
+cCopyStringsFile /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+cCompileXIB /Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib
+cCompileXIB /Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
+c000000004BD02EC30000000000000110
+t1271934659
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BC6B28900000000002797F0
+t1271313033
+s2594800
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BC6B29800000000002772A0
+t1271313048
+s2585248
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BC6B28C0000000000001466
+t1271313036
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004BC6CA8F00000000000009CD
+t1271319183
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004BC6CB630000000002435FA0
+t1271319395
+s37969824
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/Availability.h
+c000000004BC295130000000000001A3B
+t1271043347
+s6715
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml/HTMLparser.h
+c000000004BC6B22F0000000000002401
+t1271312943
+s9217
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml/parser.h
+c000000004BC6B22F00000000000098A9
+t1271312943
+s39081
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml/tree.h
+c000000004BC6B22F0000000000008F14
+t1271312943
+s36628
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml/xpath.h
+c000000004BC6B22F0000000000003F47
+t1271312943
+s16199
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml/xpathInternals.h
+c000000004BC6B22F0000000000004BF8
+t1271312943
+s19448
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/lib/libxml2.dylib
+c000000004BC6B22F0000000000122B20
+t1271312943
+s1190688
+
+N/Users/pet/Dropbox/wettr/Classes/TFHpple.h
+c000000004A6D81420000000000000685
+t1248690498
+s1669
+i<Foundation/Foundation.h>
+i"TFHppleElement.h"
+
+N/Users/pet/Dropbox/wettr/Classes/TFHpple.m
+c000000004A6D814200000000000009B4
+t1248690498
+s2484
+i"TFHpple.h"
+i"XPathQuery.h"
+
+N/Users/pet/Dropbox/wettr/Classes/TFHppleElement.h
+c000000004A6D8142000000000000074A
+t1248690498
+s1866
+i<Foundation/Foundation.h>
+
+N/Users/pet/Dropbox/wettr/Classes/TFHppleElement.m
+c000000004A6D814200000000000009FD
+t1248690498
+s2557
+i"TFHppleElement.h"
+
+N/Users/pet/Dropbox/wettr/Classes/XPathQuery.h
+c000000004A6D81420000000000000113
+t1248690498
+s275
+
+N/Users/pet/Dropbox/wettr/Classes/XPathQuery.m
+c000000004A6D8142000000000000138B
+t1248690498
+s5003
+i"XPathQuery.h"
+i<libxml/tree.h>
+i<libxml/parser.h>
+i<libxml/HTMLparser.h>
+i<libxml/xpath.h>
+i<libxml/xpathInternals.h>
+
+N/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.h
+c000000004C7A565F00000000000001D9
+t1283085919
+s473
+i<UIKit/UIKit.h>
+
+N/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m
+c000000004C7A565F00000000000002F7
+t1283085919
+s759
+i"wettrAppDelegate.h"
+i"wettrViewController.h"
+
+N/Users/pet/Dropbox/wettr/Classes/wettrViewController.h
+c000000004C7B7819000000000000010B
+t1283160089
+s267
+i<UIKit/UIKit.h>
+
+N/Users/pet/Dropbox/wettr/Classes/wettrViewController.m
+c000000004C7B7F500000000000001048
+t1283161936
+s4168
+i"wettrViewController.h"
+i"TFHpple.h"
+
+N/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app
+t2
+s0
+
+N/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app.dSYM
+t2
+s0
+
+N/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/Info.plist
+t1283162379
+s582
+
+N/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/PkgInfo
+t1283162379
+s8
+
+N/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj/InfoPlist.strings
+t1283162380
+s126
+
+N/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj/MainWindow.nib
+t1283162381
+s1119
+
+N/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj/wettrViewController.nib
+t1283162381
+s957
+
+N/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/wettr
+t2
+s0
+
+N/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHpple.o
+t1283162379
+s8708
+
+N/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHppleElement.o
+t1283162379
+s8768
+
+N/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/XPathQuery.o
+t1283162379
+s15952
+
+N/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/main.o
+t1283162379
+s2912
+
+N/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettr.LinkFileList
+c000000004C7B810B000000000000029E
+t1283162379
+s670
+
+N/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrAppDelegate.o
+t1283162379
+s38696
+
+N/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrViewController.o
+t1283162379
+s45804
+
+N/Users/pet/Dropbox/wettr/en.lproj/InfoPlist.strings
+c000000004C7A565F0000000000000066
+t1283085919
+s102
+
+N/Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib
+c000000004C7A565F0000000000004E11
+t1283085919
+s19985
+
+N/Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib
+c000000004C7B6F02000000000000193C
+t1283157762
+s6460
+
+N/Users/pet/Dropbox/wettr/main.m
+c000000004C7A565F0000000000000161
+t1283085919
+s353
+i<UIKit/UIKit.h>
+
+N/Users/pet/Dropbox/wettr/wettr_Prefix.pch
+c000000004C7A565F0000000000000137
+t1283085919
+s311
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+i<Availability.h>
+
+N/var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch.pth
+t1283162379
+s2631444
+
+Nwettr-Info.plist
+c000000004C7A565F00000000000004E5
+t1283085919
+s1253
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies304855179#304855179#0(0"0(0#1#0"4300725088#0"0#
+
+CCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHpple.o /Users/pet/Dropbox/wettr/Classes/TFHpple.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s304855179.745194
+e304855179.838784
+r1
+xCompileC
+xbuild/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHpple.o
+x/Users/pet/Dropbox/wettr/Classes/TFHpple.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@50"Compile /Users/pet/Dropbox/wettr/Classes/TFHpple.m304855179#304855179#0(0"0(0#0#42"/Users/pet/Dropbox/wettr/Classes/TFHpple.m4300725088#1942"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -I/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources/i386 -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/TFHpple.m -o /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHpple.o0#
+
+CCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHppleElement.o /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s304855179.774268
+e304855179.857367
+r1
+xCompileC
+xbuild/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHppleElement.o
+x/Users/pet/Dropbox/wettr/Classes/TFHppleElement.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@57"Compile /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m304855179#304855179#0(0"0(0#0#49"/Users/pet/Dropbox/wettr/Classes/TFHppleElement.m4300725088#1956"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -I/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources/i386 -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m -o /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/TFHppleElement.o0#
+
+CCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/XPathQuery.o /Users/pet/Dropbox/wettr/Classes/XPathQuery.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s304855179.657267
+e304855179.774149
+r1
+xCompileC
+xbuild/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/XPathQuery.o
+x/Users/pet/Dropbox/wettr/Classes/XPathQuery.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@53"Compile /Users/pet/Dropbox/wettr/Classes/XPathQuery.m304855179#304855179#0(0"0(0#0#45"/Users/pet/Dropbox/wettr/Classes/XPathQuery.m4300725088#1948"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -I/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources/i386 -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/XPathQuery.m -o /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/XPathQuery.o0#
+
+CCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/main.o /Users/pet/Dropbox/wettr/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s304855179.497325
+e304855179.610655
+r1
+xCompileC
+xbuild/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/main.o
+x/Users/pet/Dropbox/wettr/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@39"Compile /Users/pet/Dropbox/wettr/main.m304855179#304855179#0(0"0(0#0#31"/Users/pet/Dropbox/wettr/main.m4300725088#1928"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -I/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources/i386 -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch -c /Users/pet/Dropbox/wettr/main.m -o /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/main.o0#
+
+CCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrAppDelegate.o /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s304855179.498478
+e304855179.657147
+r1
+xCompileC
+xbuild/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrAppDelegate.o
+x/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@59"Compile /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m304855179#304855179#0(0"0(0#0#51"/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m4300725088#1960"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -I/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources/i386 -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m -o /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrAppDelegate.o0#
+
+CCompileC build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrViewController.o /Users/pet/Dropbox/wettr/Classes/wettrViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s304855179.610830
+e304855179.745072
+r1
+xCompileC
+xbuild/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrViewController.o
+x/Users/pet/Dropbox/wettr/Classes/wettrViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@62"Compile /Users/pet/Dropbox/wettr/Classes/wettrViewController.m304855179#304855179#0(0"0(0#0#54"/Users/pet/Dropbox/wettr/Classes/wettrViewController.m4300725088#1966"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -I/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources/i386 -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/wettrViewController.m -o /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettrViewController.o0#
+
+CCompileXIB /Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib
+s304855179.876033
+e304855181.245650
+r1
+xCompileXIB
+x/Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib
+lSLF07#2@34"CompileXIB en.lproj/MainWindow.xib304855179#304855181#0(0"0(0#0#48"/Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib4300725088#454"    cd /Users/pet/Dropbox/wettr    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj/MainWindow.nib /Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib0#
+
+CCompileXIB /Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib
+s304855180.044931
+e304855181.185360
+r1
+xCompileXIB
+x/Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib
+lSLF07#2@43"CompileXIB en.lproj/wettrViewController.xib304855180#304855181#0(0"0(0#0#57"/Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib4300725088#472"    cd /Users/pet/Dropbox/wettr    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj/wettrViewController.nib /Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib0#
+
+CCopyStringsFile /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+s304855179.874562
+e304855180.044814
+r1
+xCopyStringsFile
+x/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj/InfoPlist.strings
+xen.lproj/InfoPlist.strings
+lSLF07#2@31"Copy en.lproj/InfoPlist.strings304855179#304855180#0(0"0(0#0#51"/Users/pet/Dropbox/wettr/en.lproj/InfoPlist.strings4300725088#453"    cd /Users/pet/Dropbox/wettr    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary en.lproj/InfoPlist.strings --outdir /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/en.lproj0#
+
+CGenerateDSYMFile /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app.dSYM /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/wettr
+r0
+
+CLd /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/wettr normal i386
+s304855179.857476
+e304855179.874453
+r0
+xLd
+x/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/wettr
+xnormal
+xi386
+old: library not found for -lgcc
+oclang: error: linker command failed with exit code 1 (use -v to see invocation)
+lSLF07#2@73"Link /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/wettr304855179#304855179#0(214"ld: library not found for -lgccclang: error: linker command failed with exit code 1 (use -v to see invocation)Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang failed with exit code 12(13@27"Library not found for -lgcc304855179#0#32#0(6@0"304855179#0#0#0#0#0"0(4@101"Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang failed with exit code 1304855179#18446744073709551615#0#0(1@0"0(0#0#0"4300725088#787"    cd /Users/pet/Dropbox/wettr    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -L/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -F/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -filelist /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/Objects-normal/i386/wettr.LinkFileList -mmacosx-version-min=10.6 -framework UIKit -framework Foundation -framework CoreGraphics -lxml2 -o /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/wettr1#
+
+CProcessInfoPlistFile /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/Info.plist wettr-Info.plist
+s304855179.103963
+e304855179.122314
+r1
+xProcessInfoPlistFile
+x/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/Info.plist
+xwettr-Info.plist
+lSLF07#2@24"Process wettr-Info.plist304855179#304855179#0(0"0(0#0#41"/Users/pet/Dropbox/wettr/wettr-Info.plist4300725088#431"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility wettr-Info.plist -genpkginfo /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app/Info.plist0#
+
+CProcessPCH /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch.pth wettr_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s304855179.122458
+e304855179.497203
+r1
+xProcessPCH
+x/var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch.pth
+xwettr_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@27"Precompile wettr_Prefix.pch304855179#304855179#0(0"0(0#0#41"/Users/pet/Dropbox/wettr/wettr_Prefix.pch4300725088#1836"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/wettr-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator -I/Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources/i386 -I/Users/pet/Dropbox/wettr/build/wettr.build/Debug-iphonesimulator/wettr.build/DerivedSources -c /Users/pet/Dropbox/wettr/wettr_Prefix.pch -o /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettr_Prefix-dbvtyaveoledraeubnuzqpwdappu/wettr_Prefix.pch.pth0#
+
+CTouch /Users/pet/Dropbox/wettr/build/Debug-iphonesimulator/wettr.app
+r0
+

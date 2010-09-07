@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3066E09123677D200CA47AB /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = C3066E08123677D200CA47AB /* overlay.png */; };
+		C3066E7E123681CD00CA47AB /* IATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3066E7D123681CD00CA47AB /* IATableView.m */; };
+		C30DCE80122AD6E5000C9EBB /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C30DCE7F122AD6E5000C9EBB /* XPathQuery.m */; };
+		C30DCE85122AD6F1000C9EBB /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = C30DCE82122AD6F1000C9EBB /* TFHpple.m */; };
+		C30DCE86122AD6F1000C9EBB /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C30DCE84122AD6F1000C9EBB /* TFHppleElement.m */; };
+		C314B600122C3BA8008640C1 /* austria.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B5FF122C3BA8008640C1 /* austria.png */; };
+		C314B637122C3F2D008640C1 /* burgenland.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B636122C3F2D008640C1 /* burgenland.png */; };
+		C314B670122C41C3008640C1 /* vienna.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B66F122C41C3008640C1 /* vienna.png */; };
+		C314B67D122C428B008640C1 /* loweraustria.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B67C122C428B008640C1 /* loweraustria.png */; };
+		C314B681122C432C008640C1 /* styria.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B680122C432C008640C1 /* styria.png */; };
+		C314B68B122C43CD008640C1 /* upperaustria.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B68A122C43CD008640C1 /* upperaustria.png */; };
+		C314B690122C4475008640C1 /* salzburg.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B68F122C4475008640C1 /* salzburg.png */; };
+		C314B696122C4512008640C1 /* tyrol.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B695122C4512008640C1 /* tyrol.png */; };
+		C314B69B122C45AD008640C1 /* vorarlberg.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B69A122C45AD008640C1 /* vorarlberg.png */; };
+		C314B69F122C4636008640C1 /* carinthia.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B69E122C4636008640C1 /* carinthia.png */; };
+		C3229D6B122A923D00BE66E2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3229D6A122A923D00BE66E2 /* libxml2.dylib */; };
+		C339E9F71230313F00B90904 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = C339E9F61230313F00B90904 /* header.png */; };
+		C33B13861236349E00C1A7A7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C33B13841236349E00C1A7A7 /* Default.png */; };
+		C33B13871236349E00C1A7A7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33B13851236349E00C1A7A7 /* Default@2x.png */; };
+		C33B13E712363EAB00C1A7A7 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = C33B13E612363EAB00C1A7A7 /* iTunesArtwork */; };
+		C33B13EE12363EEE00C1A7A7 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C33B13EC12363EEE00C1A7A7 /* Icon-Small.png */; };
+		C33B13EF12363EEE00C1A7A7 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33B13ED12363EEE00C1A7A7 /* Icon-Small@2x.png */; };
+		C34D437A122BD09A0013A586 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C34D4379122BD09A0013A586 /* Icon.png */; };
+		C373907E12316BAA00CA7599 /* austria@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C373907D12316BAA00CA7599 /* austria@2x.png */; };
+		C3A7B5DD122A8DDF00FE8D9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A7B5DC122A8DDF00FE8D9B /* UIKit.framework */; };
+		C3A7B5DF122A8DDF00FE8D9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A7B5DE122A8DDF00FE8D9B /* Foundation.framework */; };
+		C3A7B5E1122A8DDF00FE8D9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A7B5E0122A8DDF00FE8D9B /* CoreGraphics.framework */; };
+		C3A7B5E6122A8DDF00FE8D9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A7B5E4122A8DDF00FE8D9B /* InfoPlist.strings */; };
+		C3A7B5E8122A8DDF00FE8D9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A7B5E7122A8DDF00FE8D9B /* main.m */; };
+		C3A7B5EB122A8DDF00FE8D9B /* wettrAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A7B5EA122A8DDF00FE8D9B /* wettrAppDelegate.m */; };
+		C3A7B5EE122A8DDF00FE8D9B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A7B5EC122A8DDF00FE8D9B /* MainWindow.xib */; };
+		C3A7B5F1122A8DE100FE8D9B /* wettrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */; };
+		C3A7B5F4122A8DE100FE8D9B /* wettrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A7B5F2122A8DE100FE8D9B /* wettrViewController.xib */; };
+		C3AB6CB212357ADD001EC208 /* header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3AB6CB112357ADD001EC208 /* header@2x.png */; };
+		C3AB6CC012360542001EC208 /* IATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AB6CBF12360542001EC208 /* IATableViewCell.m */; };
+		C3D79FF61231224000468261 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3D79FF51231224000468261 /* Icon@2x.png */; };
+		C3FD5DCE12362DB100419A3B /* austria@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DC412362DB100419A3B /* austria@2x.png */; };
+		C3FD5DCF12362DB100419A3B /* burgenland@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DC512362DB100419A3B /* burgenland@2x.png */; };
+		C3FD5DD012362DB100419A3B /* carinthia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DC612362DB100419A3B /* carinthia@2x.png */; };
+		C3FD5DD112362DB100419A3B /* loweraustria@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DC712362DB100419A3B /* loweraustria@2x.png */; };
+		C3FD5DD212362DB100419A3B /* salzburg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DC812362DB100419A3B /* salzburg@2x.png */; };
+		C3FD5DD312362DB100419A3B /* styria@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DC912362DB100419A3B /* styria@2x.png */; };
+		C3FD5DD412362DB100419A3B /* tyrol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DCA12362DB100419A3B /* tyrol@2x.png */; };
+		C3FD5DD512362DB100419A3B /* upperaustria@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DCB12362DB100419A3B /* upperaustria@2x.png */; };
+		C3FD5DD612362DB100419A3B /* vienna@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DCC12362DB100419A3B /* vienna@2x.png */; };
+		C3FD5DD712362DB100419A3B /* vorarlberg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FD5DCD12362DB100419A3B /* vorarlberg@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C3066E08123677D200CA47AB /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
+		C3066E7C123681CD00CA47AB /* IATableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATableView.h; sourceTree = "<group>"; };
+		C3066E7D123681CD00CA47AB /* IATableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATableView.m; sourceTree = "<group>"; };
+		C30DCE7E122AD6E5000C9EBB /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPathQuery.h; path = Classes/XPathQuery.h; sourceTree = "<group>"; };
+		C30DCE7F122AD6E5000C9EBB /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPathQuery.m; path = Classes/XPathQuery.m; sourceTree = "<group>"; };
+		C30DCE81122AD6F1000C9EBB /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHpple.h; path = Classes/TFHpple.h; sourceTree = "<group>"; };
+		C30DCE82122AD6F1000C9EBB /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHpple.m; path = Classes/TFHpple.m; sourceTree = "<group>"; };
+		C30DCE83122AD6F1000C9EBB /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHppleElement.h; path = Classes/TFHppleElement.h; sourceTree = "<group>"; };
+		C30DCE84122AD6F1000C9EBB /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleElement.m; path = Classes/TFHppleElement.m; sourceTree = "<group>"; };
+		C314B5FF122C3BA8008640C1 /* austria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = austria.png; sourceTree = "<group>"; };
+		C314B636122C3F2D008640C1 /* burgenland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burgenland.png; sourceTree = "<group>"; };
+		C314B66F122C41C3008640C1 /* vienna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vienna.png; sourceTree = "<group>"; };
+		C314B67C122C428B008640C1 /* loweraustria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loweraustria.png; sourceTree = "<group>"; };
+		C314B680122C432C008640C1 /* styria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = styria.png; sourceTree = "<group>"; };
+		C314B68A122C43CD008640C1 /* upperaustria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upperaustria.png; sourceTree = "<group>"; };
+		C314B68F122C4475008640C1 /* salzburg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salzburg.png; sourceTree = "<group>"; };
+		C314B695122C4512008640C1 /* tyrol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tyrol.png; sourceTree = "<group>"; };
+		C314B69A122C45AD008640C1 /* vorarlberg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vorarlberg.png; sourceTree = "<group>"; };
+		C314B69E122C4636008640C1 /* carinthia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carinthia.png; sourceTree = "<group>"; };
+		C3229D6A122A923D00BE66E2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		C339E9F61230313F00B90904 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		C33B13841236349E00C1A7A7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C33B13851236349E00C1A7A7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C33B13E612363EAB00C1A7A7 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		C33B13EC12363EEE00C1A7A7 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		C33B13ED12363EEE00C1A7A7 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		C34D4379122BD09A0013A586 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C373907D12316BAA00CA7599 /* austria@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "austria@2x.png"; sourceTree = "<group>"; };
+		C3A7B5D9122A8DDF00FE8D9B /* wettertxt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wettertxt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A7B5DC122A8DDF00FE8D9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C3A7B5DE122A8DDF00FE8D9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3A7B5E0122A8DDF00FE8D9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3A7B5E2122A8DDF00FE8D9B /* wettertxt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wettertxt-Info.plist"; sourceTree = "<group>"; };
+		C3A7B5E3122A8DDF00FE8D9B /* wettertxt_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wettertxt_Prefix.pch; sourceTree = "<group>"; };
+		C3A7B5E5122A8DDF00FE8D9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3A7B5E7122A8DDF00FE8D9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3A7B5E9122A8DDF00FE8D9B /* wettrAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wettrAppDelegate.h; sourceTree = "<group>"; };
+		C3A7B5EA122A8DDF00FE8D9B /* wettrAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wettrAppDelegate.m; sourceTree = "<group>"; };
+		C3A7B5ED122A8DDF00FE8D9B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		C3A7B5EF122A8DE000FE8D9B /* wettrViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wettrViewController.h; sourceTree = "<group>"; };
+		C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wettrViewController.m; sourceTree = "<group>"; };
+		C3A7B5F3122A8DE100FE8D9B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/wettrViewController.xib; sourceTree = "<group>"; };
+		C3AB6CB112357ADD001EC208 /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header@2x.png"; sourceTree = "<group>"; };
+		C3AB6CBE12360541001EC208 /* IATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATableViewCell.h; sourceTree = SOURCE_ROOT; };
+		C3AB6CBF12360542001EC208 /* IATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATableViewCell.m; sourceTree = SOURCE_ROOT; };
+		C3D79FF51231224000468261 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		C3FD5DC412362DB100419A3B /* austria@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "austria@2x.png"; sourceTree = "<group>"; };
+		C3FD5DC512362DB100419A3B /* burgenland@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burgenland@2x.png"; sourceTree = "<group>"; };
+		C3FD5DC612362DB100419A3B /* carinthia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carinthia@2x.png"; sourceTree = "<group>"; };
+		C3FD5DC712362DB100419A3B /* loweraustria@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loweraustria@2x.png"; sourceTree = "<group>"; };
+		C3FD5DC812362DB100419A3B /* salzburg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "salzburg@2x.png"; sourceTree = "<group>"; };
+		C3FD5DC912362DB100419A3B /* styria@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "styria@2x.png"; sourceTree = "<group>"; };
+		C3FD5DCA12362DB100419A3B /* tyrol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tyrol@2x.png"; sourceTree = "<group>"; };
+		C3FD5DCB12362DB100419A3B /* upperaustria@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upperaustria@2x.png"; sourceTree = "<group>"; };
+		C3FD5DCC12362DB100419A3B /* vienna@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vienna@2x.png"; sourceTree = "<group>"; };
+		C3FD5DCD12362DB100419A3B /* vorarlberg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vorarlberg@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3A7B5D6122A8DDF00FE8D9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A7B5DD122A8DDF00FE8D9B /* UIKit.framework in Frameworks */,
+				C3A7B5DF122A8DDF00FE8D9B /* Foundation.framework in Frameworks */,
+				C3A7B5E1122A8DDF00FE8D9B /* CoreGraphics.framework in Frameworks */,
+				C3229D6B122A923D00BE66E2 /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3490436122AD73600BCB108 /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				C30DCE7E122AD6E5000C9EBB /* XPathQuery.h */,
+				C30DCE7F122AD6E5000C9EBB /* XPathQuery.m */,
+				C30DCE81122AD6F1000C9EBB /* TFHpple.h */,
+				C30DCE82122AD6F1000C9EBB /* TFHpple.m */,
+				C30DCE83122AD6F1000C9EBB /* TFHppleElement.h */,
+				C30DCE84122AD6F1000C9EBB /* TFHppleElement.m */,
+			);
+			name = Hpple;
+			sourceTree = "<group>";
+		};
+		C3A7B5CA122A8DDD00FE8D9B = {
+			isa = PBXGroup;
+			children = (
+				C3490436122AD73600BCB108 /* Hpple */,
+				C3A7B5D1122A8DDE00FE8D9B /* Classes */,
+				C3A7B5D2122A8DDF00FE8D9B /* Other Sources */,
+				C3A7B5D3122A8DDF00FE8D9B /* Resources */,
+				C3A7B5D4122A8DDF00FE8D9B /* Frameworks */,
+				C3A7B5DA122A8DDF00FE8D9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3A7B5D1122A8DDE00FE8D9B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C3066E7C123681CD00CA47AB /* IATableView.h */,
+				C3066E7D123681CD00CA47AB /* IATableView.m */,
+				C3AB6CBE12360541001EC208 /* IATableViewCell.h */,
+				C3AB6CBF12360542001EC208 /* IATableViewCell.m */,
+				C3A7B5E9122A8DDF00FE8D9B /* wettrAppDelegate.h */,
+				C3A7B5EA122A8DDF00FE8D9B /* wettrAppDelegate.m */,
+				C3A7B5EF122A8DE000FE8D9B /* wettrViewController.h */,
+				C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C3A7B5D2122A8DDF00FE8D9B /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C3A7B5E3122A8DDF00FE8D9B /* wettertxt_Prefix.pch */,
+				C3A7B5E7122A8DDF00FE8D9B /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		C3A7B5D3122A8DDF00FE8D9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3066E08123677D200CA47AB /* overlay.png */,
+				C33B13E612363EAB00C1A7A7 /* iTunesArtwork */,
+				C33B13EC12363EEE00C1A7A7 /* Icon-Small.png */,
+				C33B13ED12363EEE00C1A7A7 /* Icon-Small@2x.png */,
+				C33B13841236349E00C1A7A7 /* Default.png */,
+				C33B13851236349E00C1A7A7 /* Default@2x.png */,
+				C3FD5DC412362DB100419A3B /* austria@2x.png */,
+				C3FD5DC512362DB100419A3B /* burgenland@2x.png */,
+				C3FD5DC612362DB100419A3B /* carinthia@2x.png */,
+				C3FD5DC712362DB100419A3B /* loweraustria@2x.png */,
+				C3FD5DC812362DB100419A3B /* salzburg@2x.png */,
+				C3FD5DC912362DB100419A3B /* styria@2x.png */,
+				C3FD5DCA12362DB100419A3B /* tyrol@2x.png */,
+				C3FD5DCB12362DB100419A3B /* upperaustria@2x.png */,
+				C3FD5DCC12362DB100419A3B /* vienna@2x.png */,
+				C3FD5DCD12362DB100419A3B /* vorarlberg@2x.png */,
+				C3D79FF51231224000468261 /* Icon@2x.png */,
+				C339E9F61230313F00B90904 /* header.png */,
+				C3AB6CB112357ADD001EC208 /* header@2x.png */,
+				C314B69E122C4636008640C1 /* carinthia.png */,
+				C314B69A122C45AD008640C1 /* vorarlberg.png */,
+				C314B695122C4512008640C1 /* tyrol.png */,
+				C314B68F122C4475008640C1 /* salzburg.png */,
+				C314B68A122C43CD008640C1 /* upperaustria.png */,
+				C314B680122C432C008640C1 /* styria.png */,
+				C314B67C122C428B008640C1 /* loweraustria.png */,
+				C314B66F122C41C3008640C1 /* vienna.png */,
+				C314B636122C3F2D008640C1 /* burgenland.png */,
+				C314B5FF122C3BA8008640C1 /* austria.png */,
+				C373907D12316BAA00CA7599 /* austria@2x.png */,
+				C34D4379122BD09A0013A586 /* Icon.png */,
+				C3A7B5E2122A8DDF00FE8D9B /* wettertxt-Info.plist */,
+				C3A7B5E4122A8DDF00FE8D9B /* InfoPlist.strings */,
+				C3A7B5EC122A8DDF00FE8D9B /* MainWindow.xib */,
+				C3A7B5F2122A8DE100FE8D9B /* wettrViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C3A7B5D4122A8DDF00FE8D9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3229D6A122A923D00BE66E2 /* libxml2.dylib */,
+				C3A7B5DC122A8DDF00FE8D9B /* UIKit.framework */,
+				C3A7B5DE122A8DDF00FE8D9B /* Foundation.framework */,
+				C3A7B5E0122A8DDF00FE8D9B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3A7B5DA122A8DDF00FE8D9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3A7B5D9122A8DDF00FE8D9B /* wettertxt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3A7B5D8122A8DDF00FE8D9B /* wettertxt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3A7B5F7122A8DE100FE8D9B /* Build configuration list for PBXNativeTarget "wettertxt" */;
+			buildPhases = (
+				C3A7B5D5122A8DDF00FE8D9B /* Sources */,
+				C3A7B5D6122A8DDF00FE8D9B /* Frameworks */,
+				C3A7B5D7122A8DDF00FE8D9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wettertxt;
+			productName = wettr;
+			productReference = C3A7B5D9122A8DDF00FE8D9B /* wettertxt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3A7B5CC122A8DDD00FE8D9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = iteractive;
+			};
+			buildConfigurationList = C3A7B5CF122A8DDD00FE8D9B /* Build configuration list for PBXProject "wettertxt" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3A7B5CA122A8DDD00FE8D9B;
+			productRefGroup = C3A7B5DA122A8DDF00FE8D9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3A7B5D8122A8DDF00FE8D9B /* wettertxt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3A7B5D7122A8DDF00FE8D9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A7B5E6122A8DDF00FE8D9B /* InfoPlist.strings in Resources */,
+				C3A7B5EE122A8DDF00FE8D9B /* MainWindow.xib in Resources */,
+				C3A7B5F4122A8DE100FE8D9B /* wettrViewController.xib in Resources */,
+				C34D437A122BD09A0013A586 /* Icon.png in Resources */,
+				C314B600122C3BA8008640C1 /* austria.png in Resources */,
+				C314B637122C3F2D008640C1 /* burgenland.png in Resources */,
+				C314B670122C41C3008640C1 /* vienna.png in Resources */,
+				C314B67D122C428B008640C1 /* loweraustria.png in Resources */,
+				C314B681122C432C008640C1 /* styria.png in Resources */,
+				C314B68B122C43CD008640C1 /* upperaustria.png in Resources */,
+				C314B690122C4475008640C1 /* salzburg.png in Resources */,
+				C314B696122C4512008640C1 /* tyrol.png in Resources */,
+				C314B69B122C45AD008640C1 /* vorarlberg.png in Resources */,
+				C314B69F122C4636008640C1 /* carinthia.png in Resources */,
+				C339E9F71230313F00B90904 /* header.png in Resources */,
+				C3D79FF61231224000468261 /* Icon@2x.png in Resources */,
+				C373907E12316BAA00CA7599 /* austria@2x.png in Resources */,
+				C3AB6CB212357ADD001EC208 /* header@2x.png in Resources */,
+				C3FD5DCE12362DB100419A3B /* austria@2x.png in Resources */,
+				C3FD5DCF12362DB100419A3B /* burgenland@2x.png in Resources */,
+				C3FD5DD012362DB100419A3B /* carinthia@2x.png in Resources */,
+				C3FD5DD112362DB100419A3B /* loweraustria@2x.png in Resources */,
+				C3FD5DD212362DB100419A3B /* salzburg@2x.png in Resources */,
+				C3FD5DD312362DB100419A3B /* styria@2x.png in Resources */,
+				C3FD5DD412362DB100419A3B /* tyrol@2x.png in Resources */,
+				C3FD5DD512362DB100419A3B /* upperaustria@2x.png in Resources */,
+				C3FD5DD612362DB100419A3B /* vienna@2x.png in Resources */,
+				C3FD5DD712362DB100419A3B /* vorarlberg@2x.png in Resources */,
+				C33B13861236349E00C1A7A7 /* Default.png in Resources */,
+				C33B13871236349E00C1A7A7 /* Default@2x.png in Resources */,
+				C33B13E712363EAB00C1A7A7 /* iTunesArtwork in Resources */,
+				C33B13EE12363EEE00C1A7A7 /* Icon-Small.png in Resources */,
+				C33B13EF12363EEE00C1A7A7 /* Icon-Small@2x.png in Resources */,
+				C3066E09123677D200CA47AB /* overlay.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3A7B5D5122A8DDF00FE8D9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A7B5E8122A8DDF00FE8D9B /* main.m in Sources */,
+				C3A7B5EB122A8DDF00FE8D9B /* wettrAppDelegate.m in Sources */,
+				C3A7B5F1122A8DE100FE8D9B /* wettrViewController.m in Sources */,
+				C30DCE80122AD6E5000C9EBB /* XPathQuery.m in Sources */,
+				C30DCE85122AD6F1000C9EBB /* TFHpple.m in Sources */,
+				C30DCE86122AD6F1000C9EBB /* TFHppleElement.m in Sources */,
+				C3AB6CC012360542001EC208 /* IATableViewCell.m in Sources */,
+				C3066E7E123681CD00CA47AB /* IATableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C3A7B5E4122A8DDF00FE8D9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A7B5E5122A8DDF00FE8D9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C3A7B5EC122A8DDF00FE8D9B /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A7B5ED122A8DDF00FE8D9B /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		C3A7B5F2122A8DE100FE8D9B /* wettrViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A7B5F3122A8DE100FE8D9B /* en */,
+			);
+			name = wettrViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3A7B5F5122A8DE100FE8D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PREBINDING = NO;
+				SDKROOT = iphonesimulator4.0;
+			};
+			name = Debug;
+		};
+		C3A7B5F6122A8DE100FE8D9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphonesimulator4.0;
+			};
+			name = Release;
+		};
+		C3A7B5F8122A8DE100FE8D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = wettertxt_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
+				INFOPLIST_FILE = "wettertxt-Info.plist";
+				PRODUCT_NAME = wettertxt;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3A7B5F9122A8DE100FE8D9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = wettertxt_Prefix.pch;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
+				INFOPLIST_FILE = "wettertxt-Info.plist";
+				PRODUCT_NAME = wettertxt;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3A7B5CF122A8DDD00FE8D9B /* Build configuration list for PBXProject "wettertxt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A7B5F5122A8DE100FE8D9B /* Debug */,
+				C3A7B5F6122A8DE100FE8D9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3A7B5F7122A8DE100FE8D9B /* Build configuration list for PBXNativeTarget "wettertxt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A7B5F8122A8DE100FE8D9B /* Debug */,
+				C3A7B5F9122A8DE100FE8D9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3A7B5CC122A8DDD00FE8D9B /* Project object */;
+}

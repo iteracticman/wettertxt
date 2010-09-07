@@ -1,0 +1,894 @@
+Twettertxt
+v7
+r0
+t305157056.062673
+cCheck dependencies
+cCpResource build/Release-iphoneos/wettertxt.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/ResourceRules.plist
+cProcessInfoPlistFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Info.plist wettertxt-Info.plist
+cProcessPCH /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch.gch wettertxt_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch.gch wettertxt_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/main.o /Users/pet/Dropbox/wettr/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrAppDelegate.o /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrViewController.o /Users/pet/Dropbox/wettr/Classes/wettrViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/XPathQuery.o /Users/pet/Dropbox/wettr/Classes/XPathQuery.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHpple.o /Users/pet/Dropbox/wettr/Classes/TFHpple.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHppleElement.o /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/main.o /Users/pet/Dropbox/wettr/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt normal armv6
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrAppDelegate.o /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrViewController.o /Users/pet/Dropbox/wettr/Classes/wettrViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/XPathQuery.o /Users/pet/Dropbox/wettr/Classes/XPathQuery.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHpple.o /Users/pet/Dropbox/wettr/Classes/TFHpple.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHppleElement.o /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt normal armv7
+cCreateUniversalBinary /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt normal "armv6 armv7"
+cGenerateDSYMFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app.dSYM /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt
+cCopyStringsFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+cCompileXIB /Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib
+cCompileXIB /Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Icon.png Icon.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/austria.png austria.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/burgenland.png burgenland.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vienna.png vienna.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/loweraustria.png loweraustria.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/styria.png styria.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/upperaustria.png upperaustria.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/salzburg.png salzburg.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/tyrol.png tyrol.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vorarlberg.png vorarlberg.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/carinthia.png carinthia.png
+cCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/header.png header.png
+cCompileXIB /Users/pet/Dropbox/wettr/HeaderView.xib
+cProcessProductPackaging "/Users/pet/Library/MobileDevice/Provisioning Profiles/B7719772-9064-4577-A970-C7CD6A2D0F20.mobileprovision" /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/embedded.mobileprovision
+cTouch /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/Entitlements.plist /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt.xcent
+cCodeSign /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+cValidate /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk
+c000000004BC928710000000000000110
+t1271474289
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/Entitlements.plist
+c000000004BC2865800000000000001A7
+t1271039576
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/ResourceRules.plist
+c000000004BC2865800000000000001E5
+t1271039576
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BC6BEA70000000000546860
+t1271316135
+s5531744
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BC6BF110000000000625A90
+t1271316241
+s6445712
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BC6BEF10000000000001466
+t1271316209
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004BC6CB0D00000000000009CD
+t1271319309
+s2509
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004BC6CBFF0000000002B27F50
+t1271319551
+s45252432
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/Availability.h
+c000000004BC29EB60000000000001A3B
+t1271045814
+s6715
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml/HTMLparser.h
+c000000004BC6BE390000000000002401
+t1271316025
+s9217
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml/parser.h
+c000000004BC6BE3900000000000098A9
+t1271316025
+s39081
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml/tree.h
+c000000004BC6BE390000000000008F14
+t1271316025
+s36628
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml/xpath.h
+c000000004BC6BE390000000000003F47
+t1271316025
+s16199
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml/xpathInternals.h
+c000000004BC6BE390000000000004BF8
+t1271316025
+s19448
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/lib/libxml2.dylib
+c000000004BC6BE3900000000002F9430
+t1271316025
+s3118128
+
+N/Users/pet/Dropbox/wettr/Classes/TFHpple.h
+c000000004A6D81420000000000000685
+t1248690498
+s1669
+i<Foundation/Foundation.h>
+i"TFHppleElement.h"
+
+N/Users/pet/Dropbox/wettr/Classes/TFHpple.m
+c000000004A6D814200000000000009B4
+t1248690498
+s2484
+i"TFHpple.h"
+i"XPathQuery.h"
+
+N/Users/pet/Dropbox/wettr/Classes/TFHppleElement.h
+c000000004A6D8142000000000000074A
+t1248690498
+s1866
+i<Foundation/Foundation.h>
+
+N/Users/pet/Dropbox/wettr/Classes/TFHppleElement.m
+c000000004A6D814200000000000009FD
+t1248690498
+s2557
+i"TFHppleElement.h"
+
+N/Users/pet/Dropbox/wettr/Classes/XPathQuery.h
+c000000004A6D81420000000000000113
+t1248690498
+s275
+
+N/Users/pet/Dropbox/wettr/Classes/XPathQuery.m
+c000000004A6D8142000000000000138B
+t1248690498
+s5003
+i"XPathQuery.h"
+i<libxml/tree.h>
+i<libxml/parser.h>
+i<libxml/HTMLparser.h>
+i<libxml/xpath.h>
+i<libxml/xpathInternals.h>
+
+N/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.h
+c000000004C7BFBD300000000000001D5
+t1283193811
+s469
+i<UIKit/UIKit.h>
+
+N/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m
+c000000004C80109E0000000000000A83
+t1283461278
+s2691
+i"wettrAppDelegate.h"
+i"wettrViewController.h"
+
+N/Users/pet/Dropbox/wettr/Classes/wettrViewController.h
+c000000004C801007000000000000020D
+t1283461127
+s525
+i<UIKit/UIKit.h>
+
+N/Users/pet/Dropbox/wettr/Classes/wettrViewController.m
+c000000004C8014090000000000001EF4
+t1283462153
+s7924
+i"wettrViewController.h"
+i"TFHpple.h"
+
+N/Users/pet/Dropbox/wettr/HeaderView.xib
+c000000004C800B110000000000004FCD
+t1283459857
+s20429
+
+N/Users/pet/Dropbox/wettr/Icon.png
+c000000004BC788DC0000000000001751
+t1271367900
+s5969
+
+N/Users/pet/Dropbox/wettr/austria.png
+c000000004C7C04110000000000000340
+t1283195921
+s832
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+t1283464255
+s782
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app.dSYM
+t1283464250
+s102
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/HeaderView.nib
+t1283464254
+s1602
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Icon.png
+t1283464253
+s6406
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Info.plist
+t1283464243
+s1011
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/PkgInfo
+t1283464243
+s8
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/ResourceRules.plist
+t1283464243
+s485
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/austria.png
+t1283464253
+s693
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/burgenland.png
+t1283464253
+s614
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/carinthia.png
+t1283464253
+s516
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/embedded.mobileprovision
+t1283464254
+s7164
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj/InfoPlist.strings
+t1283464250
+s126
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj/MainWindow.nib
+t1283464252
+s1301
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj/wettrViewController.nib
+t1283464253
+s916
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/header.png
+t1283464253
+s661
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/loweraustria.png
+t1283464253
+s875
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/salzburg.png
+t1283464253
+s721
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/styria.png
+t1283464253
+s642
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/tyrol.png
+t1283464253
+s658
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/upperaustria.png
+t1283464253
+s728
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vienna.png
+t1283464253
+s577
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vorarlberg.png
+t1283464253
+s448
+
+N/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt
+t1283464250
+s83648
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHpple.o
+t1283464245
+s12320
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHppleElement.o
+t1283464246
+s11820
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/XPathQuery.o
+t1283464245
+s19692
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/main.o
+t1283464244
+s6408
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt
+t1283464247
+s38652
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt.LinkFileList
+c000000004C801C3300000000000002B6
+t1283464243
+s694
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrAppDelegate.o
+t1283464245
+s54644
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrViewController.o
+t1283464246
+s67408
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHpple.o
+t1283464249
+s12308
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHppleElement.o
+t1283464249
+s11796
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/XPathQuery.o
+t1283464249
+s19900
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/main.o
+t1283464247
+s6388
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt
+t1283464249
+s38592
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt.LinkFileList
+c000000004C801C3300000000000002B6
+t1283464243
+s694
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrAppDelegate.o
+t1283464248
+s54524
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrViewController.o
+t1283464249
+s67188
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/com.apple.build-tools.platform.validate
+t2
+s0
+
+N/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt.xcent
+t1283464254
+s422
+
+N/Users/pet/Dropbox/wettr/burgenland.png
+c000000004C7C079F0000000000000322
+t1283196831
+s802
+
+N/Users/pet/Dropbox/wettr/carinthia.png
+c000000004C7C0EAE000000000000028A
+t1283198638
+s650
+
+N/Users/pet/Dropbox/wettr/en.lproj/InfoPlist.strings
+c000000004C7A565F0000000000000066
+t1283085919
+s102
+
+N/Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib
+c000000004C7C22480000000000004FE8
+t1283203656
+s20456
+
+N/Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib
+c000000004C80000800000000000C670E
+t1283457032
+s812814
+
+N/Users/pet/Dropbox/wettr/header.png
+c000000004C801BFD0000000000000291
+t1283464189
+s657
+
+N/Users/pet/Dropbox/wettr/loweraustria.png
+c000000004C7C0AF3000000000000042C
+t1283197683
+s1068
+
+N/Users/pet/Dropbox/wettr/main.m
+c000000004C7A565F0000000000000161
+t1283085919
+s353
+i<UIKit/UIKit.h>
+
+N/Users/pet/Dropbox/wettr/salzburg.png
+c000000004C7C0CEA0000000000000386
+t1283198186
+s902
+
+N/Users/pet/Dropbox/wettr/styria.png
+c000000004C7C0BA0000000000000030B
+t1283197856
+s779
+
+N/Users/pet/Dropbox/wettr/tyrol.png
+c000000004C7C0D810000000000000310
+t1283198337
+s784
+
+N/Users/pet/Dropbox/wettr/upperaustria.png
+c000000004C7C0C45000000000000039C
+t1283198021
+s924
+
+N/Users/pet/Dropbox/wettr/vienna.png
+c000000004C7C0A3800000000000002B3
+t1283197496
+s691
+
+N/Users/pet/Dropbox/wettr/vorarlberg.png
+c000000004C7C0E23000000000000024A
+t1283198499
+s586
+
+N/Users/pet/Dropbox/wettr/wettertxt_Prefix.pch
+c000000004C7A565F0000000000000137
+t1283085919
+s311
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+i<Availability.h>
+
+N/Users/pet/Library/MobileDevice/Provisioning Profiles/B7719772-9064-4577-A970-C7CD6A2D0F20.mobileprovision
+c000000004C7BA0E10000000000001BFC
+t1283170529
+s7164
+
+N/var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch.gch
+t1283461390
+s10102320
+
+N/var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch.gch
+t1283461390
+s9643568
+
+Nwettertxt-Info.plist
+c000000004C7FF4270000000000000518
+t1283453991
+s1304
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies305157043#305157043#0(0"0(0#1#0"4300725088#0"0#
+
+CCodeSign /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+s305157054.305365
+e305157055.397857
+r1
+xCodeSign
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+lSLF07#2@45"CodeSign build/Release-iphoneos/wettertxt.app305157054#305157055#0(0"0(0#0#61"/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app4300725088#629"    cd /Users/pet/Dropbox/wettr    setenv IGNORE_CODESIGN_ALLOCATE_RADAR_7181968 /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign -f -s "iPhone Developer: Peter Weishapl (23YYKHQL45)" --resource-rules=/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/ResourceRules.plist --entitlements /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt.xcent /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHpple.o /Users/pet/Dropbox/wettr/Classes/TFHpple.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s305157045.783369
+e305157045.961535
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHpple.o
+x/Users/pet/Dropbox/wettr/Classes/TFHpple.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@50"Compile /Users/pet/Dropbox/wettr/Classes/TFHpple.m305157045#305157045#0(0"0(0#0#42"/Users/pet/Dropbox/wettr/Classes/TFHpple.m4300725088#1876"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv6 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/TFHpple.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHpple.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHppleElement.o /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s305157045.961652
+e305157046.175648
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHppleElement.o
+x/Users/pet/Dropbox/wettr/Classes/TFHppleElement.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@57"Compile /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m305157045#305157046#0(0"0(0#0#49"/Users/pet/Dropbox/wettr/Classes/TFHppleElement.m4300725088#1890"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv6 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/TFHppleElement.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/XPathQuery.o /Users/pet/Dropbox/wettr/Classes/XPathQuery.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s305157045.147354
+e305157045.783253
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/XPathQuery.o
+x/Users/pet/Dropbox/wettr/Classes/XPathQuery.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@53"Compile /Users/pet/Dropbox/wettr/Classes/XPathQuery.m305157045#305157045#0(0"0(0#0#45"/Users/pet/Dropbox/wettr/Classes/XPathQuery.m4300725088#1882"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv6 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/XPathQuery.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/XPathQuery.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/main.o /Users/pet/Dropbox/wettr/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s305157043.308945
+e305157044.898917
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/main.o
+x/Users/pet/Dropbox/wettr/main.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Compile /Users/pet/Dropbox/wettr/main.m305157043#305157044#0(0"0(0#0#31"/Users/pet/Dropbox/wettr/main.m4300725088#1862"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv6 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/main.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/main.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrAppDelegate.o /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s305157043.310181
+e305157045.146871
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrAppDelegate.o
+x/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m305157043#305157045#0(0"0(0#0#51"/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m4300725088#1894"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv6 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrAppDelegate.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrViewController.o /Users/pet/Dropbox/wettr/Classes/wettrViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s305157044.899215
+e305157046.065801
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrViewController.o
+x/Users/pet/Dropbox/wettr/Classes/wettrViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/pet/Dropbox/wettr/Classes/wettrViewController.m305157044#305157046#0(0"0(0#0#54"/Users/pet/Dropbox/wettr/Classes/wettrViewController.m4300725088#1900"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv6 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/wettrViewController.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettrViewController.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHpple.o /Users/pet/Dropbox/wettr/Classes/TFHpple.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305157049.310623
+e305157049.479689
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHpple.o
+x/Users/pet/Dropbox/wettr/Classes/TFHpple.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@50"Compile /Users/pet/Dropbox/wettr/Classes/TFHpple.m305157049#305157049#0(0"0(0#0#42"/Users/pet/Dropbox/wettr/Classes/TFHpple.m4300725088#1876"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv7 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/TFHpple.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHpple.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHppleElement.o /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305157049.470844
+e305157049.582997
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHppleElement.o
+x/Users/pet/Dropbox/wettr/Classes/TFHppleElement.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@57"Compile /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m305157049#305157049#0(0"0(0#0#49"/Users/pet/Dropbox/wettr/Classes/TFHppleElement.m4300725088#1890"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv7 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/TFHppleElement.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/TFHppleElement.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/XPathQuery.o /Users/pet/Dropbox/wettr/Classes/XPathQuery.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305157048.406314
+e305157049.470717
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/XPathQuery.o
+x/Users/pet/Dropbox/wettr/Classes/XPathQuery.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@53"Compile /Users/pet/Dropbox/wettr/Classes/XPathQuery.m305157048#305157049#0(0"0(0#0#45"/Users/pet/Dropbox/wettr/Classes/XPathQuery.m4300725088#1882"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv7 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/XPathQuery.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/XPathQuery.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/main.o /Users/pet/Dropbox/wettr/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305157046.065920
+e305157047.840782
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/main.o
+x/Users/pet/Dropbox/wettr/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Compile /Users/pet/Dropbox/wettr/main.m305157046#305157047#0(0"0(0#0#31"/Users/pet/Dropbox/wettr/main.m4300725088#1862"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv7 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/main.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/main.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrAppDelegate.o /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305157047.408567
+e305157048.406012
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrAppDelegate.o
+x/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m305157047#305157048#0(0"0(0#0#51"/Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m4300725088#1894"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv7 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/wettrAppDelegate.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrAppDelegate.o0#
+
+CCompileC build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrViewController.o /Users/pet/Dropbox/wettr/Classes/wettrViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305157047.840901
+e305157049.310449
+r1
+xCompileC
+xbuild/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrViewController.o
+x/Users/pet/Dropbox/wettr/Classes/wettrViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/pet/Dropbox/wettr/Classes/wettrViewController.m305157047#305157049#0(0"0(0#0#54"/Users/pet/Dropbox/wettr/Classes/wettrViewController.m4300725088#1900"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv7 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch -c /Users/pet/Dropbox/wettr/Classes/wettrViewController.m -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettrViewController.o0#
+
+CCompileXIB /Users/pet/Dropbox/wettr/HeaderView.xib
+s305157053.464804
+e305157054.164180
+r1
+xCompileXIB
+x/Users/pet/Dropbox/wettr/HeaderView.xib
+lSLF07#2@25"CompileXIB HeaderView.xib305157053#305157054#0(0"0(0#0#39"/Users/pet/Dropbox/wettr/HeaderView.xib4300725088#428"    cd /Users/pet/Dropbox/wettr    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/HeaderView.nib /Users/pet/Dropbox/wettr/HeaderView.xib0#
+
+CCompileXIB /Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib
+s305157050.279638
+e305157052.892171
+r1
+xCompileXIB
+x/Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib
+lSLF07#2@34"CompileXIB en.lproj/MainWindow.xib305157050#305157052#0(0"0(0#0#48"/Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib4300725088#446"    cd /Users/pet/Dropbox/wettr    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj/MainWindow.nib /Users/pet/Dropbox/wettr/en.lproj/MainWindow.xib0#
+
+CCompileXIB /Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib
+s305157050.700528
+e305157053.052220
+r1
+xCompileXIB
+x/Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib
+lSLF07#2@43"CompileXIB en.lproj/wettrViewController.xib305157050#305157053#0(0"0(0#0#57"/Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib4300725088#464"    cd /Users/pet/Dropbox/wettr    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj/wettrViewController.nib /Users/pet/Dropbox/wettr/en.lproj/wettrViewController.xib0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Icon.png Icon.png
+s305157052.893150
+e305157053.170448
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Icon.png
+xIcon.png
+lSLF07#2@66"CopyPNGFile build/Release-iphoneos/wettertxt.app/Icon.png Icon.png305157052#305157053#0(0"0(0#0#33"/Users/pet/Dropbox/wettr/Icon.png4300725088#518"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/Icon.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Icon.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/austria.png austria.png
+s305157053.052353
+e305157053.169810
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/austria.png
+xaustria.png
+lSLF07#2@72"CopyPNGFile build/Release-iphoneos/wettertxt.app/austria.png austria.png305157053#305157053#0(0"0(0#0#36"/Users/pet/Dropbox/wettr/austria.png4300725088#524"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/austria.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/austria.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/burgenland.png burgenland.png
+s305157053.170915
+e305157053.233181
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/burgenland.png
+xburgenland.png
+lSLF07#2@78"CopyPNGFile build/Release-iphoneos/wettertxt.app/burgenland.png burgenland.png305157053#305157053#0(0"0(0#0#39"/Users/pet/Dropbox/wettr/burgenland.png4300725088#530"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/burgenland.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/burgenland.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/carinthia.png carinthia.png
+s305157053.404964
+e305157053.464673
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/carinthia.png
+xcarinthia.png
+lSLF07#2@76"CopyPNGFile build/Release-iphoneos/wettertxt.app/carinthia.png carinthia.png305157053#305157053#0(0"0(0#0#38"/Users/pet/Dropbox/wettr/carinthia.png4300725088#528"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/carinthia.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/carinthia.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/header.png header.png
+s305157053.427953
+e305157053.476922
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/header.png
+xheader.png
+lSLF07#2@70"CopyPNGFile build/Release-iphoneos/wettertxt.app/header.png header.png305157053#305157053#0(0"0(0#0#35"/Users/pet/Dropbox/wettr/header.png4300725088#522"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/header.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/header.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/loweraustria.png loweraustria.png
+s305157053.222369
+e305157053.283327
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/loweraustria.png
+xloweraustria.png
+lSLF07#2@82"CopyPNGFile build/Release-iphoneos/wettertxt.app/loweraustria.png loweraustria.png305157053#305157053#0(0"0(0#0#41"/Users/pet/Dropbox/wettr/loweraustria.png4300725088#534"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/loweraustria.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/loweraustria.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/salzburg.png salzburg.png
+s305157053.289997
+e305157053.343699
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/salzburg.png
+xsalzburg.png
+lSLF07#2@74"CopyPNGFile build/Release-iphoneos/wettertxt.app/salzburg.png salzburg.png305157053#305157053#0(0"0(0#0#37"/Users/pet/Dropbox/wettr/salzburg.png4300725088#526"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/salzburg.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/salzburg.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/styria.png styria.png
+s305157053.233297
+e305157053.289883
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/styria.png
+xstyria.png
+lSLF07#2@70"CopyPNGFile build/Release-iphoneos/wettertxt.app/styria.png styria.png305157053#305157053#0(0"0(0#0#35"/Users/pet/Dropbox/wettr/styria.png4300725088#522"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/styria.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/styria.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/tyrol.png tyrol.png
+s305157053.343817
+e305157053.427843
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/tyrol.png
+xtyrol.png
+lSLF07#2@68"CopyPNGFile build/Release-iphoneos/wettertxt.app/tyrol.png tyrol.png305157053#305157053#0(0"0(0#0#34"/Users/pet/Dropbox/wettr/tyrol.png4300725088#520"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/tyrol.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/tyrol.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/upperaustria.png upperaustria.png
+s305157053.283460
+e305157053.365200
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/upperaustria.png
+xupperaustria.png
+lSLF07#2@82"CopyPNGFile build/Release-iphoneos/wettertxt.app/upperaustria.png upperaustria.png305157053#305157053#0(0"0(0#0#41"/Users/pet/Dropbox/wettr/upperaustria.png4300725088#534"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/upperaustria.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/upperaustria.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vienna.png vienna.png
+s305157053.172191
+e305157053.222258
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vienna.png
+xvienna.png
+lSLF07#2@70"CopyPNGFile build/Release-iphoneos/wettertxt.app/vienna.png vienna.png305157053#305157053#0(0"0(0#0#35"/Users/pet/Dropbox/wettr/vienna.png4300725088#522"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/vienna.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vienna.png0#
+
+CCopyPNGFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vorarlberg.png vorarlberg.png
+s305157053.365301
+e305157053.404854
+r1
+xCopyPNGFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vorarlberg.png
+xvorarlberg.png
+lSLF07#2@78"CopyPNGFile build/Release-iphoneos/wettertxt.app/vorarlberg.png vorarlberg.png305157053#305157053#0(0"0(0#0#39"/Users/pet/Dropbox/wettr/vorarlberg.png4300725088#530"    cd /Users/pet/Dropbox/wettr    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/pet/Dropbox/wettr/vorarlberg.png /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/vorarlberg.png0#
+
+CCopyStringsFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+s305157050.278663
+e305157050.700404
+r1
+xCopyStringsFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj/InfoPlist.strings
+xen.lproj/InfoPlist.strings
+lSLF07#2@31"Copy en.lproj/InfoPlist.strings305157050#305157050#0(0"0(0#0#51"/Users/pet/Dropbox/wettr/en.lproj/InfoPlist.strings4300725088#445"    cd /Users/pet/Dropbox/wettr    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary en.lproj/InfoPlist.strings --outdir /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/en.lproj0#
+
+CCpResource build/Release-iphoneos/wettertxt.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/ResourceRules.plist
+s305157043.186410
+e305157043.308580
+r1
+xCpResource
+xbuild/Release-iphoneos/wettertxt.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/ResourceRules.plist305157043#305157043#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/ResourceRules.plist4300725088#477"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/ResourceRules.plist /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app0#
+
+CCreateUniversalBinary /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt normal "armv6 armv7"
+s305157049.986795
+e305157050.028256
+r1
+xCreateUniversalBinary
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt
+xnormal
+xarmv6 armv7
+lSLF07#2@89"CreateUniversalBinary build/Release-iphoneos/wettertxt.app/wettertxt normal "armv6 armv7"305157049#305157050#0(0"0(0#0#36"/Users/pet/Dropbox/wettr/armv6 armv74300725088#484"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt -output /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt0#
+
+CGenerateDSYMFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app.dSYM /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt
+s305157050.028588
+e305157050.278555
+r1
+xGenerateDSYMFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app.dSYM
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt
+lSLF07#2@105"GenerateDSYMFile build/Release-iphoneos/wettertxt.app.dSYM build/Release-iphoneos/wettertxt.app/wettertxt305157050#305157050#0(0"0(0#0#71"/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt4300725088#330"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/wettertxt -o /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app.dSYM0#
+
+CLd /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt normal armv6
+s305157046.175768
+e305157047.408278
+r1
+xLd
+x/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt
+xnormal
+xarmv6
+lSLF07#2@115"Link /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt305157046#305157047#0(0"0(0#0#0"4300725088#816"    cd /Users/pet/Dropbox/wettr    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -L/Users/pet/Dropbox/wettr/build/Release-iphoneos -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -filelist /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt.LinkFileList -dead_strip -miphoneos-version-min=4.0 -framework UIKit -framework Foundation -framework CoreGraphics -lxml2 -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv6/wettertxt0#
+
+CLd /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt normal armv7
+s305157049.583107
+e305157049.986347
+r1
+xLd
+x/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt
+xnormal
+xarmv7
+lSLF07#2@115"Link /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt305157049#305157049#0(0"0(0#0#0"4300725088#816"    cd /Users/pet/Dropbox/wettr    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -L/Users/pet/Dropbox/wettr/build/Release-iphoneos -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -filelist /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt.LinkFileList -dead_strip -miphoneos-version-min=4.0 -framework UIKit -framework Foundation -framework CoreGraphics -lxml2 -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/Objects-normal/armv7/wettertxt0#
+
+CProcessInfoPlistFile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Info.plist wettertxt-Info.plist
+s305157043.189295
+e305157043.273242
+r1
+xProcessInfoPlistFile
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Info.plist
+xwettertxt-Info.plist
+lSLF07#2@28"Process wettertxt-Info.plist305157043#305157043#0(0"0(0#0#45"/Users/pet/Dropbox/wettr/wettertxt-Info.plist4300725088#520"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility wettertxt-Info.plist -genpkginfo /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/ResourceRules.plist -o /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/Info.plist0#
+
+CProcessPCH /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch.gch wettertxt_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305154180.962591
+e305154190.332068
+r1
+xProcessPCH
+x/var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch.gch
+xwettertxt_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile wettertxt_Prefix.pch305154180#305154190#0(0"0(0#0#45"/Users/pet/Dropbox/wettr/wettertxt_Prefix.pch4300725088#1770"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv7 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/pet/Dropbox/wettr/wettertxt_Prefix.pch -o /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-ctydwmoyukoksibwybresixteolt/wettertxt_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch.gch wettertxt_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s305154180.961512
+e305154190.654221
+r1
+xProcessPCH
+x/var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch.gch
+xwettertxt_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile wettertxt_Prefix.pch305154180#305154190#0(0"0(0#0#45"/Users/pet/Dropbox/wettr/wettertxt_Prefix.pch7311364692946281472#1770"    cd /Users/pet/Dropbox/wettr    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-generated-files.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-own-target-headers.hmap -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-all-target-headers.hmap -iquote /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt-project-headers.hmap -F/Users/pet/Dropbox/wettr/build/Release-iphoneos -I/Users/pet/Dropbox/wettr/build/Release-iphoneos/include -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libxml2/libxml -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources/armv6 -I/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/pet/Dropbox/wettr/wettertxt_Prefix.pch -o /var/folders/PI/PIfWsn72F1qqtQlIuNRE9++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/wettertxt_Prefix-geqpivpdqbvabfeffbntdmrkvkao/wettertxt_Prefix.pch.gch0#
+
+CProcessProductPackaging "/Users/pet/Library/MobileDevice/Provisioning Profiles/B7719772-9064-4577-A970-C7CD6A2D0F20.mobileprovision" /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/embedded.mobileprovision
+s305157054.164309
+e305157054.282004
+r1
+xProcessProductPackaging
+x/Users/pet/Library/MobileDevice/Provisioning Profiles/B7719772-9064-4577-A970-C7CD6A2D0F20.mobileprovision
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/embedded.mobileprovision
+lSLF07#2@194"ProcessProductPackaging "/Users/pet/Library/MobileDevice/Provisioning Profiles/B7719772-9064-4577-A970-C7CD6A2D0F20.mobileprovision" build/Release-iphoneos/wettertxt.app/embedded.mobileprovision305157054#305157054#0(0"0(0#0#86"/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/embedded.mobileprovision4300725088#397"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/pet/Library/MobileDevice/Provisioning Profiles/B7719772-9064-4577-A970-C7CD6A2D0F20.mobileprovision" -o /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app/embedded.mobileprovision0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/Entitlements.plist /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt.xcent
+s305157054.286816
+e305157054.305252
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/Entitlements.plist
+x/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt.xcent
+lSLF07#2@183"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/Entitlements.plist build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt.xcent305157054#305157054#0(0"0(0#0#95"/Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt.xcent4300725088#412"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/Entitlements.plist -entitlements -format xml -o /Users/pet/Dropbox/wettr/build/wettertxt.build/Release-iphoneos/wettertxt.build/wettertxt.xcent0#
+
+CTouch /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+s305157054.282090
+e305157054.286638
+r1
+xTouch
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+lSLF07#2@67"Touch /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app305157054#305157054#0(0"0(0#0#0"4300725088#240"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app0#
+
+CValidate /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+s305157055.398322
+e305157056.062616
+r1
+xValidate
+x/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app
+lSLF07#2@45"Validate build/Release-iphoneos/wettertxt.app305157055#305157056#0(0"0(0#0#61"/Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app4300725088#349"    cd /Users/pet/Dropbox/wettr    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PRODUCT_TYPE com.apple.product-type.application    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation /Users/pet/Dropbox/wettr/build/Release-iphoneos/wettertxt.app0#
+
