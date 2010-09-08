@@ -79,6 +79,16 @@
 		path = /Users/pet/Dropbox/Croupier/Code/Croupier/Classes/StudyDetailViewController.m;
 		sourceTree = "<absolute>";
 	};
+	C324D18412379826001CCF7E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3A7B5EA122A8DDF00FE8D9B /* wettrAppDelegate.m */;
+		name = "wettrAppDelegate.m: 29";
+		rLen = 0;
+		rLoc = 1319;
+		rType = 0;
+		vrLen = 2625;
+		vrLoc = 283;
+	};
 	C339EA691230488300B90904 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C314B69A122C45AD008640C1 /* vorarlberg.png */;
@@ -189,16 +199,6 @@
 		vrLen = 469;
 		vrLoc = 0;
 	};
-	C354E7CF12377DD7004A7B7F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C3A7B5EA122A8DDF00FE8D9B /* wettrAppDelegate.m */;
-		name = "wettrAppDelegate.m: 50";
-		rLen = 0;
-		rLoc = 2175;
-		rType = 0;
-		vrLen = 2625;
-		vrLoc = 283;
-	};
 	C37F491F12357A46003C1A4A /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C314B680122C432C008640C1 /* styria.png */;
@@ -240,7 +240,7 @@
 	C3A7B5CC122A8DDD00FE8D9B /* Project object */ = {
 		activeBuildConfigurationName = Release;
 		activeExecutable = C3A7B5DB122A8DDF00FE8D9B /* wettertxt */;
-		activeSDKPreference = iphonesimulator4.0;
+		activeSDKPreference = iphoneos4.0;
 		activeTarget = C3A7B5D8122A8DDF00FE8D9B /* wettertxt */;
 		addToTargets = (
 			C3A7B5D8122A8DDF00FE8D9B /* wettertxt */,
@@ -274,8 +274,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 305627421;
-			PBXWorkspaceStateSaveDate = 305627421;
+			PBXPerProjectTemplateStateSaveDate = 305632803;
+			PBXWorkspaceStateSaveDate = 305632803;
 		};
 		perUserProjectItems = {
 			C3066E68123680B800CA47AB /* PBXBookmark */ = C3066E68123680B800CA47AB /* PBXBookmark */;
@@ -285,6 +285,7 @@
 			C3066EBA12368F5E00CA47AB /* PBXTextBookmark */ = C3066EBA12368F5E00CA47AB /* PBXTextBookmark */;
 			C3066EBB12368F5E00CA47AB /* PBXTextBookmark */ = C3066EBB12368F5E00CA47AB /* PBXTextBookmark */;
 			C314B57D122C3039008640C1 /* PBXTextBookmark */ = C314B57D122C3039008640C1 /* PBXTextBookmark */;
+			C324D18412379826001CCF7E /* PBXTextBookmark */ = C324D18412379826001CCF7E /* PBXTextBookmark */;
 			C339EA691230488300B90904 /* PBXBookmark */ = C339EA691230488300B90904 /* PBXBookmark */;
 			C339EA6B1230488300B90904 /* PBXTextBookmark */ = C339EA6B1230488300B90904 /* PBXTextBookmark */;
 			C339EA6D1230488300B90904 /* PBXTextBookmark */ = C339EA6D1230488300B90904 /* PBXTextBookmark */;
@@ -298,7 +299,6 @@
 			C354E7CC12377DD7004A7B7F /* PBXTextBookmark */ = C354E7CC12377DD7004A7B7F /* PBXTextBookmark */;
 			C354E7CD12377DD7004A7B7F /* PBXTextBookmark */ = C354E7CD12377DD7004A7B7F /* PBXTextBookmark */;
 			C354E7CE12377DD7004A7B7F /* PBXTextBookmark */ = C354E7CE12377DD7004A7B7F /* PBXTextBookmark */;
-			C354E7CF12377DD7004A7B7F /* PBXTextBookmark */ = C354E7CF12377DD7004A7B7F /* PBXTextBookmark */;
 			C37F491F12357A46003C1A4A /* PBXBookmark */ = C37F491F12357A46003C1A4A /* PBXBookmark */;
 			C37F492012357A46003C1A4A /* PBXBookmark */ = C37F492012357A46003C1A4A /* PBXBookmark */;
 			C37F492112357A46003C1A4A /* PBXBookmark */ = C37F492112357A46003C1A4A /* PBXBookmark */;
