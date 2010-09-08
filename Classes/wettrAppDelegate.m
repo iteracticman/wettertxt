@@ -48,7 +48,6 @@
 	
 	tabController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlack;
 
-	
 	//window.backgroundColor = [UIColor viewFlipsideBackgroundColor];
 	//window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]];
 	
