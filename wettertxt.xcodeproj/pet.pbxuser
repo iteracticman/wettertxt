@@ -8,23 +8,8 @@
 		isa = PBXBookmark;
 		fRef = C3FD5DC512362DB100419A3B /* burgenland@2x.png */;
 	};
-	C3066E7C123681CD00CA47AB /* IATableView.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {735, 827}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 211}";
-		};
-	};
-	C3066E7D123681CD00CA47AB /* IATableView.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {735, 850}}";
-			sepNavSelRange = "{404, 0}";
-			sepNavVisRange = "{0, 477}";
-		};
-	};
 	C3066E881236826A00CA47AB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = C3066E7C123681CD00CA47AB /* IATableView.h */;
 		name = "IATableView.h: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -34,7 +19,6 @@
 	};
 	C3066EB912368F5E00CA47AB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = C3066E7D123681CD00CA47AB /* IATableView.m */;
 		name = "IATableView.m: 18";
 		rLen = 0;
 		rLoc = 404;
@@ -91,16 +75,6 @@
 		path = /Users/pet/Dropbox/Croupier/Code/Croupier/Classes/StudyDetailViewController.m;
 		sourceTree = "<absolute>";
 	};
-	C32C7225123D609C00041F59 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */;
-		name = "wettrViewController.m: 214";
-		rLen = 0;
-		rLoc = 6986;
-		rType = 0;
-		vrLen = 1452;
-		vrLoc = 6527;
-	};
 	C339EA691230488300B90904 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C314B69A122C45AD008640C1 /* vorarlberg.png */;
@@ -145,7 +119,6 @@
 	};
 	C33B13FC123640F100C1A7A7 /* PBXBookmark */ = {
 		isa = PBXBookmark;
-		fRef = C33B13851236349E00C1A7A7 /* Default@2x.png */;
 	};
 	C33B13FD123640F100C1A7A7 /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -195,31 +168,62 @@
 		isa = PBXBookmark;
 		fRef = C314B69E122C4636008640C1 /* carinthia.png */;
 	};
-	C37F492212357A46003C1A4A /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = C339E9F61230313F00B90904 /* header.png */;
-	};
 	C3864B0412302B17004E9D48 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C314B66F122C41C3008640C1 /* vienna.png */;
 	};
-	C38F7476123D616C00BA522F /* PBXTextBookmark */ = {
+	C38DCE15123E531E00BF384A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */;
-		name = "wettrViewController.m: 214";
+		name = "wettrViewController.m: 225";
 		rLen = 0;
-		rLoc = 6986;
+		rLoc = 7541;
 		rType = 0;
-		vrLen = 1452;
-		vrLoc = 6527;
+		vrLen = 1435;
+		vrLoc = 0;
+	};
+	C38DCE4C123E63CF00BF384A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C3D79FF51231224000468261 /* Icon@2x.png */;
+	};
+	C38DCE4D123E63CF00BF384A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C34D4379122BD09A0013A586 /* Icon.png */;
+	};
+	C38DCE4E123E63CF00BF384A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = C3A7B5E2122A8DDF00FE8D9B /* wettertxt-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/pet/Dropbox/wettertxt/wettertxt-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C38DCE4F123E63CF00BF384A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C339E9F61230313F00B90904 /* header.png */;
+	};
+	C38DCE50123E63CF00BF384A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C3066E08123677D200CA47AB /* overlay.png */;
+	};
+	C38DCE51123E63CF00BF384A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C3C36417123DFDC600A92546 /* Default.png */;
+	};
+	C38DCE52123E63CF00BF384A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C323FAEE123DFEB60026EF5A /* Default@2x.png */;
+	};
+	C38DCE53123E63CF00BF384A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C323FAEE123DFEB60026EF5A /* Default@2x.png */;
 	};
 	C39B66A612318DD9000EF339 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C314B5FF122C3BA8008640C1 /* austria.png */;
-	};
-	C39B66BC12323D34000EF339 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = C3D79FF51231224000468261 /* Icon@2x.png */;
 	};
 	C3A2F05C122BB74700913447 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -304,8 +308,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 306012491;
-			PBXWorkspaceStateSaveDate = 306012491;
+			PBXPerProjectTemplateStateSaveDate = 306074388;
+			PBXWorkspaceStateSaveDate = 306074388;
 		};
 		perUserProjectItems = {
 			C3066E68123680B800CA47AB /* PBXBookmark */ = C3066E68123680B800CA47AB /* PBXBookmark */;
@@ -318,7 +322,6 @@
 			C309E3A312380FCC00EA0F13 /* PBXBookmark */ = C309E3A312380FCC00EA0F13 /* PBXBookmark */;
 			C309E3A412380FCC00EA0F13 /* PBXBookmark */ = C309E3A412380FCC00EA0F13 /* PBXBookmark */;
 			C314B57D122C3039008640C1 /* PBXTextBookmark */ = C314B57D122C3039008640C1 /* PBXTextBookmark */;
-			C32C7225123D609C00041F59 /* PBXTextBookmark */ = C32C7225123D609C00041F59 /* PBXTextBookmark */;
 			C339EA691230488300B90904 /* PBXBookmark */ = C339EA691230488300B90904 /* PBXBookmark */;
 			C339EA6B1230488300B90904 /* PBXTextBookmark */ = C339EA6B1230488300B90904 /* PBXTextBookmark */;
 			C339EA6D1230488300B90904 /* PBXTextBookmark */ = C339EA6D1230488300B90904 /* PBXTextBookmark */;
@@ -333,15 +336,19 @@
 			C37F491F12357A46003C1A4A /* PBXBookmark */ = C37F491F12357A46003C1A4A /* PBXBookmark */;
 			C37F492012357A46003C1A4A /* PBXBookmark */ = C37F492012357A46003C1A4A /* PBXBookmark */;
 			C37F492112357A46003C1A4A /* PBXBookmark */ = C37F492112357A46003C1A4A /* PBXBookmark */;
-			C37F492212357A46003C1A4A /* PBXBookmark */ = C37F492212357A46003C1A4A /* PBXBookmark */;
 			C3864B0412302B17004E9D48 /* PBXBookmark */ = C3864B0412302B17004E9D48 /* PBXBookmark */;
-			C38F7476123D616C00BA522F /* PBXTextBookmark */ = C38F7476123D616C00BA522F /* PBXTextBookmark */;
+			C38DCE15123E531E00BF384A /* PBXTextBookmark */ = C38DCE15123E531E00BF384A /* PBXTextBookmark */;
+			C38DCE4C123E63CF00BF384A /* PBXBookmark */ = C38DCE4C123E63CF00BF384A /* PBXBookmark */;
+			C38DCE4D123E63CF00BF384A /* PBXBookmark */ = C38DCE4D123E63CF00BF384A /* PBXBookmark */;
+			C38DCE4E123E63CF00BF384A /* PlistBookmark */ = C38DCE4E123E63CF00BF384A /* PlistBookmark */;
+			C38DCE4F123E63CF00BF384A /* PBXBookmark */ = C38DCE4F123E63CF00BF384A /* PBXBookmark */;
+			C38DCE50123E63CF00BF384A /* PBXBookmark */ = C38DCE50123E63CF00BF384A /* PBXBookmark */;
+			C38DCE51123E63CF00BF384A /* PBXBookmark */ = C38DCE51123E63CF00BF384A /* PBXBookmark */;
+			C38DCE52123E63CF00BF384A /* PBXBookmark */ = C38DCE52123E63CF00BF384A /* PBXBookmark */;
+			C38DCE53123E63CF00BF384A /* PBXBookmark */ = C38DCE53123E63CF00BF384A /* PBXBookmark */;
 			C39B66A612318DD9000EF339 /* PBXBookmark */ = C39B66A612318DD9000EF339 /* PBXBookmark */;
-			C39B66BC12323D34000EF339 /* PBXBookmark */ = C39B66BC12323D34000EF339 /* PBXBookmark */;
 			C3D03C09122BCBB0002980AA /* PBXTextBookmark */ = C3D03C09122BCBB0002980AA /* PBXTextBookmark */;
 			C3D6B1C012391D8F00516890 /* PBXBookmark */ = C3D6B1C012391D8F00516890 /* PBXBookmark */;
-			C3D6B1C112391D8F00516890 /* PBXBookmark */ = C3D6B1C112391D8F00516890 /* PBXBookmark */;
-			C3F0F2ED123BCB6A00AE3058 /* PlistBookmark */ = C3F0F2ED123BCB6A00AE3058 /* PlistBookmark */;
 			C3F0F396123BD97500AE3058 /* PBXTextBookmark */ = C3F0F396123BD97500AE3058 /* PBXTextBookmark */;
 			C3F0F3D3123BDD3B00AE3058 /* PBXTextBookmark */ = C3F0F3D3123BDD3B00AE3058 /* PBXTextBookmark */;
 			C3FD5DD912362DB800419A3B /* PBXBookmark */ = C3FD5DD912362DB800419A3B /* PBXBookmark */;
@@ -433,9 +440,9 @@
 	};
 	C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {767, 3757}}";
-			sepNavSelRange = "{6986, 0}";
-			sepNavVisRange = "{6527, 1452}";
+			sepNavIntBoundsRect = "{{0, 0}, {767, 3562}}";
+			sepNavSelRange = "{7541, 0}";
+			sepNavVisRange = "{0, 1435}";
 			sepNavWindowFrame = "{{15, 59}, {908, 964}}";
 		};
 	};
@@ -472,23 +479,6 @@
 	};
 	C3D6B1C012391D8F00516890 /* PBXBookmark */ = {
 		isa = PBXBookmark;
-		fRef = C33B13841236349E00C1A7A7 /* Default.png */;
-	};
-	C3D6B1C112391D8F00516890 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = C34D4379122BD09A0013A586 /* Icon.png */;
-	};
-	C3F0F2ED123BCB6A00AE3058 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = C3A7B5E2122A8DDF00FE8D9B /* wettertxt-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			LSRequiresIPhoneOS,
-		);
-		name = "/Users/pet/Dropbox/wettertxt/wettertxt-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 	C3F0F396123BD97500AE3058 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
