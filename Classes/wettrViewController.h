@@ -8,13 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface wettrViewController : UITableViewController {
+@protocol WettrViewControllerDelegate
+-(void)startedLoading;
+-(void)stoppedLoading;
+@end
+
+@interface wettrViewController : UITableViewController<UIWebViewDelegate> {
+	NSString* baseURL;
 	NSURL* urlInWebView;
-	NSArray* urls;
+	NSArray* dayPaths;
+	NSMutableArray* urls;
 	NSMutableArray *_texts;
+	id<WettrViewControllerDelegate> delegate;
 }
 
-- (id) initWithTitle:(NSString*)title baseURL:(NSString*)url image:(UIImage*)image;
+- (id) initWithTitle:(NSString*)title baseURL:(NSString*)url image:(UIImage*)image days:(NSArray*)days;
 - (void)closeWebView:(id)sender;
+
+@property (assign, nonatomic) id<WettrViewControllerDelegate> delegate;
 @end
 

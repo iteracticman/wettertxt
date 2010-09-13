@@ -26,6 +26,9 @@
 	NSDictionary* iconsDict = [NSDictionary dictionaryWithObjects:stateIcons forKeys:stateTitles];
 	NSArray* tabOrder = [[NSUserDefaults standardUserDefaults] objectForKey:@"tabOrder"];
 	
+	NSArray* daysState = [NSArray arrayWithObjects:@"index",@"morgen", @"uebermorgen", nil];
+	NSArray* daysAustria = [NSArray arrayWithObjects:@"index",@"morgen", @"uebermorgen", @"trend1", @"trend2", nil];
+	
 	if (tabOrder == nil) {
 		tabOrder = stateTitles;
 	}
@@ -33,11 +36,13 @@
 	NSMutableArray* viewControllers = [NSMutableArray array];
 	for (int i=0; i < states.count; i++) {
 		NSString* title = [tabOrder objectAtIndex:i];
+		NSArray* days = [title isEqualToString:@"Österreich"] ? daysAustria : daysState;
 		UIImage* icon = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[iconsDict objectForKey:title] ofType:@"png"]];
 		NSString* url = [NSString stringWithFormat:baseURL, [stateDict objectForKey:title]];
 		url = [url stringByAppendingString:@"%@.php"];
-		wettrViewController* vc = [[wettrViewController alloc] initWithTitle:title baseURL:url image:icon];
-		
+		wettrViewController* vc = [[wettrViewController alloc] initWithTitle:title baseURL:url image:icon days:days];
+		vc.delegate = self;
+		 
 		[viewControllers addObject:vc];
 		[vc release];
 	}
@@ -55,6 +60,20 @@
 	[window addSubview:tabController.view];
 	
     return YES;
+}
+
+-(void)startedLoading{
+	loadCount++;
+	NSLog(@"started. loadCount: %d", loadCount);
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+-(void)stoppedLoading{
+	loadCount--;
+	NSLog(@"stopped. loadCount: %d", loadCount);
+	if(loadCount == 0){
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	}
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

@@ -8,14 +8,12 @@
 
 
 #import <UIKit/UIKit.h>
+#import "wettrViewController.h"
 
-@class wettrViewController;
-
-@interface wettrAppDelegate : NSObject <UIApplicationDelegate> {
-
+@interface wettrAppDelegate : NSObject <UIApplicationDelegate, WettrViewControllerDelegate> {
 	UIWindow *window;
-
 	UITabBarController* tabController;
+	NSUInteger loadCount;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

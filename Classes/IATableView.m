@@ -15,8 +15,8 @@
 - (void)drawRect:(CGRect)rect {
 	/*UIImage* img = [UIImage imageNamed:@"overlay.png"];
 	[img drawInRect:CGRectMake(rect.size.width - img.size.width, 0, img.size.width, img.size.height)];*/
-	UIImage* img = [UIImage imageNamed:@"Default.png"];
-	[img drawAsPatternInRect:rect];
+	/*UIImage* img = [UIImage imageNamed:@"Default.png"];
+	[img drawAsPatternInRect:rect];*/
 }
 
 

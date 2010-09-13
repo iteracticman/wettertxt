@@ -11,23 +11,24 @@
 #import "IATableViewCell.h"
 
 @implementation wettrViewController
+@synthesize delegate;
 
-- (id) initWithTitle:(NSString*)title baseURL:(NSString*)baseURL image:(UIImage*)image
+- (id) initWithTitle:(NSString*)title baseURL:(NSString*)url image:(UIImage*)image days:(NSArray*)days
 {
 	self = [super initWithNibName:@"wettrViewController" bundle:nil];
 	if (self != nil) {
-		NSArray* days = [NSArray arrayWithObjects:@"index",@"morgen", @"uebermorgen", nil];
-		NSMutableArray* _urls = [NSMutableArray array];
-		for (NSString* day in days) {
-			[_urls addObject:[NSURL URLWithString:[NSString stringWithFormat:baseURL,day]]];
-		}
-		urls = [[NSArray alloc ] initWithArray:_urls];
-		
+		dayPaths = [days retain];
+		baseURL = [url retain];
 		self.title = title;
 		self.tabBarItem.image = image;
 
-		NSString* loading = @"Lade...";
-		_texts = [[NSMutableArray alloc] initWithObjects:loading, loading, loading, nil];
+		const NSString* loading = @"Lade...";
+		_texts = [[NSMutableArray alloc] initWithCapacity:dayPaths.count];
+		urls = [[NSMutableArray alloc] initWithCapacity:dayPaths.count];
+		for (NSString* day in dayPaths) {
+			[_texts addObject:loading];
+			[urls addObject:[NSURL URLWithString:[NSString stringWithFormat:baseURL, day]]];
+		}
 	}
 	return self;
 }
@@ -44,9 +45,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
     if (cell == nil)
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
+		cell.accessoryType = UITableViewCellAccessoryNone;
+		cell.selectionStyle = UITableViewCellSelectionStyleGray;
 		cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
 		cell.textLabel.numberOfLines = 0;
 		
@@ -112,6 +113,7 @@
 	}else {
 		urlInWebView = [[NSURL alloc] initWithString:@"http://www.zamg.ac.at"];
 	}
+	wv.delegate = self;
 	[wv loadRequest:[NSURLRequest requestWithURL:urlInWebView]];
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:NO];
@@ -122,6 +124,23 @@
 	[done release];
 	[openInSafari release];
 }
+
+#pragma mark -
+#pragma mark WebViewDelegate
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+	[delegate startedLoading];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+	[delegate stoppedLoading];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+	[delegate stoppedLoading];
+}
+
+#pragma mark -
 
 -(void)closeWebView:(id)sender{
 	[self dismissModalViewControllerAnimated:YES];
@@ -173,8 +192,8 @@
 		case 0: return @"Heute";
 		case 1: return @"Morgen";
 		case 2: return @"Übermorgen";
-		//case 3: return @"In 3 Tagen";
-		//case 4: return @"In 4 Tagen";
+		case 3: return @"In 3 Tagen";
+		case 4: return @"In 4 Tagen";
 	}
 	return nil;
 }
@@ -182,11 +201,10 @@
 - (void)viewDidLoad {
    [super viewDidLoad];
 	
-	//self.tabBarItem.title = self.title;
-	
 	NSUInteger i = 0;
-	for (NSURL* url in urls) {		
-		dispatch_async(dispatch_get_global_queue(0, 0), ^{
+	for (NSURL* url in urls) {
+		[delegate startedLoading];
+		dispatch_async(dispatch_get_global_queue(0, 0), ^{			
 			NSLog(@"fetching %@", url);
 			NSString* text;
 
@@ -211,8 +229,11 @@
 				[xpathParser release];
 			}
 			
+			[text retain];
 			dispatch_async(dispatch_get_main_queue(), ^{
+				[delegate stoppedLoading];
 				[_texts replaceObjectAtIndex:i withObject:text];
+				[text release];
 				[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:i] withRowAnimation:UITableViewRowAnimationFade];
 			});
 			
@@ -223,7 +244,7 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	return YES;
+	return NO;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -248,6 +269,8 @@
 
 
 - (void)dealloc {
+	[dayPaths release];
+	[baseURL release];
 	[urls release];
 	[_texts release];
     [super dealloc];
