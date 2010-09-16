@@ -15,7 +15,7 @@
 
 @interface wettrViewController : UITableViewController<UIWebViewDelegate> {
 	NSString* baseURL;
-	NSURL* urlInWebView;
+	UIWebView* webView;
 	NSArray* dayPaths;
 	NSMutableArray* urls;
 	NSMutableArray *_texts;

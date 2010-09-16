@@ -138,6 +138,40 @@
 		vrLen = 94;
 		vrLoc = 0;
 	};
+	C33D1F801242197700E5AEF2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C323FAEE123DFEB60026EF5A /* Default@2x.png */;
+	};
+	C33D1F9C12421BF300E5AEF2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3A7B5EF122A8DE000FE8D9B /* wettrViewController.h */;
+		name = "wettrViewController.h: 18";
+		rLen = 0;
+		rLoc = 382;
+		rType = 0;
+		vrLen = 714;
+		vrLoc = 0;
+	};
+	C33D1F9D12421BF300E5AEF2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */;
+		name = "wettrViewController.m: 147";
+		rLen = 0;
+		rLoc = 4780;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 4050;
+	};
+	C33D1F9E12421BF300E5AEF2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */;
+		name = "wettrViewController.m: 135";
+		rLen = 0;
+		rLoc = 4519;
+		rType = 0;
+		vrLen = 1239;
+		vrLoc = 3958;
+	};
 	C3499401123AAF5700D6E753 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C3FD5DCD12362DB100419A3B /* vorarlberg@2x.png */;
@@ -145,16 +179,6 @@
 	C3643238123B8509008CE0CF /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C3FD5DCB12362DB100419A3B /* upperaustria@2x.png */;
-	};
-	C36BF49D123BF22B0008A84D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C3A7B5EF122A8DE000FE8D9B /* wettrViewController.h */;
-		name = "wettrViewController.h: 20";
-		rLen = 0;
-		rLoc = 420;
-		rType = 0;
-		vrLen = 715;
-		vrLoc = 0;
 	};
 	C37F491F12357A46003C1A4A /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -171,16 +195,6 @@
 	C3864B0412302B17004E9D48 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C314B66F122C41C3008640C1 /* vienna.png */;
-	};
-	C38DCE15123E531E00BF384A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */;
-		name = "wettrViewController.m: 225";
-		rLen = 0;
-		rLoc = 7541;
-		rType = 0;
-		vrLen = 1435;
-		vrLoc = 0;
 	};
 	C38DCE4C123E63CF00BF384A /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -199,7 +213,7 @@
 		);
 		name = "/Users/pet/Dropbox/wettertxt/wettertxt-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	C38DCE4F123E63CF00BF384A /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -212,14 +226,6 @@
 	C38DCE51123E63CF00BF384A /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = C3C36417123DFDC600A92546 /* Default.png */;
-	};
-	C38DCE52123E63CF00BF384A /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = C323FAEE123DFEB60026EF5A /* Default@2x.png */;
-	};
-	C38DCE53123E63CF00BF384A /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = C323FAEE123DFEB60026EF5A /* Default@2x.png */;
 	};
 	C39B66A612318DD9000EF339 /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -238,7 +244,7 @@
 	C3A7B5CC122A8DDD00FE8D9B /* Project object */ = {
 		activeBuildConfigurationName = Release;
 		activeExecutable = C3A7B5DB122A8DDF00FE8D9B /* wettertxt */;
-		activeSDKPreference = iphoneos4.0;
+		activeSDKPreference = iphonesimulator4.1;
 		activeTarget = C3A7B5D8122A8DDF00FE8D9B /* wettertxt */;
 		addToTargets = (
 			C3A7B5D8122A8DDF00FE8D9B /* wettertxt */,
@@ -308,8 +314,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 306074388;
-			PBXWorkspaceStateSaveDate = 306074388;
+			PBXPerProjectTemplateStateSaveDate = 306321537;
+			PBXWorkspaceStateSaveDate = 306321537;
 		};
 		perUserProjectItems = {
 			C3066E68123680B800CA47AB /* PBXBookmark */ = C3066E68123680B800CA47AB /* PBXBookmark */;
@@ -330,22 +336,22 @@
 			C33B13FD123640F100C1A7A7 /* PBXBookmark */ = C33B13FD123640F100C1A7A7 /* PBXBookmark */;
 			C33B13FE123640F100C1A7A7 /* PBXBookmark */ = C33B13FE123640F100C1A7A7 /* PBXBookmark */;
 			C33B13FF123640F100C1A7A7 /* PBXTextBookmark */ = C33B13FF123640F100C1A7A7 /* PBXTextBookmark */;
+			C33D1F801242197700E5AEF2 /* PBXBookmark */ = C33D1F801242197700E5AEF2 /* PBXBookmark */;
+			C33D1F9C12421BF300E5AEF2 /* PBXTextBookmark */ = C33D1F9C12421BF300E5AEF2 /* PBXTextBookmark */;
+			C33D1F9D12421BF300E5AEF2 /* PBXTextBookmark */ = C33D1F9D12421BF300E5AEF2 /* PBXTextBookmark */;
+			C33D1F9E12421BF300E5AEF2 /* PBXTextBookmark */ = C33D1F9E12421BF300E5AEF2 /* PBXTextBookmark */;
 			C3499401123AAF5700D6E753 /* PBXBookmark */ = C3499401123AAF5700D6E753 /* PBXBookmark */;
 			C3643238123B8509008CE0CF /* PBXBookmark */ = C3643238123B8509008CE0CF /* PBXBookmark */;
-			C36BF49D123BF22B0008A84D /* PBXTextBookmark */ = C36BF49D123BF22B0008A84D /* PBXTextBookmark */;
 			C37F491F12357A46003C1A4A /* PBXBookmark */ = C37F491F12357A46003C1A4A /* PBXBookmark */;
 			C37F492012357A46003C1A4A /* PBXBookmark */ = C37F492012357A46003C1A4A /* PBXBookmark */;
 			C37F492112357A46003C1A4A /* PBXBookmark */ = C37F492112357A46003C1A4A /* PBXBookmark */;
 			C3864B0412302B17004E9D48 /* PBXBookmark */ = C3864B0412302B17004E9D48 /* PBXBookmark */;
-			C38DCE15123E531E00BF384A /* PBXTextBookmark */ = C38DCE15123E531E00BF384A /* PBXTextBookmark */;
 			C38DCE4C123E63CF00BF384A /* PBXBookmark */ = C38DCE4C123E63CF00BF384A /* PBXBookmark */;
 			C38DCE4D123E63CF00BF384A /* PBXBookmark */ = C38DCE4D123E63CF00BF384A /* PBXBookmark */;
 			C38DCE4E123E63CF00BF384A /* PlistBookmark */ = C38DCE4E123E63CF00BF384A /* PlistBookmark */;
 			C38DCE4F123E63CF00BF384A /* PBXBookmark */ = C38DCE4F123E63CF00BF384A /* PBXBookmark */;
 			C38DCE50123E63CF00BF384A /* PBXBookmark */ = C38DCE50123E63CF00BF384A /* PBXBookmark */;
 			C38DCE51123E63CF00BF384A /* PBXBookmark */ = C38DCE51123E63CF00BF384A /* PBXBookmark */;
-			C38DCE52123E63CF00BF384A /* PBXBookmark */ = C38DCE52123E63CF00BF384A /* PBXBookmark */;
-			C38DCE53123E63CF00BF384A /* PBXBookmark */ = C38DCE53123E63CF00BF384A /* PBXBookmark */;
 			C39B66A612318DD9000EF339 /* PBXBookmark */ = C39B66A612318DD9000EF339 /* PBXBookmark */;
 			C3D03C09122BCBB0002980AA /* PBXTextBookmark */ = C3D03C09122BCBB0002980AA /* PBXTextBookmark */;
 			C3D6B1C012391D8F00516890 /* PBXBookmark */ = C3D6B1C012391D8F00516890 /* PBXBookmark */;
@@ -433,16 +439,16 @@
 	};
 	C3A7B5EF122A8DE000FE8D9B /* wettrViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {767, 634}}";
-			sepNavSelRange = "{420, 0}";
-			sepNavVisRange = "{0, 715}";
+			sepNavIntBoundsRect = "{{0, 0}, {767, 611}}";
+			sepNavSelRange = "{382, 0}";
+			sepNavVisRange = "{0, 714}";
 		};
 	};
 	C3A7B5F0122A8DE100FE8D9B /* wettrViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {767, 3562}}";
-			sepNavSelRange = "{7541, 0}";
-			sepNavVisRange = "{0, 1435}";
+			sepNavSelRange = "{4519, 0}";
+			sepNavVisRange = "{3958, 1239}";
 			sepNavWindowFrame = "{{15, 59}, {908, 964}}";
 		};
 	};

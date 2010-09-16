@@ -96,8 +96,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	UIViewController* wvc = [[UIViewController alloc] init];
-	UIWebView* wv = [[UIWebView alloc] init];
-	wvc.view = wv;
+	webView = [[UIWebView alloc] init];
+	wvc.view = webView;
 	
 	UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:wvc];
 	UIBarButtonItem* done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeWebView:)];
@@ -108,19 +108,20 @@
 	
 	[self presentModalViewController:nav animated:YES];
 	
+	NSURL *urlInWebView;
 	if (indexPath.row == 0){
 		urlInWebView = [[urls objectAtIndex:indexPath.section] retain];
 	}else {
 		urlInWebView = [[NSURL alloc] initWithString:@"http://www.zamg.ac.at"];
 	}
-	wv.delegate = self;
-	[wv loadRequest:[NSURLRequest requestWithURL:urlInWebView]];
+	webView.delegate = self;
+	[webView loadRequest:[NSURLRequest requestWithURL:urlInWebView]];
+	[urlInWebView release];
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:NO];
 	
 	[nav release];
 	[wvc release];
-	[wv release];
 	[done release];
 	[openInSafari release];
 }
@@ -143,13 +144,15 @@
 #pragma mark -
 
 -(void)closeWebView:(id)sender{
+	[webView stopLoading];
+	
 	[self dismissModalViewControllerAnimated:YES];
-	[urlInWebView release];
+	[webView release];
 }
 
 -(void)openInSafari:(id)sender{
-	if (urlInWebView) {
-		[[UIApplication sharedApplication] openURL:urlInWebView];
+	if ([webView.request URL]) {
+		[[UIApplication sharedApplication] openURL:[webView.request URL]];
 	}
 }
 
