@@ -8,16 +8,26 @@
 
 
 #import "wettrAppDelegate.h"
-
 #import "wettrViewController.h"
+#import "ITATracking.h"
+#import "GANTracker.h"
+
+// Dispatch period in seconds
+static const NSInteger kGANDispatchPeriodSec = 5;
 
 @implementation wettrAppDelegate
-
-
 @synthesize window, tabController;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-1903960-3"
+                                         dispatchPeriod:kGANDispatchPeriodSec
+                                               delegate:nil];
+	
+	[ITATracking trackEvent:@"wettertxt" action:@"started" value:nil];
+	
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:16], @"fontSize", nil]];
+	
 	NSString* baseURL = @"http://www.zamg.ac.at/wetter/prognose/%@";
 	NSArray* states = [NSArray arrayWithObjects:@"", @"wien/", @"niederoesterreich/", @"burgenland/", @"steiermark/", @"oberoesterreich/", @"salzburg/", @"tirol/", @"vorarlberg/", @"kaernten/", nil];
 	NSArray* stateTitles = [NSArray arrayWithObjects:@"Österreich", @"Wien", @"NÖ", @"Burgenland", @"Steiermark", @"OÖ", @"Salzburg", @"Tirol", @"Vorarlberg", @"Kärnten", nil];
@@ -64,13 +74,13 @@
 
 -(void)startedLoading{
 	loadCount++;
-	NSLog(@"started. loadCount: %d", loadCount);
+	DLog(@"started. loadCount: %d", loadCount);
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 
 -(void)stoppedLoading{
 	loadCount--;
-	NSLog(@"stopped. loadCount: %d", loadCount);
+	DLog(@"stopped. loadCount: %d", loadCount);
 	if(loadCount == 0){
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	}

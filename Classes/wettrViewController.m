@@ -9,6 +9,8 @@
 #import "wettrViewController.h"
 #import "TFHpple.h"
 #import "IATableViewCell.h"
+#import <Three20/Three20.h>
+#import "ITATracking.h"
 
 @implementation wettrViewController
 @synthesize delegate;
@@ -42,15 +44,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 	static NSString *kCellID = @"cellID";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
+    TTStyledTextTableCell *cell = (TTStyledTextTableCell*)[tableView dequeueReusableCellWithIdentifier:kCellID];
     if (cell == nil)
     {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryNone;
-		cell.selectionStyle = UITableViewCellSelectionStyleGray;
-		cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-		cell.textLabel.numberOfLines = 0;
-		
+			cell = [[[TTStyledTextTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
+			cell.accessoryType = UITableViewCellAccessoryNone;
+			cell.selectionStyle = UITableViewCellSelectionStyleGray;
+			cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+			cell.textLabel.numberOfLines = 0;
+			
+			cell.label.contentInset = UIEdgeInsetsMake(8, 6, 0, 2);
 		/*cell.backgroundView = [[[IATableViewCell alloc] init] autorelease];
 		cell.contentView.backgroundColor = [UIColor clearColor];
 		cell.contentView.opaque = NO;
@@ -59,16 +62,23 @@
     }
 	
 	if (indexPath.row == 0) {
-		cell.textLabel.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
-		cell.textLabel.textColor = [UIColor whiteColor];
-		cell.textLabel.textAlignment = UITextAlignmentLeft;
+		cell.textLabel.hidden = YES;
+		cell.label.hidden = NO;
 		
-		cell.textLabel.text = [_texts objectAtIndex:indexPath.section];
+		CGFloat fontSize = [[NSUserDefaults standardUserDefaults] doubleForKey:@"fontSize"];
+		cell.label.font = [UIFont systemFontOfSize:fontSize];
+		cell.label.textColor = [UIColor whiteColor];
+		cell.label.textAlignment = UITextAlignmentLeft;
+		
+		cell.label.html = [_texts objectAtIndex:indexPath.section];
 	}else {
+		cell.textLabel.hidden = NO;
+		cell.label.hidden = YES;
+		
 		cell.textLabel.textColor = [UIColor lightTextColor];
 		cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
 		cell.textLabel.textAlignment = UITextAlignmentCenter;
-		
+
 		cell.textLabel.text = @"Die Wettervorhersagen stammen von der Homepage des ZAMG - www.zamg.ac.at.";
 	}
     
@@ -76,11 +86,15 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	UITableViewCell* cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
-	
-	[cell layoutIfNeeded];
-	CGFloat height = [cell.textLabel sizeThatFits:CGSizeMake(cell.textLabel.frame.size.width, CGFLOAT_MAX)].height;
-	return height + 14;
+	if (indexPath.row == 0) {
+		TTStyledTextTableCell* cell = (TTStyledTextTableCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+		
+		//[cell layoutIfNeeded];
+		CGFloat height = [cell.label sizeThatFits:CGSizeMake(cell.label.frame.size.width, CGFLOAT_MAX)].height;
+		return height + 14;
+	}else {
+		return 36;
+	}
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -208,14 +222,14 @@
 	for (NSURL* url in urls) {
 		[delegate startedLoading];
 		dispatch_async(dispatch_get_global_queue(0, 0), ^{			
-			NSLog(@"fetching %@", url);
+			DLog(@"fetching %@", url);
 			NSString* text;
 
 			NSError* error = nil;
 			NSData *data = [[NSData alloc] initWithContentsOfURL:url options:NSDataReadingMapped error:&error];
 			
 			if(error){
-				NSLog(@"ERROR %@", [error localizedDescription]);
+				DLog(@"ERROR %@", [error localizedDescription]);
 				text = @"Oje! Die Daten konnten nicht geladen werden.";
 			}else {
 				// Create parser
@@ -226,6 +240,7 @@
 				if(contMain){
 					text = [[contMain content] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 					//NSLog(@"fetched: %@ at %d", contMain, i);
+					text = [self addHighlights:text];
 				}else {
 					text = @"Auweia! Die Wetterdaten konnten nicht ausgelesen werden.";
 				}
@@ -246,23 +261,60 @@
 	}	
 }
 
+-(NSString*)addHighlights:(NSString*)text{
+	NSScanner* scanner = [NSScanner scannerWithString:text];
+	NSString* stringBeforeDigit;
+	NSMutableString* highlightedText = [NSMutableString string];
+	
+	while ([scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&stringBeforeDigit]) {
+		DLog(@"scanned: %@", stringBeforeDigit);
+		[highlightedText appendString:stringBeforeDigit];
+		
+		if (![scanner isAtEnd]) {
+			NSString* numberString;
+			[scanner scanCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&numberString];
+			DLog(@"-number: %@", numberString);
+			
+			//keine höhenmeter hervorheben!
+			if (numberString.length < 3) {
+				/*if ([stringBeforeDigit hasSuffix:@"minus "]) {
+					[highlightedText replaceCharactersInRange:NSMakeRange(highlightedText.length-6, 6) withString:@""];
+					numberString = [NSString stringWithFormat:@"minus %@", numberString];
+				}*/
+				numberString = [self moveSuffix:@"minus " fromString:highlightedText toString:numberString];
+				numberString = [self moveSuffix:@"-" fromString:highlightedText toString:numberString];
+				
+				[highlightedText appendFormat:@"<b>%@</b> ", numberString];
+			}else {
+				//Höhenmeter einfach übernehmen
+				[highlightedText appendString:numberString];
+			}
+		}
+	}
+	
+	DLog(@"highlighted text: %@", highlightedText);
+	return highlightedText;
+}
+
+-(NSString*)moveSuffix:(NSString*)suffix fromString:(NSMutableString*)from toString:(NSString*)to{
+	if ([from hasSuffix:suffix]) {
+		[from replaceCharactersInRange:NSMakeRange(from.length-suffix.length, suffix.length) withString:@""];
+		return [NSString stringWithFormat:@"%@%@", suffix, to];
+	}
+	return to;
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	return NO;
+	return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
 -(void) viewWillAppear:(BOOL)animated{
+	[ITATracking trackPageView:[NSString stringWithFormat:@"/wettertxt/%@", self.title]];
 	[self.tableView reloadData];
 }
 
 -(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
 	[self.tableView reloadData];
-}
-
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {

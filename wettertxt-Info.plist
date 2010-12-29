@@ -5,7 +5,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.iteractive.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>German</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>Icon files</key>
@@ -28,7 +28,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>

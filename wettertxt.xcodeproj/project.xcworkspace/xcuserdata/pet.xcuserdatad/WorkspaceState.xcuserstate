@@ -5620,12 +5620,7 @@
 				<integer>323</integer>
 			</dict>
 			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>3</integer>
-				</dict>
-			</array>
+			<array/>
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -7499,7 +7494,7 @@
 				<integer>615</integer>
 			</dict>
 		</dict>
-		<real>306322496.40527201</real>
+		<real>306322556.40326101</real>
 		<dict>
 			<key>$class</key>
 			<dict>
