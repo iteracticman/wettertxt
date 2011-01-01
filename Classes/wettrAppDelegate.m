@@ -24,9 +24,11 @@ static const NSInteger kGANDispatchPeriodSec = 5;
                                          dispatchPeriod:kGANDispatchPeriodSec
                                                delegate:nil];
 	
-	[ITATracking trackEvent:@"wettertxt" action:@"started" value:nil];
-	
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:16], @"fontSize", nil]];
+	
+	NSString *fontSizeSetting = [NSString stringWithFormat:@"fontSize:%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"fontSize"]];
+	DLog(@"%@", fontSizeSetting);
+	[ITATracking trackEvent:@"wettertxt" action:@"started" value:fontSizeSetting];
 	
 	NSString* baseURL = @"http://www.zamg.ac.at/wetter/prognose/%@";
 	NSArray* states = [NSArray arrayWithObjects:@"", @"wien/", @"niederoesterreich/", @"burgenland/", @"steiermark/", @"oberoesterreich/", @"salzburg/", @"tirol/", @"vorarlberg/", @"kaernten/", nil];
