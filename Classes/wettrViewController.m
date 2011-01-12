@@ -263,6 +263,8 @@
 
 -(NSString*)addHighlights:(NSString*)text{
 	NSScanner* scanner = [NSScanner scannerWithString:text];
+	[scanner setCharactersToBeSkipped:nil];
+	
 	NSString* stringBeforeDigit;
 	NSMutableString* highlightedText = [NSMutableString string];
 	
@@ -284,7 +286,7 @@
 				numberString = [self moveSuffix:@"minus " fromString:highlightedText toString:numberString];
 				numberString = [self moveSuffix:@"-" fromString:highlightedText toString:numberString];
 				
-				[highlightedText appendFormat:@"<b>%@</b> ", numberString];
+				[highlightedText appendFormat:@"<b>%@</b>", numberString];
 			}else {
 				//Höhenmeter einfach übernehmen
 				[highlightedText appendString:numberString];
