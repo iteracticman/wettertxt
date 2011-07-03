@@ -6,11 +6,10 @@
 //  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@class WetterLabel;
 
 @interface IATableViewCell : UITableViewCell {
 
 }
-
+@property (nonatomic, readonly) WetterLabel *label;
 @end

@@ -9,8 +9,9 @@
 #import "wettrViewController.h"
 #import "TFHpple.h"
 #import "IATableViewCell.h"
-#import <Three20/Three20.h>
 #import "ITATracking.h"
+#import "WetterLabel.h"
+#import "NSAttributedString+Attributes.h"
 
 @implementation wettrViewController
 @synthesize delegate;
@@ -44,16 +45,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 	static NSString *kCellID = @"cellID";
     
-    TTStyledTextTableCell *cell = (TTStyledTextTableCell*)[tableView dequeueReusableCellWithIdentifier:kCellID];
+    IATableViewCell *cell = (IATableViewCell*)[tableView dequeueReusableCellWithIdentifier:kCellID];
     if (cell == nil)
     {
-			cell = [[[TTStyledTextTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
+			cell = [[[IATableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
 			cell.accessoryType = UITableViewCellAccessoryNone;
 			cell.selectionStyle = UITableViewCellSelectionStyleGray;
 			cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
 			cell.textLabel.numberOfLines = 0;
 			
-			cell.label.contentInset = UIEdgeInsetsMake(8, 6, 0, 2);
+			//cell.label.contentInset = UIEdgeInsetsMake(8, 6, 0, 2);
 		/*cell.backgroundView = [[[IATableViewCell alloc] init] autorelease];
 		cell.contentView.backgroundColor = [UIColor clearColor];
 		cell.contentView.opaque = NO;
@@ -70,11 +71,13 @@
 		cell.label.textColor = [UIColor whiteColor];
 		cell.label.textAlignment = UITextAlignmentLeft;
 		
-		cell.label.html = [_texts objectAtIndex:indexPath.section];
+		cell.label.text = [_texts objectAtIndex:indexPath.section];
+    //[cell.label resetAttributedText];
 	}else {
 		cell.textLabel.hidden = NO;
 		cell.label.hidden = YES;
-		
+		cell.label.attributedText = nil;
+    
 		cell.textLabel.textColor = [UIColor lightTextColor];
 		cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
 		cell.textLabel.textAlignment = UITextAlignmentCenter;
@@ -87,10 +90,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	if (indexPath.row == 0) {
-		TTStyledTextTableCell* cell = (TTStyledTextTableCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+		IATableViewCell* cell = (IATableViewCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
 		
-		//[cell layoutIfNeeded];
-		CGFloat height = [cell.label sizeThatFits:CGSizeMake(cell.label.frame.size.width, CGFLOAT_MAX)].height;
+		CGFloat height = [cell.label sizeThatFits:CGSizeMake(cell.contentView.frame.size.width, CGFLOAT_MAX)].height;
 		return height + 14;
 	}else {
 		return 36;
@@ -240,9 +242,9 @@
 				if(contMain){
 					text = [[contMain content] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 					//NSLog(@"fetched: %@ at %d", contMain, i);
-					text = [self addHighlights:text];
+					//text = [self addHighlights:text];
 				}else {
-					text = @"Auweia! Die Wetterdaten konnten nicht ausgelesen werden.";
+					text = @"Auweh! Die Wetterdaten konnten zwar geladen, aber nicht ausgelesen werden. Hat sich die ZAMG Seite geändert?";
 				}
 				[xpathParser release];
 			}

@@ -7,10 +7,36 @@
 //
 
 #import "IATableViewCell.h"
-
+#import "WetterLabel.h"
 
 @implementation IATableViewCell
+@synthesize label;
 
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+  self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+  if (self) {
+    label = [[WetterLabel alloc] init];
+    label.automaticallyDetectLinks = NO;
+    label.lineBreakMode = UILineBreakModeWordWrap;
+    label.userInteractionEnabled = NO;
+    label.backgroundColor = [UIColor clearColor];
+    [self.contentView addSubview:label];
+  }
+  return self;
+}
+
+- (void)dealloc {
+  [label release];
+  [super dealloc];
+}
+
+-(void)layoutSubviews{
+  [super layoutSubviews];
+  
+  label.frame = UIEdgeInsetsInsetRect(self.contentView.frame, UIEdgeInsetsMake(8, 6, 0, 2));
+}
+
+/*
 - (void)drawRect:(CGRect)rect{
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 
@@ -29,5 +55,5 @@
 	CGContextAddLineToPoint(ctx, self.bounds.size.width, self.bounds.size.height);
 	
 	CGContextStrokePath(ctx);
-}
+}*/
 @end
