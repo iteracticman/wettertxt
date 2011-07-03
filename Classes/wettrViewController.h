@@ -24,8 +24,7 @@
 
 - (id) initWithTitle:(NSString*)title baseURL:(NSString*)url image:(UIImage*)image days:(NSArray*)days;
 - (void)closeWebView:(id)sender;
--(NSString*)addHighlights:(NSString*)text;
--(NSString*)moveSuffix:(NSString*)suffix fromString:(NSMutableString*)from toString:(NSString*)to;
+-(NSMutableAttributedString*)attributize:(NSString*)text;
 @property (assign, nonatomic) id<WettrViewControllerDelegate> delegate;
 @end
 

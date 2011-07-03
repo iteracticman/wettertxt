@@ -54,6 +54,13 @@
 			cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
 			cell.textLabel.numberOfLines = 0;
 			
+      CGFloat fontSize = [[NSUserDefaults standardUserDefaults] doubleForKey:@"fontSize"];
+      UIFont *font = [UIFont systemFontOfSize:fontSize];
+      cell.label.font = font;
+      cell.label.textColor = [UIColor whiteColor];
+      cell.label.textAlignment = UITextAlignmentLeft;
+      cell.label.lineBreakMode = UILineBreakModeWordWrap;
+
 			//cell.label.contentInset = UIEdgeInsetsMake(8, 6, 0, 2);
 		/*cell.backgroundView = [[[IATableViewCell alloc] init] autorelease];
 		cell.contentView.backgroundColor = [UIColor clearColor];
@@ -66,12 +73,13 @@
 		cell.textLabel.hidden = YES;
 		cell.label.hidden = NO;
 		
-		CGFloat fontSize = [[NSUserDefaults standardUserDefaults] doubleForKey:@"fontSize"];
-		cell.label.font = [UIFont systemFontOfSize:fontSize];
-		cell.label.textColor = [UIColor whiteColor];
-		cell.label.textAlignment = UITextAlignmentLeft;
+    NSString* txt = [_texts objectAtIndex:indexPath.section];
+    if ([txt isKindOfClass:[NSAttributedString class]]) {
+      cell.label.attributedText = (NSAttributedString*)txt;
+    }else{
+      cell.label.text = txt;
+    }
 		
-		cell.label.text = [_texts objectAtIndex:indexPath.section];
     //[cell.label resetAttributedText];
 	}else {
 		cell.textLabel.hidden = NO;
@@ -91,7 +99,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	if (indexPath.row == 0) {
 		IATableViewCell* cell = (IATableViewCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
-		
+		DLog(@"getting height for: %@", cell.label.attributedText);
 		CGFloat height = [cell.label sizeThatFits:CGSizeMake(cell.contentView.frame.size.width, CGFLOAT_MAX)].height;
 		return height + 14;
 	}else {
@@ -225,14 +233,14 @@
 		[delegate startedLoading];
 		dispatch_async(dispatch_get_global_queue(0, 0), ^{			
 			DLog(@"fetching %@", url);
-			NSString* text;
+			NSMutableAttributedString* text;
 
 			NSError* error = nil;
 			NSData *data = [[NSData alloc] initWithContentsOfURL:url options:NSDataReadingMapped error:&error];
 			
 			if(error){
-				DLog(@"ERROR %@", [error localizedDescription]);
-				text = @"Oje! Die Daten konnten nicht geladen werden.";
+				ALog(@"ERROR %@", [error localizedDescription]);
+				text = [NSMutableAttributedString attributedStringWithString:@"Oje! Die Daten konnten nicht geladen werden."];
 			}else {
 				// Create parser
 				TFHpple *xpathParser = [[TFHpple alloc] initWithHTMLData:data];
@@ -240,11 +248,11 @@
 				//Get all the cells of the 2nd row of the 3rd table 
 				TFHppleElement* contMain = [xpathParser at:@"//div[@id='contMain']/div[1]/table[1]//tr[2]/td[2]/text()"];
 				if(contMain){
-					text = [[contMain content] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+					text = [self attributize:[[contMain content] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
 					//NSLog(@"fetched: %@ at %d", contMain, i);
 					//text = [self addHighlights:text];
 				}else {
-					text = @"Auweh! Die Wetterdaten konnten zwar geladen, aber nicht ausgelesen werden. Hat sich die ZAMG Seite geändert?";
+					text = [NSMutableAttributedString attributedStringWithString:@"Auweh! Die Wetterdaten konnten zwar geladen, aber nicht ausgelesen werden. Hat sich die ZAMG Seite geändert?"];
 				}
 				[xpathParser release];
 			}
@@ -263,49 +271,52 @@
 	}	
 }
 
--(NSString*)addHighlights:(NSString*)text{
-	NSScanner* scanner = [NSScanner scannerWithString:text];
-	[scanner setCharactersToBeSkipped:nil];
-	
-	NSString* stringBeforeDigit;
-	NSMutableString* highlightedText = [NSMutableString string];
-	
-	while ([scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&stringBeforeDigit]) {
-		DLog(@"scanned: %@", stringBeforeDigit);
-		[highlightedText appendString:stringBeforeDigit];
-		
-		if (![scanner isAtEnd]) {
-			NSString* numberString;
-			[scanner scanCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&numberString];
-			DLog(@"-number: %@", numberString);
-			
-			//keine höhenmeter hervorheben!
-			if (numberString.length < 3) {
-				/*if ([stringBeforeDigit hasSuffix:@"minus "]) {
-					[highlightedText replaceCharactersInRange:NSMakeRange(highlightedText.length-6, 6) withString:@""];
-					numberString = [NSString stringWithFormat:@"minus %@", numberString];
-				}*/
-				numberString = [self moveSuffix:@"minus " fromString:highlightedText toString:numberString];
-				numberString = [self moveSuffix:@"-" fromString:highlightedText toString:numberString];
-				
-				[highlightedText appendFormat:@"<b>%@</b>", numberString];
-			}else {
-				//Höhenmeter einfach übernehmen
-				[highlightedText appendString:numberString];
-			}
-		}
+-(NSMutableAttributedString*)attributize:(NSString*)text{
+  NSMutableAttributedString *attString = [NSMutableAttributedString attributedStringWithString:text];
+  CGFloat fontSize = [[NSUserDefaults standardUserDefaults] doubleForKey:@"fontSize"];
+  UIFont *font = [UIFont systemFontOfSize:fontSize];
+  [attString setFont:font];
+  [attString setTextColor:[UIColor whiteColor]];
+  [attString setTextAlignment:kCTLeftTextAlignment lineBreakMode:kCTLineBreakByWordWrapping];
+  
+	NSString* stringBefore;
+  NSArray *highlights = [NSArray arrayWithObjects:@"regen", @"sturm", @"hagel", @"gewitter", @"blitz", @"hagel", @"unwetter", @"schneefall", @"regnet", @"stürmisch", @"stürmt", @"schneit", @"schüttet", @"schütten", nil];
+  
+  for (NSString *highlight in highlights) {
+    NSScanner* scanner = [NSScanner scannerWithString:text];
+    [scanner setCharactersToBeSkipped:nil];
+    [scanner setCaseSensitive:NO];
+    
+    while ([scanner scanUpToString:highlight intoString:&stringBefore]) {
+      if ([scanner isAtEnd]) break;
+      
+      [attString setTextColor:[UIColor colorWithRed:1.000 green:1.000 blue:0.000 alpha:1.000] range:NSMakeRange([scanner scanLocation], highlight.length)];
+      [scanner setScanLocation:[scanner scanLocation]+1];
+    }
+  }
+  
+  NSScanner* scanner = [NSScanner scannerWithString:text];
+  [scanner setCharactersToBeSkipped:nil];
+	while ([scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&stringBefore]) {
+		if ([scanner isAtEnd]) break;
+    
+    NSString* numberString;
+    [scanner scanCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&numberString];
+    DLog(@"-number: %@", numberString);
+    
+    //keine höhenmeter hervorheben!
+    if (numberString.length < 3) {
+      NSUInteger rangeLength = numberString.length;
+      if ([stringBefore hasSuffix:@"minus "]) {
+        rangeLength += 6;
+      }else if([stringBefore hasSuffix:@"-"]){
+        rangeLength += 1;
+      }
+      [attString setFontFamily:font.familyName size:font.pointSize bold:YES italic:NO range:NSMakeRange([scanner scanLocation]-rangeLength, rangeLength)]; 
+    }
 	}
-	
-	DLog(@"highlighted text: %@", highlightedText);
-	return highlightedText;
-}
-
--(NSString*)moveSuffix:(NSString*)suffix fromString:(NSMutableString*)from toString:(NSString*)to{
-	if ([from hasSuffix:suffix]) {
-		[from replaceCharactersInRange:NSMakeRange(from.length-suffix.length, suffix.length) withString:@""];
-		return [NSString stringWithFormat:@"%@%@", suffix, to];
-	}
-	return to;
+	//DLog(@"highlighted text: %@", attString);
+	return attString;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
