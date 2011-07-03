@@ -279,13 +279,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
-									<integer>11</integer>
+									<integer>25</integer>
+									<integer>24</integer>
+									<integer>23</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {258, 687}}</string>
+							<string>{{0, 238}, {258, 687}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -304,7 +305,7 @@
 							<real>258</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>421 196 1069 746 0 0 1680 1028 </string>
+						<string>375 282 1069 746 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -315,14 +316,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>wettrViewController.m</string>
+								<string>Root.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>wettrViewController.m</string>
+										<string>Root.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C31249E412DDCF73007E9C56</string>
+										<string>C31249EF12DF2165007E9C56</string>
 										<key>history</key>
 										<array>
 											<string>C3D03C09122BCBB0002980AA</string>
@@ -375,10 +374,8 @@
 											<string>C3862ADE12CB653400A26700</string>
 											<string>C3862ADF12CB653400A26700</string>
 											<string>C3862AE012CB653400A26700</string>
-											<string>C317CC2712CB8FC300EBB450</string>
 											<string>C317CC3E12CB93E000EBB450</string>
 											<string>C317CCBC12CB9C5E00EBB450</string>
-											<string>C317CD1212CBA1AE00EBB450</string>
 											<string>C317CD1412CBAB8200EBB450</string>
 											<string>C317CD1512CBAB8200EBB450</string>
 											<string>C317CD1612CBAB8200EBB450</string>
@@ -391,7 +388,9 @@
 											<string>C317CE0012CBF9A300EBB450</string>
 											<string>C317CE1312CC780C00EBB450</string>
 											<string>C31249CE12DDCE2A007E9C56</string>
-											<string>C31249CF12DDCE2A007E9C56</string>
+											<string>C31249EC12DF2165007E9C56</string>
+											<string>C31249ED12DF2165007E9C56</string>
+											<string>C31249EE12DF2165007E9C56</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -405,7 +404,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {789, 700}}</string>
 								<key>RubberWindowFrame</key>
-								<string>421 196 1069 746 0 0 1680 1028 </string>
+								<string>375 282 1069 746 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -425,7 +424,7 @@
 								<key>Frame</key>
 								<string>{{0, 705}, {789, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>421 196 1069 746 0 0 1680 1028 </string>
+								<string>375 282 1069 746 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -591,13 +590,13 @@
 	<array>
 		<string>C31249D912DDCE2B007E9C56</string>
 		<string>C31249DA12DDCE2B007E9C56</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C3A2F05A122BB74700913447</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/pet/Dropbox/wettertxt/wettertxt.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>421 196 1069 746 0 0 1680 1028 </string>
+	<string>375 282 1069 746 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -970,7 +969,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
