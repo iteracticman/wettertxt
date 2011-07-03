@@ -14,5 +14,8 @@
 @end
 
 @implementation WetterLabel
-
+-(CGSize)sizeThatFits:(CGSize)size{
+  CGSize s = [super sizeThatFits:size];
+  return CGSizeMake(round(s.width), round(s.height));
+}
 @end

@@ -99,8 +99,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	if (indexPath.row == 0) {
 		IATableViewCell* cell = (IATableViewCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
-		DLog(@"getting height for: %@", cell.label.attributedText);
-		CGFloat height = [cell.label sizeThatFits:CGSizeMake(cell.contentView.frame.size.width, CGFLOAT_MAX)].height;
+    [cell layoutSubviews];
+		//DLog(@"getting height for: %@", cell.label.attributedText);
+		CGFloat height = [cell.label sizeThatFits:CGSizeMake(cell.label.frame.size.width, CGFLOAT_MAX)].height;
 		return height + 14;
 	}else {
 		return 36;
@@ -290,7 +291,7 @@
     while ([scanner scanUpToString:highlight intoString:&stringBefore]) {
       if ([scanner isAtEnd]) break;
       
-      [attString setTextColor:[UIColor colorWithRed:1.000 green:1.000 blue:0.000 alpha:1.000] range:NSMakeRange([scanner scanLocation], highlight.length)];
+      [attString setTextColor:[UIColor redColor] range:NSMakeRange([scanner scanLocation], highlight.length)];
       [scanner setScanLocation:[scanner scanLocation]+1];
     }
   }
