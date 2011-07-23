@@ -9,3 +9,6 @@ xcuserdata
 # build dir #
 ######################
 build/**/*
+wettertxt.xcodeproj/project.xcworkspace/xcuserdata/pet.xcuserdatad/UserInterfaceState.xcuserstate
+
+wettertxt.xcodeproj/xcuserdata/pet.xcuserdatad/xcschemes/wettertxt.xcscheme
