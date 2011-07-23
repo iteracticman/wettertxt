@@ -3,6 +3,8 @@
 .DS_Store?
 ehthumbs.db
 Thumbs.db
+*.xcuserstate
+xcuserdata
 
 # build dir #
 ######################

@@ -16,8 +16,6 @@
   self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
   if (self) {
     label = [[WetterLabel alloc] init];
-    label.automaticallyDetectLinks = NO;
-    label.lineBreakMode = UILineBreakModeWordWrap;
     label.userInteractionEnabled = NO;
     label.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:label];

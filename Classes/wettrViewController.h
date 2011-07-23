@@ -6,7 +6,7 @@
 //  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class HeaderView;
 
 @protocol WettrViewControllerDelegate
 -(void)startedLoading;
@@ -20,6 +20,7 @@
 	NSMutableArray* urls;
 	NSMutableArray *_texts;
 	id<WettrViewControllerDelegate> delegate;
+  NSMutableDictionary *headerViews;
 }
 
 - (id) initWithTitle:(NSString*)title baseURL:(NSString*)url image:(UIImage*)image days:(NSArray*)days;

@@ -8,14 +8,22 @@
 
 #import "WetterLabel.h"
 #import "NSAttributedString+Attributes.h"
+#import <CoreText/CoreText.h>
 
 @interface WetterLabel()
 
 @end
 
 @implementation WetterLabel
--(CGSize)sizeThatFits:(CGSize)size{
+- (id)init {
+  self = [super init];
+  if (self) {
+    self.shouldLayoutCustomSubviews = NO;
+  }
+  return self;
+}
+/*-(CGSize)sizeThatFits:(CGSize)size{
   CGSize s = [super sizeThatFits:size];
   return CGSizeMake(round(s.width), round(s.height));
-}
+}*/
 @end

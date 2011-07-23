@@ -12,20 +12,23 @@
 #import "ITATracking.h"
 #import "WetterLabel.h"
 #import "NSAttributedString+Attributes.h"
+#import "DTAttributedTextContentView.h"
+#import "HeaderView.h"
 
 @implementation wettrViewController
 @synthesize delegate;
 
 - (id) initWithTitle:(NSString*)title baseURL:(NSString*)url image:(UIImage*)image days:(NSArray*)days
 {
-	self = [super initWithNibName:@"wettrViewController" bundle:nil];
+	self = [super initWithStyle:UITableViewStylePlain];
 	if (self != nil) {
+    headerViews = [[NSMutableDictionary alloc] initWithCapacity:days.count];
 		dayPaths = [days retain];
 		baseURL = [url retain];
 		self.title = title;
 		self.tabBarItem.image = image;
 
-		const NSString* loading = @"Lade...";
+		NSString* loading = @"Lade...";
 		_texts = [[NSMutableArray alloc] initWithCapacity:dayPaths.count];
 		urls = [[NSMutableArray alloc] initWithCapacity:dayPaths.count];
 		for (NSString* day in dayPaths) {
@@ -36,11 +39,14 @@
 	return self;
 }
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
+- (void)dealloc {
+  [headerViews release];
+	[dayPaths release];
+	[baseURL release];
+	[urls release];
+	[_texts release];
+  [super dealloc];
 }
-*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 	static NSString *kCellID = @"cellID";
@@ -53,20 +59,6 @@
 			cell.selectionStyle = UITableViewCellSelectionStyleGray;
 			cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
 			cell.textLabel.numberOfLines = 0;
-			
-      CGFloat fontSize = [[NSUserDefaults standardUserDefaults] doubleForKey:@"fontSize"];
-      UIFont *font = [UIFont systemFontOfSize:fontSize];
-      cell.label.font = font;
-      cell.label.textColor = [UIColor whiteColor];
-      cell.label.textAlignment = UITextAlignmentLeft;
-      cell.label.lineBreakMode = UILineBreakModeWordWrap;
-
-			//cell.label.contentInset = UIEdgeInsetsMake(8, 6, 0, 2);
-		/*cell.backgroundView = [[[IATableViewCell alloc] init] autorelease];
-		cell.contentView.backgroundColor = [UIColor clearColor];
-		cell.contentView.opaque = NO;
-		cell.textLabel.backgroundColor = [UIColor clearColor];
-		cell.textLabel.opaque = NO;*/
     }
 	
 	if (indexPath.row == 0) {
@@ -75,16 +67,16 @@
 		
     NSString* txt = [_texts objectAtIndex:indexPath.section];
     if ([txt isKindOfClass:[NSAttributedString class]]) {
-      cell.label.attributedText = (NSAttributedString*)txt;
+      cell.label.attributedString = (NSAttributedString*)txt;
     }else{
-      cell.label.text = txt;
+      cell.label.attributedString = [NSAttributedString attributedStringWithString:txt];
     }
 		
     //[cell.label resetAttributedText];
 	}else {
 		cell.textLabel.hidden = NO;
 		cell.label.hidden = YES;
-		cell.label.attributedText = nil;
+		cell.label.attributedString = nil;
     
 		cell.textLabel.textColor = [UIColor lightTextColor];
 		cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
@@ -182,33 +174,14 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-	UIImage* img = [UIImage imageNamed:@"header.png"];
-	img = [img stretchableImageWithLeftCapWidth:1 topCapHeight:0];
-	UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
-	btn.userInteractionEnabled = NO;
-	[btn setShowsTouchWhenHighlighted:NO];
-	[btn setTitle:[self tableView:tableView titleForHeaderInSection:section] forState:UIControlStateNormal];
-	[btn setBackgroundImage:img forState:UIControlStateNormal];
-	btn.alpha = .95;
-	
-	btn.contentEdgeInsets = UIEdgeInsetsMake(-2, 5, 0, 15);
-	//btn.titleEdgeInsets = UIEdgeInsetsMake(4, 0, 0, 0);
-	btn.titleLabel.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
-	//btn.titleLabel.shadowColor = [UIColor scrollViewTexturedBackgroundColor];
-	//btn.titleLabel.shadowOffset = CGSizeMake(0, 1);
-	[btn setTitleColor:[UIColor viewFlipsideBackgroundColor] forState:UIControlStateNormal];
-	
-	UIView* v = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
-	//v.backgroundColor = [UIColor viewFlipsideBackgroundColor];
-	//v.backgroundColor = [UIColor colorWithWhite:0 alpha:.4];
-	//v.contentMode = UIViewContentModeRight;
-	
-	[v addSubview:btn];
-	
-	[btn sizeToFit];
-	btn.frame = CGRectMake(0, 8, btn.bounds.size.width, btn.bounds.size.height);
-	
-	return v;
+  HeaderView* hv = [headerViews objectForKey:[NSNumber numberWithInt:section]];
+  if (hv == nil) {
+    hv = [[HeaderView alloc] init];
+    hv.title = [self tableView:tableView titleForHeaderInSection:section];
+    [headerViews setObject:hv forKey:[NSNumber numberWithInt:section]];
+  }
+
+	return hv;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -227,15 +200,17 @@
 }
 
 - (void)viewDidLoad {
-   [super viewDidLoad];
+  [super viewDidLoad];
+  self.tableView.backgroundColor = [UIColor clearColor];
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	
-	NSUInteger i = 0;
+  NSUInteger i = 0;
 	for (NSURL* url in urls) {
 		[delegate startedLoading];
-		dispatch_async(dispatch_get_global_queue(0, 0), ^{			
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 			DLog(@"fetching %@", url);
 			NSMutableAttributedString* text;
-
+      
 			NSError* error = nil;
 			NSData *data = [[NSData alloc] initWithContentsOfURL:url options:NSDataReadingMapped error:&error];
 			
@@ -283,6 +258,7 @@
 	NSString* stringBefore;
   NSArray *highlights = [NSArray arrayWithObjects:@"regen", @"sturm", @"hagel", @"gewitter", @"blitz", @"hagel", @"unwetter", @"schneefall", @"regnet", @"stürmisch", @"stürmt", @"schneit", @"schüttet", @"schütten", nil];
   
+  UIColor *warnBg = [[UIColor redColor] colorWithAlphaComponent:0.75];
   for (NSString *highlight in highlights) {
     NSScanner* scanner = [NSScanner scannerWithString:text];
     [scanner setCharactersToBeSkipped:nil];
@@ -290,12 +266,14 @@
     
     while ([scanner scanUpToString:highlight intoString:&stringBefore]) {
       if ([scanner isAtEnd]) break;
-      
-      [attString setTextColor:[UIColor redColor] range:NSMakeRange([scanner scanLocation], highlight.length)];
+      NSRange range = NSMakeRange([scanner scanLocation], highlight.length);
+      [attString setBackgroundColor:warnBg range:range];
+      //[attString setTextColor:[UIColor blackColor] range:range];
       [scanner setScanLocation:[scanner scanLocation]+1];
     }
   }
   
+  UIColor *tempBg = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
   NSScanner* scanner = [NSScanner scannerWithString:text];
   [scanner setCharactersToBeSkipped:nil];
 	while ([scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&stringBefore]) {
@@ -313,7 +291,12 @@
       }else if([stringBefore hasSuffix:@"-"]){
         rangeLength += 1;
       }
-      [attString setFontFamily:font.familyName size:font.pointSize bold:YES italic:NO range:NSMakeRange([scanner scanLocation]-rangeLength, rangeLength)]; 
+      
+      NSRange range = NSMakeRange([scanner scanLocation]-rangeLength, rangeLength);
+      
+      [attString setBackgroundColor:tempBg range:range];
+      [attString setTextColor:[UIColor blackColor] range:range];
+      [attString setFontFamily:font.familyName size:font.pointSize bold:YES italic:NO range:range]; 
     }
 	}
 	//DLog(@"highlighted text: %@", attString);
@@ -329,22 +312,12 @@
 	[self.tableView reloadData];
 }
 
+-(void)viewDidUnload{
+  [super viewDidUnload];
+  [headerViews removeAllObjects];
+}
+
 -(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
 	[self.tableView reloadData];
 }
-
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
-
-- (void)dealloc {
-	[dayPaths release];
-	[baseURL release];
-	[urls release];
-	[_texts release];
-    [super dealloc];
-}
-
 @end
