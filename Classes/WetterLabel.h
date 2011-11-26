@@ -6,9 +6,9 @@
 //  Copyright 2011 iteractive. All rights reserved.
 //
 
-#import "DTAttributedTextContentView.h"
+#import "TTTAttributedLabel.h"
 
-@interface WetterLabel : DTAttributedTextContentView {
+@interface WetterLabel : TTTAttributedLabel {
     
 }
 

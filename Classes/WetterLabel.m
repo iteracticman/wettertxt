@@ -7,18 +7,18 @@
 //
 
 #import "WetterLabel.h"
-#import "NSAttributedString+Attributes.h"
 #import <CoreText/CoreText.h>
 
-@interface WetterLabel()
 
-@end
 
 @implementation WetterLabel
 - (id)init {
   self = [super init];
   if (self) {
-    self.shouldLayoutCustomSubviews = NO;
+    self.textColor = [UIColor whiteColor];
+    self.lineBreakMode = UILineBreakModeWordWrap;
+    self.numberOfLines = 0;
+    self.leading = 2.0; //* [UIScreen mainScreen].scale;
   }
   return self;
 }
@@ -26,4 +26,6 @@
   CGSize s = [super sizeThatFits:size];
   return CGSizeMake(round(s.width), round(s.height));
 }*/
+
+
 @end

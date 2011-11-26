@@ -24,7 +24,7 @@ static const NSInteger kGANDispatchPeriodSec = 5;
                                          dispatchPeriod:kGANDispatchPeriodSec
                                                delegate:nil];
 	
-	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:18], @"fontSize", nil]];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:18], kFontSizeKey, nil]];
 	
 	NSString *fontSizeSetting = [NSString stringWithFormat:@"fontSize:%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"fontSize"]];
 	DLog(@"%@", fontSizeSetting);

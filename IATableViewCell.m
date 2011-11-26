@@ -31,7 +31,7 @@
 -(void)layoutSubviews{
   [super layoutSubviews];
   
-  label.frame = UIEdgeInsetsInsetRect(self.contentView.frame, UIEdgeInsetsMake(8, 6, 0, 8));
+  label.frame = UIEdgeInsetsInsetRect(self.contentView.frame, UIEdgeInsetsMake(8, 8, 0, 8));
 }
 
 /*

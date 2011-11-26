@@ -25,7 +25,7 @@
 
 - (id) initWithTitle:(NSString*)title baseURL:(NSString*)url image:(UIImage*)image days:(NSArray*)days;
 - (void)closeWebView:(id)sender;
--(NSMutableAttributedString*)attributize:(NSString*)text;
+-(void)attributize:(NSMutableAttributedString*)attString withBoldFont:(UIFont*)boldFont;
 @property (assign, nonatomic) id<WettrViewControllerDelegate> delegate;
 @end
 
