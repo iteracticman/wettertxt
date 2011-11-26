@@ -14,7 +14,7 @@
 			<key>Key</key>
 			<string>fontSize</string>
 			<key>DefaultValue</key>
-			<integer>16</integer>
+			<integer>18</integer>
 			<key>Values</key>
 			<array>
 				<integer>14</integer>
