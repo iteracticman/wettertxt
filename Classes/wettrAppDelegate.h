@@ -16,10 +16,8 @@
 	NSUInteger loadCount;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-
-
-@property (nonatomic, retain) IBOutlet UITabBarController *tabController;
+@property IBOutlet UIWindow *window;
+@property IBOutlet UITabBarController *tabController;
 
 @end
 

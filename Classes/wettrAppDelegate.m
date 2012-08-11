@@ -16,8 +16,6 @@
 static const NSInteger kGANDispatchPeriodSec = 5;
 
 @implementation wettrAppDelegate
-@synthesize window, tabController;
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-1903960-3"
@@ -30,8 +28,8 @@ static const NSInteger kGANDispatchPeriodSec = 5;
 	DLog(@"%@", fontSizeSetting);
 	[ITATracking trackEvent:@"wettertxt" action:@"started" value:fontSizeSetting];
 	
-	NSString* baseURL = @"http://www.zamg.ac.at/wetter/prognose/%@";
-	NSArray* states = [NSArray arrayWithObjects:@"", @"wien/", @"niederoesterreich/", @"burgenland/", @"steiermark/", @"oberoesterreich/", @"salzburg/", @"tirol/", @"vorarlberg/", @"kaernten/", nil];
+	NSString* baseURL = @"http://wetter.orf.at/m/%@/prognose";
+	NSArray* states = [NSArray arrayWithObjects:@"oes", @"wien", @"niederoesterreich", @"burgenland", @"steiermark", @"oberoesterreich", @"salzburg", @"tirol", @"vorarlberg", @"kaernten", nil];
 	NSArray* stateTitles = [NSArray arrayWithObjects:@"Österreich", @"Wien", @"NÖ", @"Burgenland", @"Steiermark", @"OÖ", @"Salzburg", @"Tirol", @"Vorarlberg", @"Kärnten", nil];
 	NSArray* stateIcons = [NSArray arrayWithObjects:@"austria", @"vienna", @"loweraustria",@"burgenland", @"styria", @"upperaustria", @"salzburg",@"tyrol",@"vorarlberg",@"carinthia", nil];
 	NSDictionary* stateDict = [NSDictionary dictionaryWithObjects:states forKeys:stateTitles];

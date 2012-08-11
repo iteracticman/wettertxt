@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		<style type="text/css">
+			html {
+                background-color: rgb(20, 20, 20);
+                color: rgb(230, 230, 230);
+				font-family: Georgia;
+				font-size: 18px;
+			}
+            body {
+                margin: 0px;
+            }
+            #content {
+                background-color: ;
+                padding-top: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                min-height: 369px;
+            }
+            h2 {
+                font-family: "Helvetica Neue", "Helvetica";
+                font-size: 18px;
+                font-weight: normal;
+                color: rgba(255,255,255, 0.5);
+                border-bottom-color: rgba(255,255,255, 0.5);
+                border-bottom-width: 1px;
+                border-bottom-style: dotted;
+                margin-top: 0px;
+                margin-bottom: 5px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+            p {
+                margin-top: 0px;
+                padding-top: 0px;
+                line-height: 1.4em;
+            }
+            a {
+                color: inherit;
+            }
+            .warn {
+                background-color: rgba(255, 0, 0, 0.7);
+                padding-left: 1px;
+                padding-right: 1px;
+                padding-bottom: 1px;
+            }
+            .temp {
+                color: black;
+                background-color: rgb(230, 230, 230);
+                font-weight: bold;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-bottom: 2px;
+            }
+            #footer {
+            	background-color: black;
+                font-size: 12px;
+                font-family: "Helvetica Neue", "Helvetica";
+                
+                text-align: center;
+                color: rgba(255,255,255, 0.5);
+                border-top-color: rgba(255,255,255, 0.2);
+                border-top-width: 1px;
+                border-top-style: solid;
+	            
+	            margin: 0px 0px 0px 0px;
+            }
+            #header {
+            	background-color: black;
+                font-size: 12px;
+                font-family: "Helvetica Neue", "Helvetica";
+                
+                text-align: center;
+                color: rgba(255,255,255, 0.5);
+                border-bottom-color: rgba(255,255,255, 0.2);
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+	            
+	            margin: 0px 0px 0px 0px;
+	            height: 44px;
+            }
+                    
+            #header-text {
+            	#background-color: gray;
+	            margin-right: 40px;
+	            position: relative;
+	            top: 8px;
+            }
+            #header-action {
+	            #background-color: lightgray;
+            	float: right;
+	            width: 40px;
+	            height: 100%;
+            }
+            #spinner {
+	            height: 100%;
+	            width: 20px;
+	            position: relative;
+	            left: 10px;
+            }
+            #reload {
+	            position: relative;
+	            top: -36px;
+            }
+        </style>
+        
+    </head>
+	<body>
+        <div id="header">
+        	<div id="header-action">
+        		<div id="spinner"></div>
+        		<a href="wettertxt:reload"><img id="reload" src="01-refresh@2x.png" width="24" height="26" /></a>
+        	</div>
+        	<div id="header-text">
+        		<header/>
+        	</div>
+        </div>
+        <div id="content">
+            <content/>
+        </div>
+        <div id="footer">
+        	<footer />
+        </div>
+	</body>
+    <script src="zepto.js"></script>
+    <script src="spin.js"></script>
+    <script>       
+    	//spin();
+        function spin(){
+	        var opts = {
+		        lines: 13, // The number of lines to draw
+		        length: 4, // The length of each line
+		        width: 2, // The line thickness
+		        radius: 6, // The radius of the inner circle
+		        corners: 1, // Corner roundness (0..1)
+		        rotate: 0, // The rotation offset
+		        color: 'white', // #rgb or #rrggbb
+		        speed: 1, // Rounds per second
+		        trail: 60, // Afterglow percentage
+		        shadow: false, // Whether to render a shadow
+		        hwaccel: true, // Whether to use hardware acceleration
+		        className: 'spinner', // The CSS class to assign to the spinner
+		        top: 'auto', // Top position relative to parent in px
+		        left: 'auto' // Left position relative to parent in px
+            };
+        
+	        $('#reload').hide();
+	        new Spinner(opts).spin(document.getElementById('spinner'));
+        }
+        
+        </script>
+</html>
