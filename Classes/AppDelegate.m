@@ -58,4 +58,22 @@
     return YES;
 }
 
+- (void)saveState {
+    NSMutableArray* tabOrder = [NSMutableArray array];
+	for (ORFWeatherViewController* vc in self.tabController.viewControllers) {
+		[tabOrder addObject:vc.title];
+	}
+	
+	[[NSUserDefaults standardUserDefaults] setObject:tabOrder forKey:@"tabOrder"];
+	[[NSUserDefaults standardUserDefaults] setInteger:self.tabController.selectedIndex forKey:@"selectedTabIndex"];
+}
+
+-(void)applicationDidEnterBackground:(UIApplication *)application {
+    [self saveState];
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+	[self saveState];
+}
+
 @end

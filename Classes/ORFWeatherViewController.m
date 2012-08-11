@@ -51,7 +51,7 @@ static NSUInteger loadCount;
     self.onFinishingNextLoad = ^(UIWebView *webView){
         [webView stringByEvaluatingJavaScriptFromString:@"spin()"];
     };
-    
+
     [ORFWeatherViewController incLoadCount];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         DLog(@"fetching %@", self.url);
@@ -62,7 +62,7 @@ static NSUInteger loadCount;
         
         if(error){
             DLog(@"ERROR %@", [error localizedDescription]);
-            [text appendString:@"Oje! Die Daten konnten nicht geladen werden."];
+            [text appendString:@"<p class=\"center\">Fehler beim Laden :(</p>"];
         }else {
             // Create parser
             HTMLNode* content = [[parser body] findChildWithAttribute:@"role" matchingName:@"article" allowPartial:NO];
@@ -85,10 +85,12 @@ static NSUInteger loadCount;
             DLog(@"%@", text);
             
             self.onFinishingNextLoad = ^(UIWebView *webView){
+                if (error) return;
                 [UIView animateWithDuration:0.4 animations:^{
                     self.webView.scrollView.contentOffset = CGPointMake(0, 44);
                 }];
             };
+            
             [self showHTML:HTML];
             
             [ORFWeatherViewController decLoadCount];
