@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AppDelegate : NSObject<UIApplicationDelegate>
+@interface AppDelegate : NSObject<UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (nonatomic) UIWindow *window;
 @property (strong, nonatomic) IBOutlet UITabBarController *tabController;

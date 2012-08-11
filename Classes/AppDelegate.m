@@ -48,6 +48,7 @@
 	}
     
     self.tabController = [[UITabBarController alloc] init];
+    self.tabController.delegate = self;
 	self.tabController.viewControllers = viewControllers;
 	self.tabController.selectedIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"selectedTabIndex"];
 	self.tabController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
@@ -74,6 +75,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	[self saveState];
+}
+
+#pragma mark UITabBarControllerDelegate
+
+-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    if (viewController == tabBarController.selectedViewController) {
+        [(ORFWeatherViewController *)viewController loadData];
+    }
+    return YES;
 }
 
 @end

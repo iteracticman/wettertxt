@@ -16,4 +16,6 @@ typedef void(^WhenLoadedBlock)(UIWebView *webView);
 @property (copy) WhenLoadedBlock onFinishingNextLoad;
 @property NSURL *url;
 @property UIWebView *webView;
+
+- (void)loadData;
 @end
