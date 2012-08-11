@@ -187,8 +187,6 @@
 		C3A7B5CA122A8DDD00FE8D9B = {
 			isa = PBXGroup;
 			children = (
-				780649C215D6DAA700215377 /* Default.png */,
-				780649C015D6DAA400215377 /* Default@2x.png */,
 				C32F46B3129A942A00A3675D /* Dependencies */,
 				C3A7B5D1122A8DDE00FE8D9B /* Classes */,
 				C3A7B5D2122A8DDF00FE8D9B /* Other Sources */,
@@ -225,9 +223,13 @@
 		C3A7B5D3122A8DDF00FE8D9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				780649C215D6DAA700215377 /* Default.png */,
+				780649C015D6DAA400215377 /* Default@2x.png */,
 				C33B13E612363EAB00C1A7A7 /* iTunesArtwork */,
 				C33B13EC12363EEE00C1A7A7 /* Icon-Small.png */,
 				C33B13ED12363EEE00C1A7A7 /* Icon-Small@2x.png */,
+				C34D4379122BD09A0013A586 /* Icon.png */,
+				C3D79FF51231224000468261 /* Icon@2x.png */,
 				C3FD5DC412362DB100419A3B /* austria@2x.png */,
 				C3FD5DC512362DB100419A3B /* burgenland@2x.png */,
 				C3FD5DC612362DB100419A3B /* carinthia@2x.png */,
@@ -238,7 +240,6 @@
 				C3FD5DCB12362DB100419A3B /* upperaustria@2x.png */,
 				C3FD5DCC12362DB100419A3B /* vienna@2x.png */,
 				C3FD5DCD12362DB100419A3B /* vorarlberg@2x.png */,
-				C3D79FF51231224000468261 /* Icon@2x.png */,
 				C314B69E122C4636008640C1 /* carinthia.png */,
 				C314B69A122C45AD008640C1 /* vorarlberg.png */,
 				C314B695122C4512008640C1 /* tyrol.png */,
@@ -250,7 +251,6 @@
 				C314B636122C3F2D008640C1 /* burgenland.png */,
 				C314B5FF122C3BA8008640C1 /* austria.png */,
 				C373907D12316BAA00CA7599 /* austria@2x.png */,
-				C34D4379122BD09A0013A586 /* Icon.png */,
 				C3A7B5E2122A8DDF00FE8D9B /* wettertxt-Info.plist */,
 			);
 			name = Resources;
