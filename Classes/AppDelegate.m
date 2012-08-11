@@ -18,9 +18,7 @@
     [[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-34034367-1" dispatchPeriod:10 delegate:nil];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{kFontSizeKey: @18}];
-	
-	NSString *fontSizeSetting = [NSString stringWithFormat:@"fontSize:%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"fontSize"]];
-	DLog(@"%@", fontSizeSetting);
+
 	//[ITATracking trackEvent:@"wettertxt" action:@"started" value:fontSizeSetting];
 	
 	NSString* baseURL = @"http://wetter.orf.at/m/%@/prognose";
