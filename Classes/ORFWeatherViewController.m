@@ -10,6 +10,7 @@
 #import "HTMLNode.h"
 #import "HTMLParser.h"
 #import "SVModalWebViewController.h"
+#import "GANTracker.h"
 
 #define kWarn @"warn"
 #define kTemp @"temp"
@@ -42,6 +43,8 @@ static NSUInteger loadCount;
 }
 
 - (void)loadData {
+    [[GANTracker sharedTracker] trackPageview:self.url.absoluteString withError:nil];
+    
     NSString *loadingString = [NSString stringWithFormat:@"Vorhersage von <a href='%@'>wetter.orf.at</a><br/>Wird geladen...",self.url];
     NSString *loadingHTML = [templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString];
     [self showHTML:loadingHTML];
@@ -51,7 +54,6 @@ static NSUInteger loadCount;
     
     [ORFWeatherViewController incLoadCount];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [NSThread sleepForTimeInterval:3.0];
         DLog(@"fetching %@", self.url);
         NSMutableString *text = [NSMutableString string];
         
@@ -158,19 +160,7 @@ static NSUInteger loadCount;
     [self.webView loadHTMLString:loadingHTML baseURL:[[NSBundle mainBundle] bundleURL]];
 }
 
--(void)viewDidLoad {
-    self.view.opaque = YES;
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    self.webView.opaque = NO;
-    self.webView.backgroundColor = self.view.window.backgroundColor;
-    self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.webView.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
-    [self.view addSubview:self.webView];
-
-    self.webView.delegate = self;
-
-    [self loadData];
-}
+#pragma mark UIWebView
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
@@ -200,6 +190,29 @@ static NSUInteger loadCount;
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     
+}
+
+#pragma mark View Lifecycle
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.view.opaque = YES;
+    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    self.webView.opaque = NO;
+    self.webView.backgroundColor = self.view.window.backgroundColor;
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.webView.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    [self.view addSubview:self.webView];
+    
+    self.webView.delegate = self;
+    
+    [self loadData];
+}
+
+-(void)viewDidUnload {
+    [super viewDidUnload];
+    self.webView = nil;
 }
 
 @end

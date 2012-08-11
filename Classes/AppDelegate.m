@@ -8,10 +8,15 @@
 
 #import "AppDelegate.h"
 #import "ORFWeatherViewController.h"
-
+#import "GANTracker.h"
+#import "TestFlight.h"
 @implementation AppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [TestFlight setDeviceIdentifier:[UIDevice currentDevice].uniqueIdentifier];
+    [TestFlight takeOff:@"7ee3775942aa73462bdb5e6183d30e58_OTY5OTMyMDEyLTA2LTA1IDExOjEzOjIzLjg2MTA5Mw"];
+    [[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-34034367-1" dispatchPeriod:10 delegate:nil];
+    
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{kFontSizeKey: @18}];
 	
 	NSString *fontSizeSetting = [NSString stringWithFormat:@"fontSize:%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"fontSize"]];
@@ -45,7 +50,6 @@
 	}
     
     self.tabController = [[UITabBarController alloc] init];
-    //self.tabController.tabBar.tintColor = [UIColor colorWithHue:0.111 saturation:0.026 brightness:0.898 alpha:1.000];
 	self.tabController.viewControllers = viewControllers;
 	self.tabController.selectedIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"selectedTabIndex"];
 	self.tabController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
