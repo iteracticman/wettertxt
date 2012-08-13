@@ -225,4 +225,10 @@ static NSUInteger loadCount;
     self.webView = nil;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    if (!self.isDataLoadedOrLoading) {
+        [self loadData];
+    }
+}
+
 @end

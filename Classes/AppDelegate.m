@@ -82,10 +82,8 @@
 #pragma mark UITabBarControllerDelegate
 
 -(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
-    (void)viewController.view;
-    
     ORFWeatherViewController *orfVC = (ORFWeatherViewController *)viewController;
-    if (viewController == tabBarController.selectedViewController || !orfVC.isDataLoadedOrLoading) {
+    if (viewController == tabBarController.selectedViewController) {
         [orfVC loadData];
     }
     
