@@ -48,14 +48,16 @@
 	}
     
     self.tabController = [[UITabBarController alloc] init];
-    self.tabController.delegate = self;
 	self.tabController.viewControllers = viewControllers;
 	self.tabController.selectedIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"selectedTabIndex"];
 	self.tabController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-    self.window.backgroundColor = [UIColor colorWithWhite:0.039 alpha:1.000];
+    self.tabController.delegate = self;
+    self.window.backgroundColor = [UIColor blackColor];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = self.tabController;
     [self.window makeKeyAndVisible];
+    
+    [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
     return YES;
 }
 
@@ -80,9 +82,13 @@
 #pragma mark UITabBarControllerDelegate
 
 -(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
-    if (viewController == tabBarController.selectedViewController) {
-        [(ORFWeatherViewController *)viewController loadData];
+    (void)viewController.view;
+    
+    ORFWeatherViewController *orfVC = (ORFWeatherViewController *)viewController;
+    if (viewController == tabBarController.selectedViewController || !orfVC.isDataLoadedOrLoading) {
+        [orfVC loadData];
     }
+    
     return YES;
 }
 

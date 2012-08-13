@@ -43,28 +43,38 @@ static NSUInteger loadCount;
 }
 
 - (void)loadData {
+    _isDataLoadedOrLoading = YES;
+    
     [[GANTracker sharedTracker] trackPageview:self.url.absoluteString withError:nil];
     
     NSString *loadingString = [NSString stringWithFormat:@"Vorhersage von <a href='%@'>wetter.orf.at</a><br/>Wird geladen...",self.url];
     NSString *loadingHTML = [templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString];
     [self showHTML:loadingHTML];
+    
+    __weak ORFWeatherViewController *weakSelf = self;
     self.onFinishingNextLoad = ^(UIWebView *webView){
-        [webView stringByEvaluatingJavaScriptFromString:@"spin()"];
+        [weakSelf startLoading];
     };
+}
 
+- (void)startLoading {
+    [self.webView stringByEvaluatingJavaScriptFromString:@"spin()"];
     [ORFWeatherViewController incLoadCount];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        DLog(@"fetching %@", self.url);
+    DLog(@"fetching %@", self.url);
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:self.url];
+    req.timeoutInterval = 15;
+    [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *resp, NSData *data, NSError *error) {
         NSMutableString *text = [NSMutableString string];
+        HTMLParser *parser;
         
-        NSError* error = nil;
-        HTMLParser *parser = [[HTMLParser alloc] initWithContentsOfURL:self.url error:&error];
+        if (!error) {
+            parser = [[HTMLParser alloc] initWithData:data error:&error];
+        }
         
         if(error){
             DLog(@"ERROR %@", [error localizedDescription]);
             [text appendString:@"<p class=\"center\">Fehler beim Laden :(</p>"];
         }else {
-            // Create parser
             HTMLNode* content = [[parser body] findChildWithAttribute:@"role" matchingName:@"article" allowPartial:NO];
             
             // DLog(@"%@", content.rawContents);
@@ -95,7 +105,7 @@ static NSUInteger loadCount;
             
             [ORFWeatherViewController decLoadCount];
         });
-    });
+    }];
 }
 
 - (void)addClass:(NSString *)cssClass toString:(NSMutableAttributedString *)attString {
@@ -208,8 +218,6 @@ static NSUInteger loadCount;
     [self.view addSubview:self.webView];
     
     self.webView.delegate = self;
-    
-    [self loadData];
 }
 
 -(void)viewDidUnload {
