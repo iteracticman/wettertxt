@@ -1,14 +1,11 @@
-# OS generated files #
-######################
-.DS_Store?
-ehthumbs.db
-Thumbs.db
+# Mac OS X
+*.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
 *.xcuserstate
-xcuserdata
-
-# build dir #
-######################
-build/**/*
-wettertxt.xcodeproj/project.xcworkspace/xcuserdata/pet.xcuserdatad/UserInterfaceState.xcuserstate
-
-wettertxt.xcodeproj/xcuserdata/pet.xcuserdatad/xcschemes/wettertxt.xcscheme
+project.xcworkspace/
+xcuserdata/
