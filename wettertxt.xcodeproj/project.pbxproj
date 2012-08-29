@@ -26,6 +26,9 @@
 		7852E7EE15D1876D00FF2605 /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 7852E7ED15D1876D00FF2605 /* template.html */; };
 		78A14FCF15D0474100EE58D7 /* ORFWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A14FCE15D0474100EE58D7 /* ORFWeatherViewController.m */; };
 		78A14FD315D049E900EE58D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A14FD215D049E900EE58D7 /* AppDelegate.m */; };
+		78CBD1BE15ED240A00CAD2D5 /* VideoForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CBD1BD15ED240A00CAD2D5 /* VideoForecastViewController.m */; };
+		78CBD1C115ED26F900CAD2D5 /* VideoForecast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CBD1C015ED26F900CAD2D5 /* VideoForecast.storyboard */; };
+		78CBD1C715EDE75B00CAD2D5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CBD1C615EDE75B00CAD2D5 /* AVFoundation.framework */; };
 		78D7AB2115D93F1100DF9EEF /* UIButtonBarRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D7AB2015D93F1100DF9EEF /* UIButtonBarRefresh@2x.png */; };
 		C314B600122C3BA8008640C1 /* austria.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B5FF122C3BA8008640C1 /* austria.png */; };
 		C314B637122C3F2D008640C1 /* burgenland.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B636122C3F2D008640C1 /* burgenland.png */; };
@@ -87,6 +90,10 @@
 		78A14FCE15D0474100EE58D7 /* ORFWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORFWeatherViewController.m; sourceTree = "<group>"; };
 		78A14FD115D049E900EE58D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78A14FD215D049E900EE58D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		78CBD1BC15ED240A00CAD2D5 /* VideoForecastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoForecastViewController.h; sourceTree = "<group>"; };
+		78CBD1BD15ED240A00CAD2D5 /* VideoForecastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoForecastViewController.m; sourceTree = "<group>"; };
+		78CBD1C015ED26F900CAD2D5 /* VideoForecast.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoForecast.storyboard; sourceTree = "<group>"; };
+		78CBD1C615EDE75B00CAD2D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		78D7AB2015D93F1100DF9EEF /* UIButtonBarRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarRefresh@2x.png"; sourceTree = "<group>"; };
 		C314B5FF122C3BA8008640C1 /* austria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = austria.png; sourceTree = "<group>"; };
 		C314B636122C3F2D008640C1 /* burgenland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burgenland.png; sourceTree = "<group>"; };
@@ -130,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CBD1C715EDE75B00CAD2D5 /* AVFoundation.framework in Frameworks */,
 				780649CF15D6DD9400215377 /* libz.dylib in Frameworks */,
 				780649CA15D6DBD100215377 /* CFNetwork.framework in Frameworks */,
 				780649C815D6DB4F00215377 /* libsqlite3.dylib in Frameworks */,
@@ -207,6 +215,9 @@
 				780BD80515D383D3000C0A0E /* zepto.js */,
 				782BC58F15D525D900243886 /* spin.js */,
 				78D7AB2015D93F1100DF9EEF /* UIButtonBarRefresh@2x.png */,
+				78CBD1BC15ED240A00CAD2D5 /* VideoForecastViewController.h */,
+				78CBD1BD15ED240A00CAD2D5 /* VideoForecastViewController.m */,
+				78CBD1C015ED26F900CAD2D5 /* VideoForecast.storyboard */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -259,6 +270,7 @@
 		C3A7B5D4122A8DDF00FE8D9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78CBD1C615EDE75B00CAD2D5 /* AVFoundation.framework */,
 				780649CE15D6DD9400215377 /* libz.dylib */,
 				780649C915D6DBD100215377 /* CFNetwork.framework */,
 				780649C715D6DB4F00215377 /* libsqlite3.dylib */,
@@ -365,6 +377,7 @@
 				780649C115D6DAA400215377 /* Default@2x.png in Resources */,
 				780649C315D6DAA700215377 /* Default.png in Resources */,
 				78D7AB2115D93F1100DF9EEF /* UIButtonBarRefresh@2x.png in Resources */,
+				78CBD1C115ED26F900CAD2D5 /* VideoForecast.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +411,7 @@
 				7852E7EA15D185B500FF2605 /* HTMLParser.m in Sources */,
 				782BC59B15D6CBF600243886 /* SVModalWebViewController.m in Sources */,
 				782BC59D15D6CBF600243886 /* SVWebViewController.m in Sources */,
+				78CBD1BE15ED240A00CAD2D5 /* VideoForecastViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

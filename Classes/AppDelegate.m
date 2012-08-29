@@ -8,8 +8,10 @@
 
 #import "AppDelegate.h"
 #import "ORFWeatherViewController.h"
+#import "VideoForecastViewController.h"
 #import "GANTracker.h"
 #import "TestFlight.h"
+
 @implementation AppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -54,11 +56,33 @@
     self.tabController.delegate = self;
     self.window.backgroundColor = [UIColor blackColor];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
+    
     self.window.rootViewController = self.tabController;
     [self.window makeKeyAndVisible];
     
-    [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    
     return YES;
+}
+
+- (void)orientationChanged:(NSNotification *)note {
+    UIDeviceOrientation devOrient = [UIDevice currentDevice].orientation;
+    if (UIInterfaceOrientationIsLandscape(devOrient)) {
+        DLog(@"landscape");
+        [self.window.rootViewController presentModalViewController:self.videoForecastViewController animated:YES];
+    }else if(UIInterfaceOrientationIsPortrait(devOrient)){
+        [self.window.rootViewController dismissModalViewControllerAnimated:YES];
+    }
+}
+
+-(UINavigationController *)videoForecastViewController {
+    if (_videoForecastViewController == nil) {
+        _videoForecastViewController = [[UIStoryboard storyboardWithName:@"VideoForecast" bundle:nil] instantiateInitialViewController];
+        _videoForecastViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    }
+    return _videoForecastViewController;
 }
 
 - (void)saveState {

@@ -6,11 +6,12 @@
 //  Copyright (c) 2012 iteractive. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class VideoForecastViewController;
 
 @interface AppDelegate : NSObject<UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (nonatomic) UIWindow *window;
-@property (strong, nonatomic) IBOutlet UITabBarController *tabController;
+@property (strong, nonatomic) UITabBarController *tabController;
+@property (strong, nonatomic) UINavigationController *videoForecastViewController;
 
 @end
