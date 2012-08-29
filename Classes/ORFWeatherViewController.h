@@ -16,7 +16,8 @@ typedef void(^WhenLoadedBlock)(UIWebView *webView);
 @property (copy) WhenLoadedBlock onFinishingNextLoad;
 @property NSURL *url;
 @property UIWebView *webView;
-@property (readonly) BOOL isDataLoadedOrLoading;
+@property (readonly) BOOL isLoaded;
+@property (readonly) BOOL isLoading;
 
 - (void)loadData;
 @end

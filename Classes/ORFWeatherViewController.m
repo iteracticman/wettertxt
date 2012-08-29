@@ -43,18 +43,23 @@ static NSUInteger loadCount;
 }
 
 - (void)loadData {
-    _isDataLoadedOrLoading = YES;
+    if (_isLoading) {
+        return;
+    }
+    
+    _isLoading = YES;
     
     [[GANTracker sharedTracker] trackPageview:self.url.absoluteString withError:nil];
     
     NSString *loadingString = [NSString stringWithFormat:@"Vorhersage von <a href='%@'>wetter.orf.at</a><br/>Wird geladen...",self.url];
     NSString *loadingHTML = [templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString];
-    [self showHTML:loadingHTML];
     
     __weak ORFWeatherViewController *weakSelf = self;
     self.onFinishingNextLoad = ^(UIWebView *webView){
         [weakSelf startLoading];
     };
+    
+    [self showHTML:loadingHTML];
 }
 
 - (void)startLoading {
@@ -64,6 +69,7 @@ static NSUInteger loadCount;
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:self.url];
     req.timeoutInterval = 15;
     [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *resp, NSData *data, NSError *error) {
+        [NSThread sleepForTimeInterval:3];
         NSMutableString *text = [NSMutableString string];
         HTMLParser *parser;
         
@@ -104,6 +110,8 @@ static NSUInteger loadCount;
             [self showHTML:HTML];
             
             [ORFWeatherViewController decLoadCount];
+            _isLoading = NO;
+            _isLoaded = YES;
         });
     }];
 }
@@ -226,7 +234,7 @@ static NSUInteger loadCount;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    if (!self.isDataLoadedOrLoading) {
+    if (!self.isLoaded) {
         [self loadData];
     }
 }
