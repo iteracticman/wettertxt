@@ -123,7 +123,7 @@
 
 -(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     ORFWeatherViewController *orfVC = (ORFWeatherViewController *)viewController;
-    if (viewController == tabBarController.selectedViewController) {
+    if (viewController != tabBarController.moreNavigationController &&  viewController == tabBarController.selectedViewController) {
         [orfVC loadData];
     }
     
