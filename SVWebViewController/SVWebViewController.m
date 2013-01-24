@@ -322,10 +322,10 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
 	NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
     
-	if([title isEqualToString:NSLocalizedString(@"Open in Safari", @"")])
+	if([title isEqualToString:NSLocalizedString(@"In Safari öffnen", @"")])
         [[UIApplication sharedApplication] openURL:self.mainWebView.request.URL];
     
-    if([title isEqualToString:NSLocalizedString(@"Copy Link", @"")]) {
+    if([title isEqualToString:NSLocalizedString(@"Link kopieren", @"")]) {
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         pasteboard.string = self.mainWebView.request.URL.absoluteString;
     }
