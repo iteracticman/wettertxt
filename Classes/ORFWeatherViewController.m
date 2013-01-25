@@ -130,7 +130,7 @@ static NSUInteger loadCount;
     NSString* stringBefore;
     NSArray *highlights = @[@"regen", @"regenschauer", @"schauer", @"regentropfen", @"tröpfeln", @"regnen", @"regnerisch", @"regnet", @"niederschlag", @"niederschläge", @"schüttet", @"schütten", @"sturm", @"stürmisch", @"stürmt", @"hagel", @"gewitter", @"gewittrig", @"gewittrige", @"blitz", @"unwetter",  @"schnee", @"schneefall", @"schneefälle", @"schneien", @"schneit", @"schneeschauer", @"schneeregen", @"schneeregenschauer", @"stürmischer"];
     for (NSString *highlight in highlights) {
-        //highlight = [NSString stringWithFormat:@" %@ ", highlight]; //whole words only
+//        NSString highlight = [NSString stringWithFormat:@" %@ ", highlight]; //whole words only
         NSScanner* scanner = [NSScanner scannerWithString:text];
         [scanner setCharactersToBeSkipped:nil];
         [scanner setCaseSensitive:NO];
@@ -140,6 +140,22 @@ static NSUInteger loadCount;
             //DLog(@"scaned til: %@", stringBefore);
             NSRange range = NSMakeRange([scanner scanLocation]+1, highlight.length);
             [attString addAttribute:kWarn value:kWarn range:range];
+            //[attString setTextColor:[UIColor blackColor] range:range];
+            [scanner setScanLocation:[scanner scanLocation]+1];
+        }
+    }
+    
+    NSArray *exceptions = @[ @"Bregenz", @"gSchneeberg", @"gBregenzerwald" ];
+    for (NSString *exception in exceptions) {
+        NSScanner* scanner = [NSScanner scannerWithString:text];
+        [scanner setCharactersToBeSkipped:nil];
+        [scanner setCaseSensitive:NO];
+        
+        while ([scanner scanUpToString:exception intoString:&stringBefore]) {
+            if ([scanner isAtEnd]) break;
+            //DLog(@"scaned til: %@", stringBefore);
+            NSRange range = NSMakeRange([scanner scanLocation]+1, exception.length);
+            [attString removeAttribute:kWarn range:range];
             //[attString setTextColor:[UIColor blackColor] range:range];
             [scanner setScanLocation:[scanner scanLocation]+1];
         }
