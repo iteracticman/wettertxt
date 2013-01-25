@@ -145,7 +145,7 @@ static NSUInteger loadCount;
         }
     }
     
-    NSArray *exceptions = @[ @"Bregenz", @"gSchneeberg", @"gBregenzerwald" ];
+    NSArray *exceptions = @[ @"Bregenz", @"Schneeberg", @"Bregenzerwald" ];
     for (NSString *exception in exceptions) {
         NSScanner* scanner = [NSScanner scannerWithString:text];
         [scanner setCharactersToBeSkipped:nil];
