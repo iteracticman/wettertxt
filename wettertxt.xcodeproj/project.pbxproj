@@ -20,12 +20,9 @@
 		782BC59F15D6CC6600243886 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782BC59E15D6CC6600243886 /* MessageUI.framework */; };
 		7852E7E915D185B500FF2605 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7852E7E515D185B500FF2605 /* HTMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7852E7EA15D185B500FF2605 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7852E7E715D185B500FF2605 /* HTMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7852E7EB15D185B500FF2605 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7852E7E815D185B500FF2605 /* README.md */; };
 		7852E7EE15D1876D00FF2605 /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 7852E7ED15D1876D00FF2605 /* template.html */; };
 		78A14FCF15D0474100EE58D7 /* ORFWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A14FCE15D0474100EE58D7 /* ORFWeatherViewController.m */; };
 		78A14FD315D049E900EE58D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A14FD215D049E900EE58D7 /* AppDelegate.m */; };
-		78CBD1BE15ED240A00CAD2D5 /* VideoForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CBD1BD15ED240A00CAD2D5 /* VideoForecastViewController.m */; };
-		78CBD1C115ED26F900CAD2D5 /* VideoForecast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CBD1C015ED26F900CAD2D5 /* VideoForecast.storyboard */; };
 		78CBD1C715EDE75B00CAD2D5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CBD1C615EDE75B00CAD2D5 /* AVFoundation.framework */; };
 		78D10DB417E2EC4A00B61C2F /* template7.html in Resources */ = {isa = PBXBuildFile; fileRef = 78D10DB317E2EC4A00B61C2F /* template7.html */; };
 		78D10DB617E2FA2D00B61C2F /* UIButtonBarRefresh7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D10DB517E2FA2D00B61C2F /* UIButtonBarRefresh7@2x.png */; };
@@ -316,6 +313,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = iteractive;
+				TargetAttributes = {
+					C3A7B5D8122A8DDF00FE8D9B = {
+						DevelopmentTeam = HQ648YTXZ8;
+					};
+				};
 			};
 			buildConfigurationList = C3A7B5CF122A8DDD00FE8D9B /* Build configuration list for PBXProject "wettertxt" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -362,14 +364,12 @@
 				78D10DB817E2FD9A00B61C2F /* Media.xcassets in Resources */,
 				C3FD5DD612362DB100419A3B /* vienna@2x.png in Resources */,
 				C3FD5DD712362DB100419A3B /* vorarlberg@2x.png in Resources */,
-				7852E7EB15D185B500FF2605 /* README.md in Resources */,
 				78D10DB417E2EC4A00B61C2F /* template7.html in Resources */,
 				7852E7EE15D1876D00FF2605 /* template.html in Resources */,
 				782BC58D15D4E40600243886 /* zepto.js in Resources */,
 				782BC59015D525D900243886 /* spin.js in Resources */,
 				782BC59C15D6CBF600243886 /* SVWebViewController.bundle in Resources */,
 				78D7AB2115D93F1100DF9EEF /* UIButtonBarRefresh@2x.png in Resources */,
-				78CBD1C115ED26F900CAD2D5 /* VideoForecast.storyboard in Resources */,
 				78D124A416B12783002BC7C9 /* mountain.png in Resources */,
 				78D124A516B12783002BC7C9 /* mountain@2x.png in Resources */,
 			);
@@ -405,7 +405,6 @@
 				7852E7EA15D185B500FF2605 /* HTMLParser.m in Sources */,
 				782BC59B15D6CBF600243886 /* SVModalWebViewController.m in Sources */,
 				782BC59D15D6CBF600243886 /* SVWebViewController.m in Sources */,
-				78CBD1BE15ED240A00CAD2D5 /* VideoForecastViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +423,7 @@
 				GCC_WARN_PEDANTIC = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PREBINDING = "";
@@ -443,7 +442,7 @@
 				GCC_WARN_PEDANTIC = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
 				PREBINDING = "";
@@ -460,6 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -482,6 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = wettertxt_Prefix.pch;

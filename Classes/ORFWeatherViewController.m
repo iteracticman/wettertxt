@@ -39,7 +39,9 @@ static NSUInteger loadCount;
     if (self) {
         templateString = [NSMutableString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:PRE_IOS7 ? @"template" : @"template7" withExtension:@"html"] encoding:NSUTF8StringEncoding error:nil];
         
-        self.automaticallyAdjustsScrollViewInsets = NO;
+        if (IOS7) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
     }
     return self;
 }
@@ -246,12 +248,15 @@ static NSUInteger loadCount;
     self.webView.opaque = NO;
     self.webView.backgroundColor = self.view.window.backgroundColor;
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
     if (PRE_IOS7) {
         self.webView.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
     }
     
+    if (IOS7) {
+        self.webView.scrollView.contentInset = self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake([UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.bounds.size.height, 0, self.tabBarController.tabBar.bounds.size.height, 0);
+    }
     
-    self.webView.scrollView.contentInset = self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake([UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.bounds.size.height, 0, self.tabBarController.tabBar.bounds.size.height, 0);
     [self.view addSubview:self.webView];
     
     self.webView.delegate = self;

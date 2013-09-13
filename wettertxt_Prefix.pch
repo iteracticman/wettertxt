@@ -14,7 +14,11 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#define PRE_IOS7 floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define IOS7 SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")
+#define PRE_IOS7 SYSTEM_VERSION_LESS_THAN(@"7.0")
+
 #define kFontSizeKey @"fontSize"
 #endif
 
