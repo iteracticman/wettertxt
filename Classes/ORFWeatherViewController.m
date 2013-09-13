@@ -37,7 +37,7 @@ static NSUInteger loadCount;
 {
     self = [super init];
     if (self) {
-        templateString = [NSMutableString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"template" withExtension:@"html"] encoding:NSUTF8StringEncoding error:nil];
+        templateString = [NSMutableString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:PRE_IOS7 ? @"template" : @"template7" withExtension:@"html"] encoding:NSUTF8StringEncoding error:nil];
     }
     return self;
 }
@@ -79,7 +79,7 @@ static NSUInteger loadCount;
         
         if(error){
             DLog(@"ERROR %@", [error localizedDescription]);
-            [text appendString:@"<p class=\"center\">Fehler beim Laden :(</p>"];
+            [text appendString:@"<p class=\"center\"><br/>Fehler beim Laden :(</p>"];
         }else {
             HTMLNode* content = [[parser body] findChildWithAttribute:@"role" matchingName:@"article" allowPartial:NO];
             
@@ -102,8 +102,14 @@ static NSUInteger loadCount;
             
             self.onFinishingNextLoad = ^(UIWebView *webView){
                 if (error) return;
+                
                 [UIView animateWithDuration:0.4 animations:^{
-                    self.webView.scrollView.contentOffset = CGPointMake(0, 44);
+                    if (PRE_IOS7) {
+                        webView.scrollView.contentOffset = CGPointMake(0, 44);
+                    } else {
+                        webView.scrollView.contentOffset = CGPointMake(0, 25);
+                    }
+                    
                 }];
             };
             
@@ -230,6 +236,10 @@ static NSUInteger loadCount;
 
 #pragma mark View Lifecycle
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
+}
+
 -(void)viewDidLoad {
     [super viewDidLoad];
     
@@ -238,10 +248,21 @@ static NSUInteger loadCount;
     self.webView.opaque = NO;
     self.webView.backgroundColor = self.view.window.backgroundColor;
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.webView.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    if (PRE_IOS7) {
+        self.webView.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    }
+    
+    
+    self.webView.scrollView.contentInset = self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake([UIApplication sharedApplication].statusBarFrame.size.height, 0, self.tabBarController.tabBar.bounds.size.height, 0);
     [self.view addSubview:self.webView];
     
     self.webView.delegate = self;
+    
+    if (!PRE_IOS7) {
+        self.view.backgroundColor = [UIColor whiteColor];
+        UINavigationBar *blurBar = [[UINavigationBar alloc] initWithFrame:[UIApplication sharedApplication].statusBarFrame];
+        [self.view addSubview:blurBar];
+    }
 }
 
 -(void)viewDidUnload {

@@ -15,7 +15,7 @@
 @implementation AppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [TestFlight setDeviceIdentifier:[UIDevice currentDevice].uniqueIdentifier];
+//    [TestFlight setDeviceIdentifier:[UIDevice currentDevice].uniqueIdentifier];
     [TestFlight takeOff:@"7ee3775942aa73462bdb5e6183d30e58_OTY5OTMyMDEyLTA2LTA1IDExOjEzOjIzLjg2MTA5Mw"];
     [[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-34034367-1" dispatchPeriod:10 delegate:nil];
     
@@ -68,9 +68,19 @@
     self.tabController = [[UITabBarController alloc] init];
 	self.tabController.viewControllers = viewControllers;
 	self.tabController.selectedIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"selectedTabIndex"];
-	self.tabController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    if (PRE_IOS7) {
+        self.tabController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    }
+	
     self.tabController.delegate = self;
-    self.window.backgroundColor = [UIColor blackColor];
+    
+    if (PRE_IOS7) {
+        self.window.backgroundColor = [UIColor blackColor];
+    } else {
+        self.tabController.view.backgroundColor = [UIColor whiteColor];
+    }
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
@@ -108,7 +118,9 @@
 	}
 	
 	[[NSUserDefaults standardUserDefaults] setObject:tabOrder forKey:@"tabOrder"];
-	[[NSUserDefaults standardUserDefaults] setInteger:self.tabController.selectedIndex forKey:@"selectedTabIndex"];
+    
+    NSUInteger selIndex = self.tabController.selectedIndex < 4 ? self.tabController.selectedIndex : 0;
+	[[NSUserDefaults standardUserDefaults] setInteger:selIndex forKey:@"selectedTabIndex"];
 }
 
 -(void)applicationDidEnterBackground:(UIApplication *)application {
