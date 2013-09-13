@@ -16,7 +16,7 @@
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    [TestFlight setDeviceIdentifier:[UIDevice currentDevice].uniqueIdentifier];
-    [TestFlight takeOff:@"7ee3775942aa73462bdb5e6183d30e58_OTY5OTMyMDEyLTA2LTA1IDExOjEzOjIzLjg2MTA5Mw"];
+//    [TestFlight takeOff:@"7ee3775942aa73462bdb5e6183d30e58_OTY5OTMyMDEyLTA2LTA1IDExOjEzOjIzLjg2MTA5Mw"];
     [[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-34034367-1" dispatchPeriod:10 delegate:nil];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{kFontSizeKey: @18}];
@@ -82,7 +82,7 @@
     }
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
+    self.window.tintColor = [[UIColor redColor] colorWithAlphaComponent:0.8];
     [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
     
     self.window.rootViewController = self.tabController;

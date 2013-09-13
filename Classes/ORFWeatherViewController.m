@@ -38,6 +38,8 @@ static NSUInteger loadCount;
     self = [super init];
     if (self) {
         templateString = [NSMutableString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:PRE_IOS7 ? @"template" : @"template7" withExtension:@"html"] encoding:NSUTF8StringEncoding error:nil];
+        
+        self.automaticallyAdjustsScrollViewInsets = NO;
     }
     return self;
 }
@@ -100,16 +102,12 @@ static NSUInteger loadCount;
             NSString *HTML = [[templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString] stringByReplacingOccurrencesOfString:@"<content/>" withString:text];
             DLog(@"%@", text);
             
+            CGFloat offsetAdjust = PRE_IOS7 ? 44 : 44 - [UIApplication sharedApplication].statusBarFrame.size.height - self.navigationController.navigationBar.bounds.size.height;
             self.onFinishingNextLoad = ^(UIWebView *webView){
                 if (error) return;
                 
                 [UIView animateWithDuration:0.4 animations:^{
-                    if (PRE_IOS7) {
-                        webView.scrollView.contentOffset = CGPointMake(0, 44);
-                    } else {
-                        webView.scrollView.contentOffset = CGPointMake(0, 25);
-                    }
-                    
+                    webView.scrollView.contentOffset = CGPointMake(0, offsetAdjust);
                 }];
             };
             
@@ -253,7 +251,7 @@ static NSUInteger loadCount;
     }
     
     
-    self.webView.scrollView.contentInset = self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake([UIApplication sharedApplication].statusBarFrame.size.height, 0, self.tabBarController.tabBar.bounds.size.height, 0);
+    self.webView.scrollView.contentInset = self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake([UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.bounds.size.height, 0, self.tabBarController.tabBar.bounds.size.height, 0);
     [self.view addSubview:self.webView];
     
     self.webView.delegate = self;

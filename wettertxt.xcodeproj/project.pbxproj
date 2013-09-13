@@ -314,7 +314,7 @@
 		C3A7B5CC122A8DDD00FE8D9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = iteractive;
 			};
 			buildConfigurationList = C3A7B5CF122A8DDD00FE8D9B /* Build configuration list for PBXProject "wettertxt" */;
@@ -415,7 +415,6 @@
 		C3A7B5F5122A8DE100FE8D9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -426,6 +425,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PREBINDING = "";
 				SDKROOT = iphoneos;
@@ -436,7 +436,6 @@
 		C3A7B5F6122A8DE100FE8D9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Weishapl (23YYKHQL45)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
