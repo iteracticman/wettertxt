@@ -8,15 +8,10 @@
 
 #import "AppDelegate.h"
 #import "ORFWeatherViewController.h"
-#import "VideoForecastViewController.h"
-#import "GANTracker.h"
-#import "TestFlight.h"
 
 @implementation AppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [TestFlight takeOff:@"f47b9e9a-bfb1-4cc3-b5f2-320126b2d893"];
-    [[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-34034367-1" dispatchPeriod:10 delegate:nil];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{kFontSizeKey: @18}];
 

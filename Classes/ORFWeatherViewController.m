@@ -10,7 +10,6 @@
 #import "HTMLNode.h"
 #import "HTMLParser.h"
 #import "SVModalWebViewController.h"
-#import "GANTracker.h"
 
 #define kWarn @"warn"
 #define kTemp @"temp"
@@ -52,8 +51,6 @@ static NSUInteger loadCount;
     }
     
     _isLoading = YES;
-    
-    [[GANTracker sharedTracker] trackPageview:self.url.absoluteString withError:nil];
     
     NSString *loadingString = [NSString stringWithFormat:@"Vorhersage von <a href='%@'>wetter.orf.at</a><br/>Wird geladen...",self.url];
     NSString *loadingHTML = [templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString];

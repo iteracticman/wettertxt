@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780649C615D6DB4300215377 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649C515D6DB4300215377 /* libGoogleAnalytics.a */; };
 		780649C815D6DB4F00215377 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649C715D6DB4F00215377 /* libsqlite3.dylib */; };
 		780649CA15D6DBD100215377 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649C915D6DBD100215377 /* CFNetwork.framework */; };
-		780649CD15D6DD2700215377 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649CB15D6DD2700215377 /* libTestFlight.a */; };
 		780649CF15D6DD9400215377 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649CE15D6DD9400215377 /* libz.dylib */; };
 		782BC58D15D4E40600243886 /* zepto.js in Resources */ = {isa = PBXBuildFile; fileRef = 780BD80515D383D3000C0A0E /* zepto.js */; };
 		782BC59015D525D900243886 /* spin.js in Resources */ = {isa = PBXBuildFile; fileRef = 782BC58F15D525D900243886 /* spin.js */; };
@@ -30,6 +28,7 @@
 		78D124A416B12783002BC7C9 /* mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D124A216B12783002BC7C9 /* mountain.png */; };
 		78D124A516B12783002BC7C9 /* mountain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D124A316B12783002BC7C9 /* mountain@2x.png */; };
 		78D7AB2115D93F1100DF9EEF /* UIButtonBarRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D7AB2015D93F1100DF9EEF /* UIButtonBarRefresh@2x.png */; };
+		78DF2BF51EA0E39C00C28878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DF2BF41EA0E39C00C28878 /* LaunchScreen.storyboard */; };
 		C314B600122C3BA8008640C1 /* austria.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B5FF122C3BA8008640C1 /* austria.png */; };
 		C314B637122C3F2D008640C1 /* burgenland.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B636122C3F2D008640C1 /* burgenland.png */; };
 		C314B670122C41C3008640C1 /* vienna.png in Resources */ = {isa = PBXBuildFile; fileRef = C314B66F122C41C3008640C1 /* vienna.png */; };
@@ -59,12 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		780649C415D6DB4300215377 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
-		780649C515D6DB4300215377 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		780649C715D6DB4F00215377 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		780649C915D6DBD100215377 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		780649CB15D6DD2700215377 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		780649CC15D6DD2700215377 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		780649CE15D6DD9400215377 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		780BD80515D383D3000C0A0E /* zepto.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zepto.js; sourceTree = "<group>"; };
 		782BC58F15D525D900243886 /* spin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = spin.js; sourceTree = "<group>"; };
@@ -84,9 +79,6 @@
 		78A14FCE15D0474100EE58D7 /* ORFWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORFWeatherViewController.m; sourceTree = "<group>"; };
 		78A14FD115D049E900EE58D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78A14FD215D049E900EE58D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		78CBD1BC15ED240A00CAD2D5 /* VideoForecastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoForecastViewController.h; sourceTree = "<group>"; };
-		78CBD1BD15ED240A00CAD2D5 /* VideoForecastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoForecastViewController.m; sourceTree = "<group>"; };
-		78CBD1C015ED26F900CAD2D5 /* VideoForecast.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoForecast.storyboard; sourceTree = "<group>"; };
 		78CBD1C615EDE75B00CAD2D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		78D10DB317E2EC4A00B61C2F /* template7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template7.html; sourceTree = "<group>"; };
 		78D10DB517E2FA2D00B61C2F /* UIButtonBarRefresh7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarRefresh7@2x.png"; sourceTree = "<group>"; };
@@ -94,6 +86,7 @@
 		78D124A216B12783002BC7C9 /* mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountain.png; sourceTree = "<group>"; };
 		78D124A316B12783002BC7C9 /* mountain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mountain@2x.png"; sourceTree = "<group>"; };
 		78D7AB2015D93F1100DF9EEF /* UIButtonBarRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarRefresh@2x.png"; sourceTree = "<group>"; };
+		78DF2BF41EA0E39C00C28878 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C314B5FF122C3BA8008640C1 /* austria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = austria.png; sourceTree = "<group>"; };
 		C314B636122C3F2D008640C1 /* burgenland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burgenland.png; sourceTree = "<group>"; };
 		C314B66F122C41C3008640C1 /* vienna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vienna.png; sourceTree = "<group>"; };
@@ -141,8 +134,6 @@
 				C3A7B5DD122A8DDF00FE8D9B /* UIKit.framework in Frameworks */,
 				C3A7B5DF122A8DDF00FE8D9B /* Foundation.framework in Frameworks */,
 				C3A7B5E1122A8DDF00FE8D9B /* CoreGraphics.framework in Frameworks */,
-				780649C615D6DB4300215377 /* libGoogleAnalytics.a in Frameworks */,
-				780649CD15D6DD2700215377 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +167,6 @@
 		C32F46B3129A942A00A3675D /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				780649CB15D6DD2700215377 /* libTestFlight.a */,
-				780649CC15D6DD2700215377 /* TestFlight.h */,
-				780649C415D6DB4300215377 /* GANTracker.h */,
-				780649C515D6DB4300215377 /* libGoogleAnalytics.a */,
 				782BC59515D6CBF600243886 /* SVWebViewController */,
 				7852E7E315D185B500FF2605 /* Objective-C-HMTL-Parser */,
 			);
@@ -212,9 +199,6 @@
 				782BC58F15D525D900243886 /* spin.js */,
 				78D7AB2015D93F1100DF9EEF /* UIButtonBarRefresh@2x.png */,
 				78D10DB517E2FA2D00B61C2F /* UIButtonBarRefresh7@2x.png */,
-				78CBD1BC15ED240A00CAD2D5 /* VideoForecastViewController.h */,
-				78CBD1BD15ED240A00CAD2D5 /* VideoForecastViewController.m */,
-				78CBD1C015ED26F900CAD2D5 /* VideoForecast.storyboard */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -255,6 +239,7 @@
 				C314B5FF122C3BA8008640C1 /* austria.png */,
 				C373907D12316BAA00CA7599 /* austria@2x.png */,
 				C3A7B5E2122A8DDF00FE8D9B /* wettertxt-Info.plist */,
+				78DF2BF41EA0E39C00C28878 /* LaunchScreen.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -316,6 +301,7 @@
 				TargetAttributes = {
 					C3A7B5D8122A8DDF00FE8D9B = {
 						DevelopmentTeam = HQ648YTXZ8;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -359,6 +345,7 @@
 				C3FD5DD212362DB100419A3B /* salzburg@2x.png in Resources */,
 				C3FD5DD312362DB100419A3B /* styria@2x.png in Resources */,
 				78D10DB617E2FA2D00B61C2F /* UIButtonBarRefresh7@2x.png in Resources */,
+				78DF2BF51EA0E39C00C28878 /* LaunchScreen.storyboard in Resources */,
 				C3FD5DD412362DB100419A3B /* tyrol@2x.png in Resources */,
 				C3FD5DD512362DB100419A3B /* upperaustria@2x.png in Resources */,
 				78D10DB817E2FD9A00B61C2F /* Media.xcassets in Resources */,
@@ -428,7 +415,6 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = "";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -448,7 +434,6 @@
 				PREBINDING = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5EB0E16A-BBC5-4A10-8F0C-AC9375E5FE73";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
@@ -457,22 +442,23 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = HQ648YTXZ8;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = wettertxt_Prefix.pch;
 				INFOPLIST_FILE = "wettertxt-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = wettertxt;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -482,21 +468,22 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Weishapl (23YYKHQL45)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = HQ648YTXZ8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = wettertxt_Prefix.pch;
 				INFOPLIST_FILE = "wettertxt-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = wettertxt;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
