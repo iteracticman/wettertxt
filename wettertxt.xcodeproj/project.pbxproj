@@ -276,7 +276,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3A7B5F7122A8DE100FE8D9B /* Build configuration list for PBXNativeTarget "wettertxt" */;
 			buildPhases = (
-				780649D415D6DE4B00215377 /* ShellScript */,
 				C3A7B5D5122A8DDF00FE8D9B /* Sources */,
 				C3A7B5D6122A8DDF00FE8D9B /* Frameworks */,
 				C3A7B5D7122A8DDF00FE8D9B /* Resources */,
@@ -363,22 +362,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		780649D415D6DE4B00215377 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo \"Updating version/build number from git...\"\n\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n\n\n# increment the build number (ie 115 to 116)\n\nversionnum=`git describe | awk '{split($0,a,\"-\"); print a[1]}'`\n\nbuildnum=`git describe | awk '{split($0,a,\"-\"); print a[1] \".\" a[2]}'`\n\n\n\nif [[ \"${versionnum}\" == \"\" ]]; then\n\necho \"No version number from git\"\n\nexit 2\n\nfi\n\n\n\nif [[ \"${buildnum}\" == \"\" ]]; then\n\necho \"No build number from git\"\n\nexit 2\n\nfi\n\n\n\n/usr/libexec/Plistbuddy -c \"Set CFBundleShortVersionString $versionnum\" \"${plist}\"\n\necho \"Updated version number to $versionnum\"\n\n\n\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\n\necho \"Updated build number to $buildnum\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3A7B5D5122A8DDF00FE8D9B /* Sources */ = {
