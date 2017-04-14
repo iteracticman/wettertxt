@@ -9,7 +9,6 @@
 #import "ORFWeatherViewController.h"
 #import "HTMLNode.h"
 #import "HTMLParser.h"
-#import "SVModalWebViewController.h"
 
 #define kWarn @"warn"
 #define kTemp @"temp"
@@ -206,9 +205,7 @@ static NSUInteger loadCount;
         if ([request.URL.absoluteString isEqualToString:@"wettertxt:reload"]) {
             [self loadData];
         }else {
-            SVModalWebViewController *webVC = [[SVModalWebViewController alloc] initWithURL:request.URL];
-            webVC.availableActions = SVWebViewControllerAvailableActionsOpenInSafari | SVWebViewControllerAvailableActionsCopyLink;
-            [self presentModalViewController:webVC animated:YES];
+            [[UIApplication sharedApplication] openURL:request.URL];
             return NO;
         }
         

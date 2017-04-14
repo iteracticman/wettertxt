@@ -89,24 +89,6 @@
     return YES;
 }
 
-- (void)orientationChanged:(NSNotification *)note {
-    UIDeviceOrientation devOrient = [UIDevice currentDevice].orientation;
-    if (UIInterfaceOrientationIsLandscape(devOrient)) {
-        DLog(@"landscape");
-        [self.window.rootViewController presentModalViewController:self.videoForecastViewController animated:YES];
-    }else if(UIInterfaceOrientationIsPortrait(devOrient)){
-        [self.window.rootViewController dismissModalViewControllerAnimated:YES];
-    }
-}
-
--(UINavigationController *)videoForecastViewController {
-    if (_videoForecastViewController == nil) {
-        _videoForecastViewController = [[UIStoryboard storyboardWithName:@"VideoForecast" bundle:nil] instantiateInitialViewController];
-        _videoForecastViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    }
-    return _videoForecastViewController;
-}
-
 - (void)saveState {
     NSMutableArray* tabOrder = [NSMutableArray array];
 	for (ORFWeatherViewController* vc in self.tabController.viewControllers) {
