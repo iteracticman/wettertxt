@@ -99,7 +99,7 @@ static NSUInteger loadCount;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *loadingString = [NSString stringWithFormat:@"Vorhersage von <a href='%@'>wetter.orf.at</a><br/>Aktualisert am %@",self.url, [NSDateFormatter  localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle]];
-            NSString *HTML = [[templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString] stringByReplacingOccurrencesOfString:@"<content/>" withString:text];
+            NSString *HTML = [[self->templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString] stringByReplacingOccurrencesOfString:@"<content/>" withString:text];
             DLog(@"%@", text);
             
             CGFloat offsetAdjust = 44 - self.view.safeAreaInsets.top;
@@ -115,8 +115,8 @@ static NSUInteger loadCount;
             [self showHTML:HTML];
             
             [ORFWeatherViewController decLoadCount];
-            _isLoading = NO;
-            _isLoaded = YES;
+            self->_isLoading = NO;
+            self->_isLoaded = YES;
         });
     }] resume];
 }
@@ -264,11 +264,6 @@ static NSUInteger loadCount;
         [blurBar.leftAnchor constraintEqualToAnchor:self.view.leftAnchor],
         [blurBar.rightAnchor constraintEqualToAnchor:self.view.rightAnchor]
     ]];
-}
-
--(void)viewDidUnload {
-    [super viewDidUnload];
-    self.webView = nil;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
