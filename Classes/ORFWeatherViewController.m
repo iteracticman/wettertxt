@@ -213,6 +213,7 @@ static NSUInteger loadCount;
                 // don't care
             }];
             decisionHandler(WKNavigationActionPolicyCancel);
+            return;
         }
     }
     decisionHandler(WKNavigationActionPolicyAllow);
