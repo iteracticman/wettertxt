@@ -10,7 +10,6 @@
 		780649C815D6DB4F00215377 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649C715D6DB4F00215377 /* libsqlite3.dylib */; };
 		780649CA15D6DBD100215377 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649C915D6DBD100215377 /* CFNetwork.framework */; };
 		780649CF15D6DD9400215377 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649CE15D6DD9400215377 /* libz.dylib */; };
-		782BC58D15D4E40600243886 /* zepto.js in Resources */ = {isa = PBXBuildFile; fileRef = 780BD80515D383D3000C0A0E /* zepto.js */; };
 		782BC59015D525D900243886 /* spin.js in Resources */ = {isa = PBXBuildFile; fileRef = 782BC58F15D525D900243886 /* spin.js */; };
 		782BC59F15D6CC6600243886 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782BC59E15D6CC6600243886 /* MessageUI.framework */; };
 		7852E7E915D185B500FF2605 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7852E7E515D185B500FF2605 /* HTMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -58,7 +57,6 @@
 		780649C715D6DB4F00215377 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		780649C915D6DBD100215377 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		780649CE15D6DD9400215377 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		780BD80515D383D3000C0A0E /* zepto.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zepto.js; sourceTree = "<group>"; };
 		782BC58F15D525D900243886 /* spin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = spin.js; sourceTree = "<group>"; };
 		782BC59E15D6CC6600243886 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7852E7E415D185B500FF2605 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 				78A14FCD15D0474100EE58D7 /* ORFWeatherViewController.h */,
 				78A14FCE15D0474100EE58D7 /* ORFWeatherViewController.m */,
 				78D10DB317E2EC4A00B61C2F /* template.html */,
-				780BD80515D383D3000C0A0E /* zepto.js */,
 				782BC58F15D525D900243886 /* spin.js */,
 				78D7AB2015D93F1100DF9EEF /* UIButtonBarRefresh@2x.png */,
 				78D10DB517E2FA2D00B61C2F /* UIButtonBarRefresh7@2x.png */,
@@ -332,7 +329,6 @@
 				C3FD5DD612362DB100419A3B /* vienna@2x.png in Resources */,
 				C3FD5DD712362DB100419A3B /* vorarlberg@2x.png in Resources */,
 				78D10DB417E2EC4A00B61C2F /* template.html in Resources */,
-				782BC58D15D4E40600243886 /* zepto.js in Resources */,
 				782BC59015D525D900243886 /* spin.js in Resources */,
 				78D7AB2115D93F1100DF9EEF /* UIButtonBarRefresh@2x.png in Resources */,
 				78D124A416B12783002BC7C9 /* mountain.png in Resources */,
