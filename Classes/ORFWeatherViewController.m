@@ -31,15 +31,10 @@ static NSUInteger loadCount;
     }
 }
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
-        templateString = [NSMutableString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:PRE_IOS7 ? @"template" : @"template7" withExtension:@"html"] encoding:NSUTF8StringEncoding error:nil];
-        
-        if (IOS7) {
-            self.automaticallyAdjustsScrollViewInsets = NO;
-        }
+        templateString = [NSMutableString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"template" withExtension:@"html"] encoding:NSUTF8StringEncoding error:nil];
     }
     return self;
 }
@@ -55,21 +50,28 @@ static NSUInteger loadCount;
     NSString *loadingHTML = [templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString];
     
     __weak ORFWeatherViewController *weakSelf = self;
-    self.onFinishingNextLoad = ^(UIWebView *webView){
+    
+    self.onFinishingNextLoad = ^(WKWebView *webView){
         [weakSelf startLoading];
     };
     
+    [self spin];
     [self showHTML:loadingHTML];
 }
 
+- (void)spin {
+    [self.webView evaluateJavaScript:@"spin()" completionHandler:nil];
+}
+
 - (void)startLoading {
-    [self.webView stringByEvaluatingJavaScriptFromString:@"spin()"];
+    [self spin];
+    
     [ORFWeatherViewController incLoadCount];
     DLog(@"fetching %@", self.url);
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:self.url];
     req.timeoutInterval = 15;
-    [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *resp, NSData *data, NSError *error) {
-        [NSThread sleepForTimeInterval:3];
+    [[[NSURLSession sharedSession] dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        //[NSThread sleepForTimeInterval:3];
         NSMutableString *text = [NSMutableString string];
         HTMLParser *parser;
         
@@ -100,9 +102,10 @@ static NSUInteger loadCount;
             NSString *HTML = [[templateString stringByReplacingOccurrencesOfString:@"<header/>" withString:loadingString] stringByReplacingOccurrencesOfString:@"<content/>" withString:text];
             DLog(@"%@", text);
             
-            CGFloat offsetAdjust = PRE_IOS7 ? 44 : 44 - [UIApplication sharedApplication].statusBarFrame.size.height - self.navigationController.navigationBar.bounds.size.height;
-            self.onFinishingNextLoad = ^(UIWebView *webView){
+            CGFloat offsetAdjust = 44 - self.view.safeAreaInsets.top;
+            self.onFinishingNextLoad = ^(WKWebView *webView){
                 if (error) return;
+                
                 
                 [UIView animateWithDuration:0.4 animations:^{
                     webView.scrollView.contentOffset = CGPointMake(0, offsetAdjust);
@@ -115,7 +118,7 @@ static NSUInteger loadCount;
             _isLoading = NO;
             _isLoaded = YES;
         });
-    }];
+    }] resume];
 }
 
 - (void)addClass:(NSString *)cssClass toString:(NSMutableAttributedString *)attString {
@@ -198,34 +201,30 @@ static NSUInteger loadCount;
     [self.webView loadHTMLString:loadingHTML baseURL:[[NSBundle mainBundle] bundleURL]];
 }
 
-#pragma mark UIWebView
+#pragma mark WKWebView
 
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-        if ([request.URL.absoluteString isEqualToString:@"wettertxt:reload"]) {
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSURL *url = navigationAction.request.URL;
+    if (navigationAction.navigationType == WKNavigationTypeLinkActivated) {
+        if ([url.absoluteString isEqualToString:@"wettertxt:reload"]) {
             [self loadData];
-        }else {
-            [[UIApplication sharedApplication] openURL:request.URL];
-            return NO;
+        } else {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+                // don't care
+            }];
+            decisionHandler(WKNavigationActionPolicyCancel);
         }
-        
     }
-    return YES;
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
--(void)webViewDidStartLoad:(UIWebView *)webView {
-    
-}
-
--(void)webViewDidFinishLoad:(UIWebView *)webView {
-    if (self.onFinishingNextLoad) {
-        self.onFinishingNextLoad(webView);
-        self.onFinishingNextLoad = nil;
-    }
-}
-
--(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (self.onFinishingNextLoad) {
+            self.onFinishingNextLoad(webView);
+            self.onFinishingNextLoad = nil;
+        }
+    });
 }
 
 #pragma mark View Lifecycle
@@ -238,28 +237,33 @@ static NSUInteger loadCount;
     [super viewDidLoad];
     
     self.view.opaque = YES;
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:[WKWebViewConfiguration new]];
     self.webView.opaque = NO;
     self.webView.backgroundColor = self.view.window.backgroundColor;
-    self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
-    if (PRE_IOS7) {
-        self.webView.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
-    }
-    
-    if (IOS7) {
-        self.webView.scrollView.contentInset = self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake([UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.bounds.size.height, 0, self.tabBarController.tabBar.bounds.size.height, 0);
-    }
+    self.webView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
     
     [self.view addSubview:self.webView];
+    [NSLayoutConstraint activateConstraints:@[
+         [self.webView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+         [self.webView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor],
+         [self.webView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor],
+         [self.webView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor]
+    ]];
     
-    self.webView.delegate = self;
+    self.webView.navigationDelegate = self;
     
-    if (!PRE_IOS7) {
-        self.view.backgroundColor = [UIColor whiteColor];
-        UINavigationBar *blurBar = [[UINavigationBar alloc] initWithFrame:[UIApplication sharedApplication].statusBarFrame];
-        [self.view addSubview:blurBar];
-    }
+    self.view.backgroundColor = [UIColor whiteColor];
+    UINavigationBar *blurBar = [UINavigationBar new];
+    blurBar.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:blurBar];
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [blurBar.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+        [blurBar.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
+        [blurBar.leftAnchor constraintEqualToAnchor:self.view.leftAnchor],
+        [blurBar.rightAnchor constraintEqualToAnchor:self.view.rightAnchor]
+    ]];
 }
 
 -(void)viewDidUnload {

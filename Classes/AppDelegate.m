@@ -62,24 +62,14 @@
     self.tabController = [[UITabBarController alloc] init];
 	self.tabController.viewControllers = viewControllers;
 	self.tabController.selectedIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"selectedTabIndex"];
-    
-    if (PRE_IOS7) {
-        self.tabController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-    }
 	
     self.tabController.delegate = self;
     
-    if (PRE_IOS7) {
-        self.window.backgroundColor = [UIColor blackColor];
-    } else {
-        self.tabController.view.backgroundColor = [UIColor whiteColor];
-    }
+    self.tabController.view.backgroundColor = [UIColor whiteColor];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    if (IOS7) {
-        self.window.tintColor = [[UIColor redColor] colorWithAlphaComponent:0.8];
-        [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
-    }
+    self.window.tintColor = [[UIColor redColor] colorWithAlphaComponent:0.8];
+    [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
     
     self.window.rootViewController = self.tabController;
     [self.window makeKeyAndVisible];

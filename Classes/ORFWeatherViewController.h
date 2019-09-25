@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-typedef void(^WhenLoadedBlock)(UIWebView *webView);
+typedef void(^WhenLoadedBlock)(WKWebView *webView);
 
-@interface ORFWeatherViewController : UIViewController<UIWebViewDelegate>{
+@interface ORFWeatherViewController : UIViewController<WKNavigationDelegate>{
     NSMutableString *templateString;
 }
 @property (copy) WhenLoadedBlock onFinishingNextLoad;
 @property NSURL *url;
-@property UIWebView *webView;
+@property WKWebView *webView;
 @property (readonly) BOOL isLoaded;
 @property (readonly) BOOL isLoading;
 
