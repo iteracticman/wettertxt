@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		780649C815D6DB4F00215377 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649C715D6DB4F00215377 /* libsqlite3.dylib */; };
 		780649CA15D6DBD100215377 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649C915D6DBD100215377 /* CFNetwork.framework */; };
-		780649CF15D6DD9400215377 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 780649CE15D6DD9400215377 /* libz.dylib */; };
 		782BC59015D525D900243886 /* spin.js in Resources */ = {isa = PBXBuildFile; fileRef = 782BC58F15D525D900243886 /* spin.js */; };
 		782BC59F15D6CC6600243886 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782BC59E15D6CC6600243886 /* MessageUI.framework */; };
 		7852E7E915D185B500FF2605 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7852E7E515D185B500FF2605 /* HTMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -56,7 +55,6 @@
 /* Begin PBXFileReference section */
 		780649C715D6DB4F00215377 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		780649C915D6DBD100215377 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		780649CE15D6DD9400215377 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		782BC58F15D525D900243886 /* spin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = spin.js; sourceTree = "<group>"; };
 		782BC59E15D6CC6600243886 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7852E7E415D185B500FF2605 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78CBD1C715EDE75B00CAD2D5 /* AVFoundation.framework in Frameworks */,
-				780649CF15D6DD9400215377 /* libz.dylib in Frameworks */,
 				780649CA15D6DBD100215377 /* CFNetwork.framework in Frameworks */,
 				780649C815D6DB4F00215377 /* libsqlite3.dylib in Frameworks */,
 				782BC59F15D6CC6600243886 /* MessageUI.framework in Frameworks */,
@@ -225,7 +222,6 @@
 			children = (
 				D5543672233BE53E0011C9A3 /* WebKit.framework */,
 				78CBD1C615EDE75B00CAD2D5 /* AVFoundation.framework */,
-				780649CE15D6DD9400215377 /* libz.dylib */,
 				780649C915D6DBD100215377 /* CFNetwork.framework */,
 				780649C715D6DB4F00215377 /* libsqlite3.dylib */,
 				782BC59E15D6CC6600243886 /* MessageUI.framework */,
@@ -391,7 +387,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PREBINDING = "";
@@ -433,7 +429,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
 				PREBINDING = "";
