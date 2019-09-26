@@ -65,10 +65,10 @@
 	
     self.tabController.delegate = self;
     
-    self.tabController.view.backgroundColor = [UIColor whiteColor];
+    self.tabController.view.backgroundColor = [UIColor colorNamed:@"background"];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.tintColor = [[UIColor redColor] colorWithAlphaComponent:0.8];
+    self.window.tintColor = [UIColor colorNamed:@"tint"];
     [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
     
     self.window.rootViewController = self.tabController;

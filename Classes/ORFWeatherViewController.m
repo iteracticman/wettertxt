@@ -220,7 +220,7 @@ static NSUInteger loadCount;
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (self.onFinishingNextLoad) {
             self.onFinishingNextLoad(webView);
             self.onFinishingNextLoad = nil;
@@ -254,7 +254,6 @@ static NSUInteger loadCount;
     
     self.webView.navigationDelegate = self;
     
-    self.view.backgroundColor = [UIColor whiteColor];
     UINavigationBar *blurBar = [UINavigationBar new];
     blurBar.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:blurBar];
