@@ -11,7 +11,7 @@
 
 typedef void(^WhenLoadedBlock)(WKWebView *webView);
 
-@interface ORFWeatherViewController : UIViewController<WKNavigationDelegate>{
+@interface ORFWeatherViewController : UIViewController<WKNavigationDelegate, WKUIDelegate>{
     NSMutableString *templateString;
 }
 @property (copy) WhenLoadedBlock onFinishingNextLoad;

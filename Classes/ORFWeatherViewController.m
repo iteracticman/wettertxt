@@ -220,12 +220,16 @@ static NSUInteger loadCount;
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (self.onFinishingNextLoad) {
             self.onFinishingNextLoad(webView);
             self.onFinishingNextLoad = nil;
         }
     });
+}
+
+- (BOOL)webView:(WKWebView *)webView shouldPreviewElement:(WKPreviewElementInfo *)elementInfo {
+    return NO;
 }
 
 #pragma mark View Lifecycle
@@ -253,11 +257,23 @@ static NSUInteger loadCount;
     
     self.view.insetsLayoutMarginsFromSafeArea = NO;
     self.view.opaque = YES;
-    self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:[WKWebViewConfiguration new]];
+    
+    WKWebViewConfiguration *cfg = [WKWebViewConfiguration new];
+    cfg.suppressesIncrementalRendering = YES;
+    cfg.allowsInlineMediaPlayback = NO;
+    cfg.allowsPictureInPictureMediaPlayback = NO;
+    cfg.dataDetectorTypes = WKDataDetectorTypeNone;
+    
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:cfg];
+    
     self.webView.opaque = NO;
     self.webView.backgroundColor = self.view.window.backgroundColor;
     self.webView.translatesAutoresizingMaskIntoConstraints = NO;
     self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
+    self.webView.scrollView.delaysContentTouches = NO;
+    
+    self.webView.navigationDelegate = self;
+    self.webView.UIDelegate = self;
     
     [self.view addSubview:self.webView];
     [NSLayoutConstraint activateConstraints:@[
@@ -266,8 +282,6 @@ static NSUInteger loadCount;
          [self.webView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor],
          [self.webView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor]
     ]];
-    
-    self.webView.navigationDelegate = self;
     
     UINavigationBar *blurBar = [UINavigationBar new];
     blurBar.translatesAutoresizingMaskIntoConstraints = NO;
