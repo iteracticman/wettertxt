@@ -55,7 +55,6 @@ static NSUInteger loadCount;
         [weakSelf startLoading];
     };
     
-    [self spin];
     [self showHTML:loadingHTML];
 }
 
@@ -105,7 +104,6 @@ static NSUInteger loadCount;
             CGFloat offsetAdjust = 44 - self.view.safeAreaInsets.top;
             self.onFinishingNextLoad = ^(WKWebView *webView){
                 if (error) return;
-                
                 
                 [UIView animateWithDuration:0.4 animations:^{
                     webView.scrollView.contentOffset = CGPointMake(0, offsetAdjust);
@@ -228,8 +226,8 @@ static NSUInteger loadCount;
     });
 }
 
-- (BOOL)webView:(WKWebView *)webView shouldPreviewElement:(WKPreviewElementInfo *)elementInfo {
-    return NO;
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    DLog(@"loading error %@", error);
 }
 
 #pragma mark View Lifecycle
@@ -241,7 +239,12 @@ static NSUInteger loadCount;
 -(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
     [super traitCollectionDidChange:previousTraitCollection];
     
-    [self updateUserInterfaceStyle];
+    if (previousTraitCollection.preferredContentSizeCategory != self.traitCollection.preferredContentSizeCategory) {
+        [self loadData];
+    }
+    if (previousTraitCollection.userInterfaceStyle != self.traitCollection.userInterfaceStyle) {
+        [self updateUserInterfaceStyle];
+    }
 }
 
 -(void)updateUserInterfaceStyle {
@@ -271,7 +274,7 @@ static NSUInteger loadCount;
     self.webView.translatesAutoresizingMaskIntoConstraints = NO;
     self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
     self.webView.scrollView.delaysContentTouches = NO;
-    
+    self.webView.allowsLinkPreview = NO;
     self.webView.navigationDelegate = self;
     self.webView.UIDelegate = self;
     
@@ -296,7 +299,9 @@ static NSUInteger loadCount;
     [self updateUserInterfaceStyle];
 }
 
--(void)viewWillAppear:(BOOL)animated {
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     if (!self.isLoaded) {
         [self loadData];
     }

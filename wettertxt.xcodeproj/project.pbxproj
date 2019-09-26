@@ -208,12 +208,12 @@
 			};
 			buildConfigurationList = C3A7B5CF122A8DDD00FE8D9B /* Build configuration list for PBXProject "wettertxt" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				de,
+				Base,
 			);
 			mainGroup = C3A7B5CA122A8DDD00FE8D9B;
 			productRefGroup = C3A7B5DA122A8DDF00FE8D9B /* Products */;
