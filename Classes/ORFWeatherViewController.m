@@ -251,6 +251,7 @@ static NSUInteger loadCount;
 -(void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.insetsLayoutMarginsFromSafeArea = NO;
     self.view.opaque = YES;
     self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:[WKWebViewConfiguration new]];
     self.webView.opaque = NO;
