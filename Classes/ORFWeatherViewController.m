@@ -234,6 +234,20 @@ static NSUInteger loadCount;
     return UIStatusBarStyleDefault;
 }
 
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    
+    [self updateUserInterfaceStyle];
+}
+
+-(void)updateUserInterfaceStyle {
+    if (self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+        self.webView.scrollView.indicatorStyle = UIScrollViewIndicatorStyleDefault;
+    } else {
+        self.webView.scrollView.indicatorStyle = UIScrollViewIndicatorStyleBlack;
+    }
+}
+
 -(void)viewDidLoad {
     [super viewDidLoad];
     
@@ -264,6 +278,7 @@ static NSUInteger loadCount;
         [blurBar.leftAnchor constraintEqualToAnchor:self.view.leftAnchor],
         [blurBar.rightAnchor constraintEqualToAnchor:self.view.rightAnchor]
     ]];
+    [self updateUserInterfaceStyle];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
