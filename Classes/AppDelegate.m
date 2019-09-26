@@ -59,9 +59,14 @@
 		[viewControllers addObject:vc];
 	}
     
-    self.tabController = [[UITabBarController alloc] init];
+    self.tabController = [UITabBarController new];
 	self.tabController.viewControllers = viewControllers;
-	self.tabController.selectedIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"selectedTabIndex"];
+    NSUInteger selIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"selectedTabIndex"];
+    if (selIndex > 4) {
+        self.tabController.selectedViewController = self.tabController.moreNavigationController;
+    } else {
+        self.tabController.selectedIndex = selIndex;
+    }
 	
     self.tabController.delegate = self;
     
@@ -69,12 +74,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.tintColor = [UIColor colorNamed:@"tint"];
-    [(ORFWeatherViewController *)self.tabController.selectedViewController loadData];
+    [self tabBarController:self.tabController shouldSelectViewController:self.tabController.selectedViewController];
     
     self.window.rootViewController = self.tabController;
     [self.window makeKeyAndVisible];
-    
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
     
     return YES;
 }
@@ -87,8 +90,7 @@
 	
 	[[NSUserDefaults standardUserDefaults] setObject:tabOrder forKey:@"tabOrder"];
     
-    NSUInteger selIndex = self.tabController.selectedIndex < 4 ? self.tabController.selectedIndex : 0;
-	[[NSUserDefaults standardUserDefaults] setInteger:selIndex forKey:@"selectedTabIndex"];
+	[[NSUserDefaults standardUserDefaults] setInteger:self.tabController.selectedIndex forKey:@"selectedTabIndex"];
 }
 
 -(void)applicationDidEnterBackground:(UIApplication *)application {
