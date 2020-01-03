@@ -364,7 +364,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				MARKETING_VERSION = 2.3;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iteractive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = wettertxt;
 				PROVISIONING_PROFILE = "";
@@ -393,7 +393,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				MARKETING_VERSION = 2.3;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iteractive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = wettertxt;
 				PROVISIONING_PROFILE = "";

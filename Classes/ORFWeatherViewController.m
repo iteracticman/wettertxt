@@ -230,6 +230,10 @@ static NSUInteger loadCount;
     DLog(@"loading error %@", error);
 }
 
+- (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView {
+    [self loadData];
+}
+
 #pragma mark View Lifecycle
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
